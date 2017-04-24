@@ -95,6 +95,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Model\Barn.cs" />
+    <Compile Include="Model\Forældre.cs" />
+    <Compile Include="Model\Singleton.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -127,8 +131,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Common\" />
-    <Folder Include="Model\" />
+    <Folder Include="Handler\" />
     <Folder Include="Persistency\" />
     <Folder Include="Viewmodel\" />
   </ItemGroup>
