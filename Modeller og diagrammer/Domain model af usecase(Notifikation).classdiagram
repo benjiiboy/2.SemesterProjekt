@@ -1,1 +1,39 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="5587c911-6bb5-41db-994d-d7a7a7a664e5" name="Domain model af usecase(Notifikation)" linkedPackageId="87d111ce-bd0c-4e71-a75f-852f1c4af83a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="aeaf338c-4ed7-40b7-869a-72a5f51d8583">
+      <profileInstance Id="f9844be8-2910-4d42-ad82-5eb0ba9b50b5" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="9ac1a005-636f-4337-b10c-c6fa9465905d">
+      <profileInstance Id="0dc511e8-1085-436b-9a66-f3e4dd64e2d6" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="9094a737-f2c6-46cc-85b9-7f775b79c4fb" name="Handler">
+        <elementDefinition Id="ccac4a5c-7624-4ab5-b384-1c7bc6157f8e" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="1c2e01ff-d1aa-4911-b715-c3158797297c" name="Notifikation" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="dc3f1be1-c425-467d-9371-f1b36aa562a5" />
+              <ownedAttributesInternal>
+                <property Id="2fb26217-e636-4b2d-a270-5bc1efea376c" name="Push notifikation" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7fb89113-6999-4a73-b78b-382e063b0286" />
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="87d111ce-bd0c-4e71-a75f-852f1c4af83a" name="Modeller og diagrammer">
+    <elementDefinition Id="7601ee2e-aac9-4ea4-99b1-8ff3250c0c10" />
+  </package>
+</logicalClassDesignerModel>
