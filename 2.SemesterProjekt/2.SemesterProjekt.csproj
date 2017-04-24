@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Handler\BarnHandler.cs" />
+    <Compile Include="Handler\Notifikation.cs" />
     <Compile Include="Model\Barn.cs" />
     <Compile Include="Model\Forældre.cs" />
     <Compile Include="Model\Singleton.cs" />

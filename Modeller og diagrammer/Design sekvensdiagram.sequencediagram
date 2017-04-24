@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="7cccbcbe-8c0b-4cf6-a45c-b98b5d496e66" name="Design sekvensdiagram" linkedPackageId="0b83bbb2-e387-449f-933e-49f8544c0265" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="5df73d74-cec6-4db5-a41c-724c6a4c6331">
+      <profileInstance Id="a7f28b83-f374-4142-9236-c79159d80f3d" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="388cabec-639f-45a6-90a7-4f64a88fd25a">
+      <profileInstance Id="2b5949ad-3ca2-43a9-90f2-81d377f7b35b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="737f4216-9b4e-4eaf-948a-ec9d9493258d" name="Design sekvensdiagram" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <elementDefinition Id="3a303452-4002-4f82-a22b-d5dc97503230" />
+        <lifelines>
+          <lifeline Id="15e39e14-49a9-4f66-9fee-5e9a0a58bf28" name="Forældre" isActor="false" lifelineDisplayName="Forældre">
+            <elementDefinition Id="93d6e003-e62b-4897-85f5-21592dc0646c" />
+          </lifeline>
+          <lifeline Id="39cf7d46-b2ce-4b32-876e-506b615c2343" name="Barn" isActor="false" lifelineDisplayName="Barn">
+            <elementDefinition Id="d36ad6d6-c87c-492d-a1b9-5ce3b0456420" />
+          </lifeline>
+          <lifeline Id="c599a514-13db-4185-b298-86ab92dc0837" name="Notifikation" isActor="false" lifelineDisplayName="Notifikation">
+            <elementDefinition Id="15446cee-065e-4def-a5df-6cebdfbcd672" />
+          </lifeline>
+        </lifelines>
+      </interaction>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="0b83bbb2-e387-449f-933e-49f8544c0265" name="Modeller og diagrammer">
+    <elementDefinition Id="7601ee2e-aac9-4ea4-99b1-8ff3250c0c10" />
+  </package>
+</SequenceDesignerModel>

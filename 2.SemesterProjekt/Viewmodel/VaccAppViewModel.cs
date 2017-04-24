@@ -60,6 +60,8 @@ namespace _2.SemesterProjekt.Viewmodel
         {
             BarnHandler = new Handler.BarnHandler(this);
             Singleton = Singleton.VaccAppSingletion;
+
+            //TODO: insitaliserer knapper 
         }
 
     }
