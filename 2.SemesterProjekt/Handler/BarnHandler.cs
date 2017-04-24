@@ -21,7 +21,8 @@ namespace _2.SemesterProjekt.Handler
         {
             Model.Barn tempbarn = new Model.Barn();
             tempbarn.Fødselsdato = VaccAppVievModel.Fødselsdato;
-            tempbarn.Navn = VaccAppVievModel.Navn;
+            tempbarn.ForNavn = VaccAppVievModel.ForNavn;
+            tempbarn.EfterNavn = VaccAppVievModel.EfterNavn;
 
             Model.Singleton.VaccAppSingletion.TilføjBarn(tempbarn);
 

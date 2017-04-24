@@ -14,5 +14,28 @@
         </classShape>
       </nestedChildShapes>
     </packageShape>
+    <packageShape Id="40de2bb8-43e4-46d6-8ed9-e377702fc652" absoluteBounds="3.5, 1.875, 2, 2.375" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="7e887e0a-c669-48ef-9d2f-38266b67fe4a" LastKnownName="Model" />
+      <nestedChildShapes>
+        <classShape Id="aa3521a1-53d2-487b-b278-a8fd8e77881d" absoluteBounds="3.875, 2.625, 1.5, 1.5429687152306233" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+          <classMoniker Id="7060feac-373f-4eaa-9e54-a5254e12355d" LastKnownName="Barn" />
+          <nestedChildShapes>
+            <AttributeElementListCompartment Id="d942f58a-e3f4-454e-945a-60dc4889a9df" absoluteBounds="3.89, 3.015, 1.4700000000000002, 0.84179684768120444" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+            <OperationElementListCompartment Id="7ecb1961-bf5c-430e-9214-7dc7493e1f2b" absoluteBounds="3.89, 3.8667968476812042, 1.4700000000000002, 0.20117186754941963" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          </nestedChildShapes>
+        </classShape>
+      </nestedChildShapes>
+    </packageShape>
+    <associationConnector edgePoints="[(5.375 : 3.09374999006589); (6.5 : 3.09374999006589)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="1..*">
+      <associationMoniker Id="8dba4903-fa5f-4be9-a74a-8402d11abd88" />
+      <relativeChildShapes />
+      <moveableDecoratorHostShapes>
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="6.2593135163187981, 3.1425781225164728, 0.23137296736240387, 0.14800345897674561" shapeFieldName="TargetMultiplicity" />
+      </moveableDecoratorHostShapes>
+      <nodes>
+        <classShapeMoniker Id="aa3521a1-53d2-487b-b278-a8fd8e77881d" />
+        <classShapeMoniker Id="98b3c4ed-769f-48ce-8ffb-b7289d30339a" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </logicalClassDesignerDiagram>

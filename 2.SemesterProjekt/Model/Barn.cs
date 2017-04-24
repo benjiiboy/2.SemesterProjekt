@@ -12,6 +12,8 @@ namespace _2.SemesterProjekt.Model
 
         public int Fødselsdato { get; set; }
 
-        public string Navn { get; set; }
+        public string ForNavn { get; set; }
+
+        public string EfterNavn { get; set; }
     }
 }

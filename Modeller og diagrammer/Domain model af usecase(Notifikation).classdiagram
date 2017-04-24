@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="5587c911-6bb5-41db-994d-d7a7a7a664e5" name="Domain model af usecase(Notifikation)" linkedPackageId="87d111ce-bd0c-4e71-a75f-852f1c4af83a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="aeaf338c-4ed7-40b7-869a-72a5f51d8583">
-      <profileInstance Id="f9844be8-2910-4d42-ad82-5eb0ba9b50b5" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="9ac1a005-636f-4337-b10c-c6fa9465905d">
-      <profileInstance Id="0dc511e8-1085-436b-9a66-f3e4dd64e2d6" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="9094a737-f2c6-46cc-85b9-7f775b79c4fb" name="Handler">
@@ -32,8 +18,76 @@
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="7e887e0a-c669-48ef-9d2f-38266b67fe4a" name="Model">
+        <elementDefinition Id="8bc3dee5-a69c-469c-ad73-5b1272bc226b" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="7060feac-373f-4eaa-9e54-a5254e12355d" name="Barn" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="d1c3a787-b3ff-4652-8cd0-92cd98fc597c" />
+              <targetEnds>
+                <association Id="8dba4903-fa5f-4be9-a74a-8402d11abd88" isDerived="false" sourceEndRoleName="Barn" targetEndRoleName="Notifikation" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="1c2e01ff-d1aa-4911-b715-c3158797297c" LastKnownName="Notifikation" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="66bf6061-d767-4212-85a6-f1a0caeb2462" name="Barn" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="739496fb-b2d1-496c-b74e-331a41c9b81b" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7c39c116-5770-42be-8b33-a045f725acfe" name="Notifikation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <lowerValueInternal>
+                          <literalString Id="793fda1d-8c09-4dd3-8d93-131f5f20bbb0" name="Lower" value="1">
+                            <elementDefinition Id="17a276f5-6c4f-474f-9ae5-11ba5e49042a" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="b5f33002-98cf-4316-9b1e-82552172a86b" name="Upper" value="*">
+                            <elementDefinition Id="bdf54558-a30d-4de6-83f2-a99aa2f37acf" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="e643420d-9326-409c-9d4e-ee453d658c07" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="2d1cbcab-17cd-41c4-98ec-53a9cd7cc84e" />
+                </association>
+              </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="2234eb9e-23f9-4901-be34-567034600f63" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e07d99ae-a4c3-4a5b-8e29-202549541b87" />
+                </property>
+                <property Id="96912ecf-da63-4119-ab91-ec311acda607" name="Fødselsdato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6e0e5179-3b54-4fe9-b33f-ef2232164252" />
+                </property>
+                <property Id="4d71481d-f64a-43f2-8efc-48ca9b95e4d7" name="ForNavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6f760662-92c7-4b49-a9d6-60d65d5c9dae" />
+                </property>
+                <property Id="1c536e4a-c38e-4347-b988-723d63421ead" name="EfterNavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a35748d2-9bbf-4f5a-bd06-2797aef6198a" />
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
   </packagedElements>
   <package Id="87d111ce-bd0c-4e71-a75f-852f1c4af83a" name="Modeller og diagrammer">
     <elementDefinition Id="7601ee2e-aac9-4ea4-99b1-8ff3250c0c10" />
+    <profileInstances>
+      <packageHasProfileInstances Id="aeaf338c-4ed7-40b7-869a-72a5f51d8583">
+        <profileInstance Id="f9844be8-2910-4d42-ad82-5eb0ba9b50b5" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="9ac1a005-636f-4337-b10c-c6fa9465905d">
+        <profileInstance Id="0dc511e8-1085-436b-9a66-f3e4dd64e2d6" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

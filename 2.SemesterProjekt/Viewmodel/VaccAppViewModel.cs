@@ -20,12 +20,20 @@ namespace _2.SemesterProjekt.Viewmodel
             set { fødselsdato = value; }
         }
 
-        private string navn;
+        private string fornavn;
 
-        public string Navn
+        public string ForNavn
         {
-            get { return navn; }
-            set { navn = value; }
+            get { return fornavn; }
+            set { fornavn = value; }
+        }
+
+        private string efternavn;
+
+        public string EfterNavn
+        {
+            get { return efternavn; }
+            set { efternavn = value; }
         }
 
         /*Valgte barn*/

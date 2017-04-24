@@ -44,6 +44,9 @@
     <Content Include="ModelDefinition\Package_1314.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package_1422.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="Design sekvensdiagram.sequencediagram">
       <SubType>Content</SubType>

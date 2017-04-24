@@ -472,6 +472,12 @@
         LastKnownName="Handler"
         LastKnownLocation="Package_1314.uml" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8bc3dee5-a69c-469c-ad73-5b1272bc226b"
+        LastKnownName="Model"
+        LastKnownLocation="Package_1422.uml" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
