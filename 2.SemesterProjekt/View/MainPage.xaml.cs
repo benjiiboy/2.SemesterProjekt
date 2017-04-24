@@ -27,5 +27,22 @@ namespace _2.SemesterProjekt
             this.InitializeComponent();
             MainPageFrame.Navigate(typeof(View.Menu));
         }
+
+
+        private void FrameGåTilbage()
+        {
+            if (MainPageFrame.CanGoBack)
+            {
+                MainPageFrame.GoBack();
+            }
+        }
+
+        private void FrameGåFrem()
+        {
+            if (MainPageFrame.CanGoForward)
+            {
+                MainPageFrame.GoForward();
+            }
+        }
     }
 }
