@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="_2.SemesterProjekt.View.Menu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_2.SemesterProjekt.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="HovedMenuWiki"
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Center" 
+                    Height="100" Content="Wiki" 
+                    FontSize="28" 
+                    FontWeight="Bold" 
+                    Margin="0,0,0,20"
+                    />
+
+            <Button x:Name="HovedMenuFamilie"
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Center" 
+                    Height="100"  FontSize="28" 
+                    FontWeight="Bold" 
+                    Content="Familie" 
+                    Margin="0,0,0,20"
+                    />
+
+            <Button x:Name="HovedMenuVaccinationsKort" 
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Center" 
+                    Height="100"  FontSize="28" 
+                    FontWeight="Bold"
+                    Content="Vaccination's kort"
+                   ></Button>
+
+        </StackPanel>
+
+
+    </Grid>
+</Page>

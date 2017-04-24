@@ -8,6 +8,14 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Frame Name="MainPageFrame" Margin="0,0,0,48"></Frame>
+       
+        
+        <Button Name="MainPageHjem"
+                Content="&#xE80F;"
+                FontFamily="Segoe MDl2 Assets"
+                FontSize="36" VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                ></Button>
+        
     </Grid>
 </Page>
