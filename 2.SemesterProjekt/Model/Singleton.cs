@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using _2.SemesterProjekt.Persistency;
 
 namespace _2.SemesterProjekt.Model
 {
@@ -40,6 +41,21 @@ namespace _2.SemesterProjekt.Model
             //TODO: der skal lægges hent json ind her
         }
 
+        public void TilføjBarn(Barn g)
+        {
+            Barn.Add(g);
+        }
+
+        public void FjernBarn(Barn g)
+        {
+            Barn.Remove(g);
+            //TODO: PersistencyService.(opdaterbarnliste)(g); fra persistencyservice classen som kan opdatere tabellen med børn i
+        }
+
+        public void HentJson()
+        {
+           //TODO: barn = PersistencyService.(loadbarnfromjsonasync)();
+        }
 
 
 
