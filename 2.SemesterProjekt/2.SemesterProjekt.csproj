@@ -99,7 +99,6 @@
     <Compile Include="Handler\BarnHandler.cs" />
     <Compile Include="Handler\Notifikation.cs" />
     <Compile Include="Model\Barn.cs" />
-    <Compile Include="Model\Forældre.cs" />
     <Compile Include="Model\Singleton.cs" />
     <Compile Include="Persistency\PersistencyService.cs" />
     <Compile Include="Viewmodel\VaccAppViewModel.cs" />

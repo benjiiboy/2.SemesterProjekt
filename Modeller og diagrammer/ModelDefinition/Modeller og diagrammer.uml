@@ -27,24 +27,444 @@
         isAbstract="false"
         isLeaf="false"
         isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="076f9155-b047-4371-b335-70d077687f3a"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d36ad6d6-c87c-492d-a1b9-5ce3b0456420"
+                LastKnownName="Barn"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="261d7ef1-877c-4339-a057-21c29b4b3ab7"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="383d29fd-e28c-4ff8-92b1-1aa13c67fb85"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="ef287b82-0fca-4875-a81e-80fc12e8b187"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="a165641c-73bb-4a30-b685-b6f33bb20328"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="383d29fd-e28c-4ff8-92b1-1aa13c67fb85"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="4abc24d7-59d5-4194-92a1-cf035c37eed6"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Modeller og diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d36ad6d6-c87c-492d-a1b9-5ce3b0456420"
+                LastKnownName="Barn"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7dff9c82-1af0-494a-9bcc-ba29b82dcbe1"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="93d6e003-e62b-4897-85f5-21592dc0646c"
+                LastKnownName="Forældre"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ef287b82-0fca-4875-a81e-80fc12e8b187"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="d36ad6d6-c87c-492d-a1b9-5ce3b0456420"
+                LastKnownName="Barn"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="d806ab2c-b96b-41fd-a450-ff90feb6e117"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="15446cee-065e-4def-a5df-6cebdfbcd672"
+                LastKnownName="Notifikation"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="b3639fcc-006a-4354-828c-b1d185a63b31"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="8f455118-ea9b-4748-b067-930cf865f45f"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="f016b61a-cdce-4382-bebf-c1ef89e80faf"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e9e6c8cd-b1be-4ece-8287-7156ece9200c"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="8f455118-ea9b-4748-b067-930cf865f45f"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="bb713af3-7fda-495a-8fe3-49efc3dc0ccc"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Modeller og diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="15446cee-065e-4def-a5df-6cebdfbcd672"
+                LastKnownName="Notifikation"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a165641c-73bb-4a30-b685-b6f33bb20328"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="d36ad6d6-c87c-492d-a1b9-5ce3b0456420"
+                LastKnownName="Barn"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f016b61a-cdce-4382-bebf-c1ef89e80faf"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="15446cee-065e-4def-a5df-6cebdfbcd672"
+                LastKnownName="Notifikation"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="261d7ef1-877c-4339-a057-21c29b4b3ab7"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a7081e4b-a238-446f-b24d-af7bb073c7f2"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Modeller og diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d36ad6d6-c87c-492d-a1b9-5ce3b0456420"
+                LastKnownName="Barn"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="7c6d6841-9f12-4c30-ad77-b1ad01f16582"
+            name="BehaviorExecutionSpecification6">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="93d6e003-e62b-4897-85f5-21592dc0646c"
+                LastKnownName="Forældre"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="2f895fab-35b2-45de-a893-5d603c213611"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="c486b2ed-978f-4ed5-9fd0-dc32214a17f4"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="16ec9a5d-0ac0-4061-a81b-6932d44b430d"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="c486b2ed-978f-4ed5-9fd0-dc32214a17f4"
+            name="ExecutionOccurrenceSpecification11">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3a8827b4-1387-42f6-83e7-7494f62081b2"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Modeller og diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="93d6e003-e62b-4897-85f5-21592dc0646c"
+                LastKnownName="Forældre"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="16ec9a5d-0ac0-4061-a81b-6932d44b430d"
+            name="MessageOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="93d6e003-e62b-4897-85f5-21592dc0646c"
+                LastKnownName="Forældre"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e9e6c8cd-b1be-4ece-8287-7156ece9200c"
+            name="MessageOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="15446cee-065e-4def-a5df-6cebdfbcd672"
+                LastKnownName="Notifikation"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="2f895fab-35b2-45de-a893-5d603c213611"
+            name="ExecutionOccurrenceSpecification12">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ec18b167-9ef3-4b47-a1c6-9970690702a4"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Modeller og diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="93d6e003-e62b-4897-85f5-21592dc0646c"
+                LastKnownName="Forældre"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="b3639fcc-006a-4354-828c-b1d185a63b31"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f65587f2-969c-47b4-a9d4-7ef2ed88c009"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Modeller og diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="15446cee-065e-4def-a5df-6cebdfbcd672"
+                LastKnownName="Notifikation"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
         <lifelines>
           <lifeline
             Id="93d6e003-e62b-4897-85f5-21592dc0646c"
             name="Forældre"
             isActor="false"
-            lifelineDisplayName="Forældre" />
+            lifelineDisplayName="Forældre">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="7dff9c82-1af0-494a-9bcc-ba29b82dcbe1"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="c486b2ed-978f-4ed5-9fd0-dc32214a17f4"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2f895fab-35b2-45de-a893-5d603c213611"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </topLevelOccurrences>
+          </lifeline>
           <lifeline
             Id="d36ad6d6-c87c-492d-a1b9-5ce3b0456420"
             name="Barn"
             isActor="false"
-            lifelineDisplayName="Barn" />
+            lifelineDisplayName="Barn">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="383d29fd-e28c-4ff8-92b1-1aa13c67fb85"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="261d7ef1-877c-4339-a057-21c29b4b3ab7"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </topLevelOccurrences>
+          </lifeline>
           <lifeline
             Id="15446cee-065e-4def-a5df-6cebdfbcd672"
             name="Notifikation"
             isActor="false"
-            lifelineDisplayName="Notifikation" />
+            lifelineDisplayName="Notifikation">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="8f455118-ea9b-4748-b067-930cf865f45f"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="b3639fcc-006a-4354-828c-b1d185a63b31"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </topLevelOccurrences>
+          </lifeline>
         </lifelines>
+        <messages>
+          <message
+            Id="a7cb2d99-b0ad-48f7-8df0-b46f417a7342"
+            name="Oprettelse af barn"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7dff9c82-1af0-494a-9bcc-ba29b82dcbe1"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ef287b82-0fca-4875-a81e-80fc12e8b187"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5dd10482-0e41-4031-b616-dca5581cc259"
+            name="Tiden før en notifikation sættes"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a165641c-73bb-4a30-b685-b6f33bb20328"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f016b61a-cdce-4382-bebf-c1ef89e80faf"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="9fba3c04-afa9-44e3-a400-231e53cd0147"
+            name="Return&gt; Når tiden er inde sker modtagelsen af notifikationen"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e9e6c8cd-b1be-4ece-8287-7156ece9200c"
+                LastKnownName="MessageOccurrenceSpecification13"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="16ec9a5d-0ac0-4061-a81b-6932d44b430d"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
       </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="4abc24d7-59d5-4194-92a1-cf035c37eed6"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a7081e4b-a238-446f-b24d-af7bb073c7f2"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="bb713af3-7fda-495a-8fe3-49efc3dc0ccc"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f65587f2-969c-47b4-a9d4-7ef2ed88c009"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3a8827b4-1387-42f6-83e7-7494f62081b2"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ec18b167-9ef3-4b47-a1c6-9970690702a4"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="05334e67-8d96-4d44-9f74-c1508936b401"
+        name="Singleton"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="194074f1-7eb9-4903-97d7-6741d0366986"
+        LastKnownName="Model"
+        LastKnownLocation="Package_1257.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9c4378ee-2cff-482e-a8ef-4a712597c971"
+        LastKnownName="Handler"
+        LastKnownLocation="Package1_1257.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="922ffb75-cd02-4131-864d-0b348dc5426f"
+        LastKnownName="ViewModel"
+        LastKnownLocation="Package2_1257.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="fb5c724c-1bde-477c-9dda-1888816af145"
+        LastKnownName="Common"
+        LastKnownLocation="Package_1259.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

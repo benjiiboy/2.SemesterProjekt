@@ -8,6 +8,8 @@ namespace _2.SemesterProjekt.Model
 {
    public class Barn
     {
+        public int Id { get; set; }
+
         public int Fødselsdato { get; set; }
 
         public string Navn { get; set; }
