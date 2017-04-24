@@ -15,7 +15,7 @@
                 Content="&#xE80F;"
                 FontFamily="Segoe MDl2 Assets"
                 FontSize="36" VerticalAlignment="Bottom" HorizontalAlignment="Center"
-                ></Button>
+                Click="MainPageHjem_Click"></Button>
         
     </Grid>
 </Page>

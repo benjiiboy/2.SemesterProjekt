@@ -17,7 +17,7 @@
                       Width="250"></ListView>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Name="opretBarn"
-                        Click="opretBarn_Click">Opret</Button>
+                        >Opret</Button>
                 <Button Name="SletBarn" Margin="50,0,0,0">Slet</Button>
             </StackPanel>
             <Button HorizontalAlignment="Center" Margin="0,20,0,0">Se vaccinationskort</Button>

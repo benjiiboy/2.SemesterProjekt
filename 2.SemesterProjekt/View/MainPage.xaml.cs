@@ -44,5 +44,10 @@ namespace _2.SemesterProjekt
                 MainPageFrame.GoForward();
             }
         }
+
+        private void MainPageHjem_Click(object sender, RoutedEventArgs e)
+        {
+            MainPageFrame.Navigate(typeof(View.Menu));
+        }
     }
 }
