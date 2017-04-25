@@ -11,6 +11,7 @@ namespace _2.SemesterProjekt.Model
         public int ID { get; set; }
         public string Fornavn { get; set; }
         public string Efternavn { get; set; }
+        //husk år først altså fx 19921210 for 12 10 1992
         public int Fødselsdato { get; set; }
         public int TelefonNr { get; set; }
     }
