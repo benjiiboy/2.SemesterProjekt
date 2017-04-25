@@ -8,12 +8,10 @@ namespace _2.SemesterProjekt.Model
 {
    public class Barn
     {
-        public int Id { get; set; }
-
+        public int ID { get; set; }
+        public string BarnFornavn { get; set; }
+        public string BarnEfternavn { get; set; }
         public int Fødselsdato { get; set; }
-
-        public string ForNavn { get; set; }
-
-        public string EfterNavn { get; set; }
+        public int TelefonNr { get; set; }
     }
 }
