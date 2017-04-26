@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="356c5240-7299-4b14-b49b-df813e1abfb8" name="Domain Model" linkedPackageId="b18c3b85-2a7d-43d6-96f8-8797782ee16e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="5d7e9c3c-5d36-44d4-bae4-61c8a935ed3e" name="Model">
+        <elementDefinition Id="194074f1-7eb9-4903-97d7-6741d0366986" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="bf708012-b1cc-4fd6-bb26-849ded0576b4" name="Barn" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="38bbe8df-21e0-41cd-91a8-466f50174105" />
+              <targetEnds>
+                <association Id="6807a564-9c15-4efc-8386-24e5ae0176e5" isDerived="false" sourceEndRoleName="Barn" targetEndRoleName="Notifikation" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="4f2af48e-b325-4959-8886-9a66eaa1aec0" LastKnownName="Notifikation" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="d95cfa90-864e-4be9-b609-b7058a59e9c5" name="Barn" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <lowerValueInternal>
+                          <literalString Id="edfb62f9-a8cf-4dd6-93b7-3bb3965090d4" name="Lower" value="1">
+                            <elementDefinition Id="5de0079f-78cb-46c5-aa7d-d3dca5d62c2a" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="41b7fd99-c936-42ff-8828-129cec4e296f" name="Upper" value="1">
+                            <elementDefinition Id="f9a575be-9f69-4f9b-b177-9509e0bb3da6" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="7bba5769-69df-43f6-b812-0cdee31ed2c4" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7b39a74e-40b8-4f03-9144-04d34451cf91" name="Notifikation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <lowerValueInternal>
+                          <literalString Id="884c000d-e67e-4ede-9592-57c846b6bb78" name="Lower" value="1">
+                            <elementDefinition Id="303604ec-eab4-45e2-85ed-b21162be38b8" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="13e4ad45-4736-4a3f-ab86-345c21334419" name="Upper" value="*">
+                            <elementDefinition Id="282f9436-45ee-43b6-a3a1-ce793e9b870c" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="0a96b2c7-007e-40cf-9f46-052feedb48f3" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="e5edf8b4-dfe0-4027-93fb-0f0f1a5d48e9" />
+                </association>
+              </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="306ce906-e670-4851-bc0a-4119e84e45e6" name="Fødselssdato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8c996522-6f4d-4ff9-aaba-61570034f3b9" />
+                </property>
+                <property Id="c6f82bed-3fc5-48d3-92f9-4c52eefade92" name="Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="92373225-c8fc-42e4-bc4b-a15f80308784" />
+                </property>
+                <property Id="a479fa8b-f6bb-425b-b299-8c7e4f8bc820" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d523a0c0-894a-4443-8225-52f9a81f0dd9" />
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="36a269b7-5ed7-4029-8ff9-d693092cd904" name="Singleton" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="0d965ee9-aba4-461d-9ba8-2a2779a78567" />
+              <targetEnds>
+                <association Id="39fb0a0d-7c0e-4134-8efa-f11c83e96d14" isDerived="false" sourceEndRoleName="Singleton" targetEndRoleName="VaccAppViewModel" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="9afea6ac-6197-45c8-be19-8aafb6711e0c" LastKnownName="VaccAppViewModel" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a9a9a507-9f8d-4e03-95d9-9aea19630e53" name="Singleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="bdaafca4-238a-4b75-b8d2-ebbc7b303178" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="ff59f659-dbff-440d-bb46-8c15d8da1efa" name="VaccAppViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="e8803f39-2477-4dcc-8497-3f7ab38e6ec0" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="de6419d2-ea9b-4d18-a0ee-7c686a88144f" />
+                </association>
+              </targetEnds>
+              <ownedOperationsInternal>
+                <operation Id="7b56abd0-2653-404a-ab3a-4ec2eb72b27c" name="TilføjBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="658f7ccb-0733-430e-9540-93fdfd792df7" />
+                </operation>
+                <operation Id="c592fb54-2258-4fff-bd0d-b79917097927" name="FjernBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="ba07d0ef-1224-4c95-bb74-260aed3badeb" />
+                </operation>
+                <operation Id="968f8aed-ec5b-4c07-a52c-ac05c74e1c08" name="HentJson" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="e5459efd-c819-4bf4-8720-3274eee09cdb" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="c6f81831-596e-4b81-bea1-8b4530743d10" name="Handler">
+        <elementDefinition Id="9c4378ee-2cff-482e-a8ef-4a712597c971" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="4f2af48e-b325-4959-8886-9a66eaa1aec0" name="Notifikation" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="9e60562e-d0eb-416a-b86c-115929c972c8" />
+              <ownedAttributesInternal>
+                <property Id="f4fd9003-13c0-431a-a5f4-e1c3c8adbfcf" name="Push Notifikation" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4e196f34-dc64-47ca-b48b-898cbec63eaa" />
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="6f0e13a9-2bf7-4a67-bbdb-ed88f42f9a3c" name="BarnHandler" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="2998ac9b-44a6-4394-ac1c-170de964b61f" />
+              <targetEnds>
+                <association Id="f6fa49f1-2772-4056-9eb3-65620b26b01a" isDerived="false" sourceEndRoleName="BarnHandler" targetEndRoleName="Singleton" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="36a269b7-5ed7-4029-8ff9-d693092cd904" LastKnownName="Singleton" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="b5920873-3c32-4760-bb80-011dcd1466a1" name="BarnHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="287f766f-cfc4-472e-8ddd-7524f911f2b4" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="f23c6f58-06e9-47b8-9efa-2a6f1114cdd8" name="Singleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="426a19c8-cd0d-4926-9e83-028d3b8e0804" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="8f926bb3-1834-432b-83fc-134d9d8b21f3" />
+                </association>
+              </targetEnds>
+              <ownedOperationsInternal>
+                <operation Id="cef5be9d-6e84-46b5-8e89-8bdea7b240cf" name="SletBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="a4c0ba61-56ee-4eaa-885b-5ebacf8ed2ab" />
+                </operation>
+                <operation Id="95184a8c-4625-4c0b-b18e-fb0eacf33c81" name="OpretBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="02e56c24-b159-4da4-8923-dfc55176c020" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="1c00185c-0446-4e33-bf08-adafbf714a88" name="ViewModel">
+        <elementDefinition Id="922ffb75-cd02-4131-864d-0b348dc5426f" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="9afea6ac-6197-45c8-be19-8aafb6711e0c" name="VaccAppViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b34c92fb-6cba-41b6-9b8d-033cee59ae86" />
+              <ownedAttributesInternal>
+                <property Id="1d79e452-1ddf-4a54-8881-e1930c161831" name="SelectedBarn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e8ca75a1-c701-4956-a4a1-ddd6987b7afd" />
+                </property>
+              </ownedAttributesInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="72669b24-d24e-45c1-a1ae-98bc0eeb8a7e" name="Common">
+        <elementDefinition Id="fb5c724c-1bde-477c-9dda-1888816af145" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="b0260ddc-15bc-44c0-9fec-0065e4942132" name="RelayCommand" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="ce762f07-ff54-4a80-ae1f-a1622c6b1d33" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="b18c3b85-2a7d-43d6-96f8-8797782ee16e" name="Modeller og diagrammer">
+    <elementDefinition Id="7601ee2e-aac9-4ea4-99b1-8ff3250c0c10" />
+    <profileInstances>
+      <packageHasProfileInstances Id="4091b2e4-11ac-477d-94e0-114be2637ef7">
+        <profileInstance Id="f293b274-9c02-4605-9a82-b208303b059c" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="cfbda4a1-f4c6-4993-a340-d9762ee64b40">
+        <profileInstance Id="a0ad81bf-c71a-4f33-ac1a-91a9a0961903" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>
