@@ -49,5 +49,15 @@ namespace _2.SemesterProjekt
         {
             MainPageFrame.Navigate(typeof(View.Menu));
         }
+
+        private void TilbageKnap_Click(object sender, RoutedEventArgs e)
+        {
+            FrameGåTilbage();
+        }
+
+        private void FremKnap_Click(object sender, RoutedEventArgs e)
+        {
+            FrameGåFrem();
+        }
     }
 }

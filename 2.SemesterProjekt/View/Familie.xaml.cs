@@ -26,5 +26,10 @@ namespace _2.SemesterProjekt.View
         {
             this.InitializeComponent();
         }
+
+        private void opretBarn_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(OpretBarn));
+        }
     }
 }

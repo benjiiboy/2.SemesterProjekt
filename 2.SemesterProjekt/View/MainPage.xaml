@@ -8,14 +8,54 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Frame Name="MainPageFrame" Margin="0,0,0,48"></Frame>
-       
-        
-        <Button Name="MainPageHjem"
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+
+
+        <Frame Name="MainPageFrame" Grid.Row="0"></Frame>
+
+        <!--<Button Name="MainPageHjem"
                 Content="&#xE80F;"
                 FontFamily="Segoe MDl2 Assets"
-                FontSize="36" VerticalAlignment="Bottom" HorizontalAlignment="Center"
-                Click="MainPageHjem_Click"></Button>
-        
+                FontSize="36" VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Click="MainPageHjem_Click"
+                ></Button>-->
+
+        <RelativePanel Grid.Row="1" >
+            <Button Name="MainPageHjem"
+                Content="&#xE80F;"
+                FontFamily="Segoe MDl2 Assets"
+                FontSize="36" VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Click="MainPageHjem_Click"
+                    RelativePanel.AlignHorizontalCenterWithPanel="True"
+                ></Button>
+
+            <Button Name="TilbageKnap"
+                Content="&#xE0c4;"
+                FontFamily="Segoe MDl2 Assets"
+                FontSize="36" VerticalAlignment="Top"
+                HorizontalAlignment="Left" Height="48" Width="56"
+                    Click="TilbageKnap_Click"
+                    RelativePanel.AlignLeftWithPanel="True"
+                ></Button>
+
+            <Button Name="FremKnap"
+                Content="&#xE111;"
+                FontFamily="Segoe MDl2 Assets"
+                FontSize="36" VerticalAlignment="Top"
+                HorizontalAlignment="Left" Height="48" Width="56"
+                    Click="FremKnap_Click"
+                    RelativePanel.AlignRightWithPanel="True"
+                ></Button>
+        </RelativePanel>
+
+
     </Grid>
 </Page>

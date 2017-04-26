@@ -16,7 +16,7 @@
                       Height="350"
                       Width="250"></ListView>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Name="opretBarn"
+                <Button Name="opretBarn" Click="opretBarn_Click"
                         >Opret</Button>
                 <Button Name="SletBarn" Margin="50,0,0,0">Slet</Button>
             </StackPanel>

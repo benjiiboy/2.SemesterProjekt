@@ -18,6 +18,8 @@
                     FontSize="28" 
                     FontWeight="Bold" 
                     Margin="0,0,0,20"
+                    Click="HovedMenuWiki_Click"
+                    
                     />
 
             <Button x:Name="HovedMenuFamilie"
@@ -26,7 +28,8 @@
                     Height="100"  FontSize="28" 
                     FontWeight="Bold" 
                     Content="Familie" 
-                    Margin="0,0,0,20"
+                    Margin="0,0,0,20" 
+                    Click="HovedMenuFamilie_Click"
                     />
 
             <Button x:Name="HovedMenuVaccinationsKort" 
@@ -34,7 +37,7 @@
                     VerticalAlignment="Center" 
                     Height="100"  FontSize="28" 
                     FontWeight="Bold"
-                    Content="Vaccination's kort"
+                    Content="Vaccination's kort" 
                    ></Button>
 
         </StackPanel>

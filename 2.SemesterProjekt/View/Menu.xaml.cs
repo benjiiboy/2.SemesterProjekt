@@ -26,5 +26,17 @@ namespace _2.SemesterProjekt.View
         {
             this.InitializeComponent();
         }
+
+        private void HovedMenuFamilie_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Familie));
+        }
+
+        private void HovedMenuWiki_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Wiki));
+        }
+
+
     }
 }
