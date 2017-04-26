@@ -3,6 +3,12 @@
   dslVersion="1.0.0.0"
   Id="7601ee2e-aac9-4ea4-99b1-8ff3250c0c10"
   name="Modeller og diagrammer" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="eb4e8d8d-11c3-4858-b168-ffbe43e8a8c9">
+      <body>Der er ingen kobling imellem Viewmodel og view endnu</body>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -477,6 +483,12 @@
         Id="8bc3dee5-a69c-469c-ad73-5b1272bc226b"
         LastKnownName="Model"
         LastKnownLocation="Package_1422.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="0d407d90-1a42-41f0-9de0-8f2b566978dc"
+        LastKnownName="View"
+        LastKnownLocation="Package_1303.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="356c5240-7299-4b14-b49b-df813e1abfb8" name="Domain Model" linkedPackageId="b18c3b85-2a7d-43d6-96f8-8797782ee16e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="1f33c7c0-d04b-4b1e-9a9a-5460784bef3e">
+      <elementDefinition Id="eb4e8d8d-11c3-4858-b168-ffbe43e8a8c9" />
+      <body>Der er ingen kobling imellem Viewmodel og view endnu</body>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="5d7e9c3c-5d36-44d4-bae4-61c8a935ed3e" name="Model">
@@ -50,11 +56,17 @@
                 <property Id="306ce906-e670-4851-bc0a-4119e84e45e6" name="Fødselssdato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="8c996522-6f4d-4ff9-aaba-61570034f3b9" />
                 </property>
-                <property Id="c6f82bed-3fc5-48d3-92f9-4c52eefade92" name="Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="92373225-c8fc-42e4-bc4b-a15f80308784" />
-                </property>
-                <property Id="a479fa8b-f6bb-425b-b299-8c7e4f8bc820" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="a479fa8b-f6bb-425b-b299-8c7e4f8bc820" name="ID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="d523a0c0-894a-4443-8225-52f9a81f0dd9" />
+                </property>
+                <property Id="9e450ad8-5471-4a07-aeb2-21b9401556e8" name="Fornavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5c6baa13-fa67-41f1-81ac-a1d0cc01b8a0" />
+                </property>
+                <property Id="81b7e4ec-b272-43e0-a353-6ae91a623c55" name="Efternavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="38b2c85c-10f5-49de-92c8-29e76ed490d2" />
+                </property>
+                <property Id="c99c6a1a-514d-4985-862f-834bd4b423a0" name="TelefonNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="984b0a90-08bf-4133-ac60-563b11209ab2" />
                 </property>
               </ownedAttributesInternal>
             </class>
@@ -141,6 +153,16 @@
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="e9e131ba-40b1-4f6c-9ea4-b53dbceab7c4" name="VacSkema" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="20dab33d-778a-4547-9909-47d995fe29b4" />
+              <ownedOperationsInternal>
+                <operation Id="e7a01516-5a35-4ff7-9a83-4eb9fb5eaf06" name="Return vaccine navn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="4b1988a7-9248-4030-b7ea-7a072c1e293e" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
@@ -152,10 +174,27 @@
             <class Id="9afea6ac-6197-45c8-be19-8aafb6711e0c" name="VaccAppViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="b34c92fb-6cba-41b6-9b8d-033cee59ae86" />
               <ownedAttributesInternal>
-                <property Id="1d79e452-1ddf-4a54-8881-e1930c161831" name="SelectedBarn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="e8ca75a1-c701-4956-a4a1-ddd6987b7afd" />
+                <property Id="1023a72f-8e47-4aac-bc87-b2872be2a331" name="Singleton" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="01cec98f-df0b-49fd-aea0-0070734c26d1" />
+                </property>
+                <property Id="8dec58b8-8541-4ab0-8965-e69f1978bd77" name="int fødselsdato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="95d312e9-6b5d-441d-8662-21c6f8fd32f5" />
+                </property>
+                <property Id="14ba8a73-b616-410c-af67-f4e7b407b891" name="fornavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="721d3c8f-4205-487f-8738-c256dc8f787a" />
+                </property>
+                <property Id="4e044780-13fd-4a13-b480-5b35161bde49" name="efternavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dbfcdf24-0aad-4b2d-b192-adda88f6da25" />
+                </property>
+                <property Id="c7a86822-cd67-4e18-a2c7-fe74e4dccf56" name="selectedbarn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="36a16752-a659-4ce1-a255-0f99624b6e42" />
                 </property>
               </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="7144230e-e570-4d72-94df-8f397d411db5" name="Operation1" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="d447e2d9-805f-4e9c-b336-81b3d578d87e" />
+                </operation>
+              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
         </packagedElements>
@@ -168,6 +207,117 @@
           <packageHasNamedElement>
             <class Id="b0260ddc-15bc-44c0-9fec-0065e4942132" name="RelayCommand" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="ce762f07-ff54-4a80-ae1f-a1622c6b1d33" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="33238544-3713-472a-b03a-e90db9b81c1f" name="View">
+        <ownedCommentsInternal>
+          <comment Id="bfe9bc1a-9590-4be9-9ebe-5552c13b6d31">
+            <elementDefinition Id="93edb037-6129-43f7-9392-b6c76f04b035" />
+            <body>Der bliver tilføjet et
+vackort 
+som kan tilgås fra:
+Familie &amp; Menu</body>
+          </comment>
+        </ownedCommentsInternal>
+        <elementDefinition Id="0d407d90-1a42-41f0-9de0-8f2b566978dc" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="9d75c384-45b5-4bea-979b-a8dd1ff1d80b" name="MainPage" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="14c3aad1-5e25-4fca-a6f7-7a21404a83e7" />
+              <targetEnds>
+                <association Id="f261b07b-ca7f-46ba-bac2-56b86632002f" isDerived="false" sourceEndRoleName="MainPage" targetEndRoleName="Menu" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="7bf59c0c-a280-4b5e-8ce3-025c4b762351" LastKnownName="Menu" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="9e15ec87-c786-4cfe-8a4e-b2201c52a3a9" name="MainPage" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="43cd0647-a1b7-4f5f-b746-379183b3827a" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="40ffdfb4-b8db-48da-8d9a-fb680355f0be" name="Menu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="d07edd84-e150-43d9-88b7-324c7578d2f6" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="d61ab213-b344-4cc6-955b-783ae3fd5cad" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="7bf59c0c-a280-4b5e-8ce3-025c4b762351" name="Menu" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="aa51c6c3-290c-4406-b354-a8750a758e73" />
+              <targetEnds>
+                <association Id="a765ee2f-f838-46fd-b4d1-b6f41cc92d56" isDerived="false" sourceEndRoleName="Menu" targetEndRoleName="Familie" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="bfc67be1-b4f3-46cc-9658-0a5455d1fcf0" LastKnownName="Familie" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="880313a3-aab2-4064-af93-5c828cb876dd" name="Menu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="a6daaa6b-0c94-47c2-bba2-2848f40a00f4" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="c8f76b95-0787-47ee-a7ac-c79c8759e025" name="Familie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="0553d050-fc80-4d51-90dc-2605a343e4d2" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="41df5613-d945-4b07-a816-f1b6c9157b00" />
+                </association>
+                <association Id="81fb2e3f-e22a-493e-b425-aa0390c4276d" isDerived="false" sourceEndRoleName="Menu" targetEndRoleName="Wiki" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="1ae0f355-ff60-445d-a323-37a1bf06aa2b" LastKnownName="Wiki" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="2d458dac-6468-4d31-bd35-426e5c7c07c2" name="Menu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="2ff6376c-ad95-4c74-bc59-d490a2a22831" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="5f2e3873-f2fa-4e7e-b218-629a0a19323d" name="Wiki" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="5ea32420-349e-4dba-b6f9-a576e33fb659" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="16b3f48b-2f06-4efa-b5ec-f939ce4b8e43" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="bfc67be1-b4f3-46cc-9658-0a5455d1fcf0" name="Familie" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="a4971c61-7ca9-4544-b4b2-6b57985882e8" />
+              <targetEnds>
+                <association Id="df58a077-357d-4434-b283-55f865d80643" isDerived="false" sourceEndRoleName="Familie" targetEndRoleName="opret barn" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="683e6828-7139-49ac-9a44-b48613bbce48" LastKnownName="opret barn" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="882e6f7c-7744-4899-a25e-8798a6da1bfb" name="Familie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="ed508a85-f7e7-40b5-9ca6-15705fd34c60" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="8f88419f-4b37-4b2a-b839-80e0b552b675" name="opret barn" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="f09ad307-9bda-4af0-b87d-9ece6eca4949" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="6970f1a4-ac19-4349-a46b-8128722878a6" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="1ae0f355-ff60-445d-a323-37a1bf06aa2b" name="Wiki" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="ec1afff8-8cee-43cc-b5e7-f240888baa75" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="683e6828-7139-49ac-9a44-b48613bbce48" name="opret barn" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="fa157ac0-17f5-41d9-b8ab-bb79f05e8cfc" />
             </class>
           </packageHasNamedElement>
         </packagedElements>

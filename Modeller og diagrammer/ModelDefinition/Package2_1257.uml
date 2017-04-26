@@ -13,8 +13,52 @@
         isActiveClass="false">
         <ownedAttributesInternal>
           <property
-            Id="e8ca75a1-c701-4956-a4a1-ddd6987b7afd"
-            name="SelectedBarn"
+            Id="01cec98f-df0b-49fd-aea0-0070734c26d1"
+            name="Singleton"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="95d312e9-6b5d-441d-8662-21c6f8fd32f5"
+            name="int fødselsdato"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="721d3c8f-4205-487f-8738-c256dc8f787a"
+            name="fornavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="dbfcdf24-0aad-4b2d-b192-adda88f6da25"
+            name="efternavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="36a16752-a659-4ce1-a255-0f99624b6e42"
+            name="selectedbarn"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -24,6 +68,16 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d447e2d9-805f-4e9c-b336-81b3d578d87e"
+            name="Operation1"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
   </packagedElements>

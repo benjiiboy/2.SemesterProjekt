@@ -91,8 +91,8 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="92373225-c8fc-42e4-bc4b-a15f80308784"
-            name="Navn"
+            Id="d523a0c0-894a-4443-8225-52f9a81f0dd9"
+            name="ID"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -102,8 +102,30 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="d523a0c0-894a-4443-8225-52f9a81f0dd9"
-            name="Id"
+            Id="5c6baa13-fa67-41f1-81ac-a1d0cc01b8a0"
+            name="Fornavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="38b2c85c-10f5-49de-92c8-29e76ed490d2"
+            name="Efternavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="984b0a90-08bf-4133-ac60-563b11209ab2"
+            name="TelefonNr"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"

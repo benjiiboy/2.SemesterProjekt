@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="0d407d90-1a42-41f0-9de0-8f2b566978dc"
+  name="View" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="93edb037-6129-43f7-9392-b6c76f04b035">
+      <body>Der bliver tilføjet et
+vackort 
+som kan tilgås fra:
+Familie &amp; Menu</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="14c3aad1-5e25-4fca-a6f7-7a21404a83e7"
+        name="MainPage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="d61ab213-b344-4cc6-955b-783ae3fd5cad"
+            isDerived="false"
+            sourceEndRoleName="MainPage"
+            targetEndRoleName="Menu"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="aa51c6c3-290c-4406-b354-a8750a758e73"
+              LastKnownName="Menu"
+              LastKnownLocation="Package_1303.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="43cd0647-a1b7-4f5f-b746-379183b3827a"
+                  name="MainPage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d07edd84-e150-43d9-88b7-324c7578d2f6"
+                  name="Menu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="aa51c6c3-290c-4406-b354-a8750a758e73"
+        name="Menu"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="41df5613-d945-4b07-a816-f1b6c9157b00"
+            isDerived="false"
+            sourceEndRoleName="Menu"
+            targetEndRoleName="Familie"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a4971c61-7ca9-4544-b4b2-6b57985882e8"
+              LastKnownName="Familie"
+              LastKnownLocation="Package_1303.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a6daaa6b-0c94-47c2-bba2-2848f40a00f4"
+                  name="Menu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0553d050-fc80-4d51-90dc-2605a343e4d2"
+                  name="Familie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="16b3f48b-2f06-4efa-b5ec-f939ce4b8e43"
+            isDerived="false"
+            sourceEndRoleName="Menu"
+            targetEndRoleName="Wiki"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ec1afff8-8cee-43cc-b5e7-f240888baa75"
+              LastKnownName="Wiki"
+              LastKnownLocation="Package_1303.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2ff6376c-ad95-4c74-bc59-d490a2a22831"
+                  name="Menu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5ea32420-349e-4dba-b6f9-a576e33fb659"
+                  name="Wiki"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a4971c61-7ca9-4544-b4b2-6b57985882e8"
+        name="Familie"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="6970f1a4-ac19-4349-a46b-8128722878a6"
+            isDerived="false"
+            sourceEndRoleName="Familie"
+            targetEndRoleName="opret barn"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fa157ac0-17f5-41d9-b8ab-bb79f05e8cfc"
+              LastKnownName="opret barn"
+              LastKnownLocation="Package_1303.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ed508a85-f7e7-40b5-9ca6-15705fd34c60"
+                  name="Familie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f09ad307-9bda-4af0-b87d-9ece6eca4949"
+                  name="opret barn"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ec1afff8-8cee-43cc-b5e7-f240888baa75"
+        name="Wiki"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fa157ac0-17f5-41d9-b8ab-bb79f05e8cfc"
+        name="opret barn"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fa8c7a42-1eba-4c5d-8d3b-0866d6ebede1"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c8f5d268-7504-49d2-b968-bcf6dbe8eeaf"
+        LastKnownName="Package1"
+        LastKnownLocation="Package_1308.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
