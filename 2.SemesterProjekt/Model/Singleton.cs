@@ -12,12 +12,12 @@ namespace _2.SemesterProjekt.Model
     {
 
 
-        private ObservableCollection<Barn> barn;
+        private ObservableCollection<Barn> børn;
 
-        public  ObservableCollection<Barn> Barn
+        public  ObservableCollection<Barn> Børn
         {
-            get { return barn; }
-            set { barn = value; }
+            get { return børn; }
+            set { børn = value; }
         }
 
         private static Singleton vaccAppSingleton;
@@ -37,18 +37,18 @@ namespace _2.SemesterProjekt.Model
         /*CTOR*/
         public Singleton()
         {
-            Barn = new ObservableCollection<Barn>();
+            Børn = new ObservableCollection<Barn>();
             //TODO: der skal lægges hent json ind her
         }
 
         public void TilføjBarn(Barn g)
         {
-            Barn.Add(g);
+            Børn.Add(g);
         }
 
         public void FjernBarn(Barn g)
         {
-            Barn.Remove(g);
+            Børn.Remove(g);
             //TODO: PersistencyService.(opdaterbarnliste)(g); fra persistencyservice classen som kan opdatere tabellen med børn i
         }
 
