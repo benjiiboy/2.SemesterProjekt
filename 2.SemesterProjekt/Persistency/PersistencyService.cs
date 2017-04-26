@@ -8,5 +8,6 @@ namespace _2.SemesterProjekt.Persistency
 {
    public class PersistencyService
     {
+
     }
 }
