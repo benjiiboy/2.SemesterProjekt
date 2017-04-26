@@ -15,7 +15,7 @@
             <TextBlock>Skriv efternavn:</TextBlock>
             <TextBox Name="OpretBarnEfternavn"></TextBox>
             <TextBlock>Fødselsdag:</TextBlock>
-            <TextBox Name="OpretbarnFødselsdag"></TextBox>
+            <TextBox Name="OpretbarnFødselsdag" PlaceholderText="Skriv år først fx: 19921210"></TextBox>
             <Button Margin="0,5,0,0">Opret</Button>
         </StackPanel>
         
