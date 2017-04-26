@@ -8,24 +8,52 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Image Source="ms-appx:///Assets/vaccine.jpg" 
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Visibility="Visible">
+            <StackPanel >
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="ms-appx:///Assets/vaccine.jpg" 
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
                    Width="150"/>
-                <TextBlock VerticalAlignment="Center" FontSize="25" Margin="15,0,0,0" FontWeight="Bold"> Lorem Ipsum</TextBlock>
-            </StackPanel>
-            <TextBlock TextWrapping="WrapWholeWords">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies est tempus metus accumsan fermentum. Aliquam iaculis magna in mauris suscipit accumsan. Donec et ipsum eget metus sollicitudin mollis lacinia vitae ipsum. Proin ultricies efficitur arcu, non laoreet purus interdum id. Pellentesque porttitor malesuada justo a hendrerit. Etiam sit amet mauris porttitor, elementum dui id, porttitor nisi. Curabitur justo libero, gravida non sem vitae, iaculis facilisis nunc.</TextBlock>
-            <StackPanel Orientation="Horizontal">
-                <Image 
+                    <TextBlock VerticalAlignment="Center" FontSize="25" Margin="15,0,0,0" FontWeight="Bold"> Lorem Ipsum</TextBlock>
+                </StackPanel>
+                <TextBlock TextWrapping="WrapWholeWords">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies est tempus metus accumsan fermentum. Aliquam iaculis magna in mauris suscipit accumsan. Donec et ipsum eget metus sollicitudin mollis lacinia vitae ipsum. Proin ultricies efficitur arcu, non laoreet purus interdum id. Pellentesque porttitor malesuada justo a hendrerit. Etiam sit amet mauris porttitor, elementum dui id, porttitor nisi. Curabitur justo libero, gravida non sem vitae, iaculis facilisis nunc.</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="ms-appx:///Assets/vaccine.jpg" 
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
-                   Width="150" Source="ms-appx:///Assets/vaccine.jpg"/>
-                <TextBlock VerticalAlignment="Center" FontSize="25" Margin="15,0,0,0" FontWeight="Bold"> Lorem Ipsum</TextBlock>
-            </StackPanel>
-            <TextBlock TextWrapping="WrapWholeWords">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies est tempus metus accumsan fermentum. Aliquam iaculis magna in mauris suscipit accumsan. Donec et ipsum eget metus sollicitudin mollis lacinia vitae ipsum. Proin ultricies efficitur arcu, non laoreet purus interdum id. Pellentesque porttitor malesuada justo a hendrerit. Etiam sit amet mauris porttitor, elementum dui id, porttitor nisi. Curabitur justo libero, gravida non sem vitae, iaculis facilisis nunc.</TextBlock>
+                   Width="150"/>
+                    <TextBlock VerticalAlignment="Center" FontSize="25" Margin="15,0,0,0" FontWeight="Bold"> Lorem Ipsum</TextBlock>
+                </StackPanel>
+                <TextBlock TextWrapping="WrapWholeWords">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies est tempus metus accumsan fermentum. Aliquam iaculis magna in mauris suscipit accumsan. Donec et ipsum eget metus sollicitudin mollis lacinia vitae ipsum. Proin ultricies efficitur arcu, non laoreet purus interdum id. Pellentesque porttitor malesuada justo a hendrerit. Etiam sit amet mauris porttitor, elementum dui id, porttitor nisi. Curabitur justo libero, gravida non sem vitae, iaculis facilisis nunc.</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="ms-appx:///Assets/vaccine.jpg" 
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Width="150"/>
+                    <TextBlock VerticalAlignment="Center" FontSize="25" Margin="15,0,0,0" FontWeight="Bold"> Lorem Ipsum</TextBlock>
+                </StackPanel>
+                <TextBlock TextWrapping="WrapWholeWords">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies est tempus metus accumsan fermentum. Aliquam iaculis magna in mauris suscipit accumsan. Donec et ipsum eget metus sollicitudin mollis lacinia vitae ipsum. Proin ultricies efficitur arcu, non laoreet purus interdum id. Pellentesque porttitor malesuada justo a hendrerit. Etiam sit amet mauris porttitor, elementum dui id, porttitor nisi. Curabitur justo libero, gravida non sem vitae, iaculis facilisis nunc.</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="ms-appx:///Assets/vaccine.jpg" 
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Width="150"/>
+                    <TextBlock VerticalAlignment="Center" FontSize="25" Margin="15,0,0,0" FontWeight="Bold"> Lorem Ipsum</TextBlock>
+                </StackPanel>
+                <TextBlock TextWrapping="WrapWholeWords">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies est tempus metus accumsan fermentum. Aliquam iaculis magna in mauris suscipit accumsan. Donec et ipsum eget metus sollicitudin mollis lacinia vitae ipsum. Proin ultricies efficitur arcu, non laoreet purus interdum id. Pellentesque porttitor malesuada justo a hendrerit. Etiam sit amet mauris porttitor, elementum dui id, porttitor nisi. Curabitur justo libero, gravida non sem vitae, iaculis facilisis nunc.</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="ms-appx:///Assets/vaccine.jpg" 
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Width="150"/>
+                    <TextBlock VerticalAlignment="Center" FontSize="25" Margin="15,0,0,0" FontWeight="Bold"> Lorem Ipsum</TextBlock>
+                </StackPanel>
+                <TextBlock TextWrapping="WrapWholeWords">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies est tempus metus accumsan fermentum. Aliquam iaculis magna in mauris suscipit accumsan. Donec et ipsum eget metus sollicitudin mollis lacinia vitae ipsum. Proin ultricies efficitur arcu, non laoreet purus interdum id. Pellentesque porttitor malesuada justo a hendrerit. Etiam sit amet mauris porttitor, elementum dui id, porttitor nisi. Curabitur justo libero, gravida non sem vitae, iaculis facilisis nunc.</TextBlock>
 
-        </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        
     </Grid>
 </Page>
