@@ -37,7 +37,7 @@ namespace _2.SemesterProjekt.Persistency
                 }
                 catch (Exception e)
                 {
-                    MessageDialog BarnAdded = new MessageDialog("Dit barn blev ikke tilføjet");
+                    MessageDialog BarnAdded = new MessageDialog("Fejl, barn blev ikke tilføjet" + e);
                     BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
                     BarnAdded.ShowAsync().AsTask();
                     throw;
@@ -55,11 +55,48 @@ namespace _2.SemesterProjekt.Persistency
 
                 if (response.IsSuccessStatusCode)
                 {
-                    var BørnList = response.Content.ReadAsAsync
+                    var BørnList = response.Content.ReadAsAsync<ObservableCollection<Barn>>().Result;
+
+                    return BørnList;
                 }
 
-
+                return null;
             }
         }
+
+        public static void DeleteBarn(Barn DeleteBarn)
+        {
+            using (var Client = new HttpClient())
+            {
+                Client.BaseAddress = new Uri(serverUrl);
+                string urlString = "api/børn/" + DeleteBarn.ID;
+                try
+                {
+                    var response = Client.DeleteAsync(urlString).Result;
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageDialog BarnDeleted = new MessageDialog("Dit barn blev slettet");
+                        BarnDeleted.Commands.Add(new UICommand { Label = "Ok" });
+                        BarnDeleted.ShowAsync().AsTask();
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageDialog Error = new MessageDialog("Fejl, barn blev ikke slettet" + e);
+                    Error.Commands.Add(new UICommand { Label = "Ok" });
+                    Error.ShowAsync().AsTask();
+                }
+            }
+        }
+        public static void PutBarn(Barn PutBarn)
+        {
+            using (var Client = new HttpClient())
+            {
+                Client.BaseAddress = new Uri(serverUrl);
+                Client.DefaultRequestHeaders.Clear();
+            }
+        }
+            
+        }
     }
-}
+
