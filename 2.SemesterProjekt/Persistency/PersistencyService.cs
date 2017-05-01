@@ -96,7 +96,34 @@ namespace _2.SemesterProjekt.Persistency
                 Client.DefaultRequestHeaders.Clear();
             }
         }
-            
+        public static void PutGuest(Barn PutBarn)
+        {
+            using (var Client = new HttpClient())
+            {
+                Client.BaseAddress = new Uri(serverUrl);
+                Client.DefaultRequestHeaders.Clear();
+                Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                string urlString = "api/børn/" + PutBarn.ID;
+
+                try
+                {
+                    var response = Client.PutAsJsonAsync(urlString, PutBarn).Result;
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageDialog GuestUpdated = new MessageDialog("Barn opdateret");
+                        GuestUpdated.Commands.Add(new UICommand { Label = "Ok" });
+                        GuestUpdated.ShowAsync().AsTask();
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageDialog Error = new MessageDialog("Fejl, barn blev IKKE opdateret" + e);
+                    Error.Commands.Add(new UICommand { Label = "Ok" });
+                    Error.ShowAsync().AsTask();
+                }
+            }
         }
+    }
     }
 
