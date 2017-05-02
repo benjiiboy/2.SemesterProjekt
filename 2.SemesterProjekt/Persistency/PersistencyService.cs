@@ -11,10 +11,10 @@ using _2.SemesterProjekt.Model;
 
 namespace _2.SemesterProjekt.Persistency
 {
-   public class PersistencyService
+    public class PersistencyService
     {
         const string serverUrl = "http://vaccappws.azurewebsites.net/";
-        
+
 
         public static void PostBarn(Barn PostBarn)
         {
@@ -125,5 +125,4 @@ namespace _2.SemesterProjekt.Persistency
             }
         }
     }
-    }
-
+}
