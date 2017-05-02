@@ -89,15 +89,8 @@ namespace _2.SemesterProjekt.Persistency
                 }
             }
         }
+
         public static void PutBarn(Barn PutBarn)
-        {
-            using (var Client = new HttpClient())
-            {
-                Client.BaseAddress = new Uri(serverUrl);
-                Client.DefaultRequestHeaders.Clear();
-            }
-        }
-        public static void PutGuest(Barn PutBarn)
         {
             using (var Client = new HttpClient())
             {
@@ -112,9 +105,9 @@ namespace _2.SemesterProjekt.Persistency
                     var response = Client.PutAsJsonAsync(urlString, PutBarn).Result;
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageDialog GuestUpdated = new MessageDialog("Barn opdateret");
-                        GuestUpdated.Commands.Add(new UICommand { Label = "Ok" });
-                        GuestUpdated.ShowAsync().AsTask();
+                        MessageDialog BarnUpdated = new MessageDialog("Barn opdateret");
+                        BarnUpdated.Commands.Add(new UICommand { Label = "Ok" });
+                        BarnUpdated.ShowAsync().AsTask();
                     }
                 }
                 catch (Exception e)
