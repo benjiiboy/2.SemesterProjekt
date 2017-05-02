@@ -36,17 +36,16 @@ namespace _2.SemesterProjekt.Viewmodel
             set { efternavn = value; }
         }
 
+        #region Selectedbarn metode
         /*Valgte barn*/
         private Barn selectedbarn;
-
-        
 
         public Barn SelectedBarn
         {
             get { return selectedbarn; }
             set { selectedbarn = value; OnPropertyChanged(nameof(SelectedBarn)); }
         }
-
+        #endregion 
         #region propertycahnged
         public event PropertyChangedEventHandler PropertyChanged;
 
