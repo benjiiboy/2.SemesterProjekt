@@ -14,6 +14,7 @@ namespace _2.SemesterProjekt.Persistency
     public class PersistencyService
     {
         const string serverUrl = "http://vaccappws.azurewebsites.net/";
+        const string apibørn = "api/børn/";
 
 
         public static void PostBarn(Barn PostBarn)
@@ -26,7 +27,7 @@ namespace _2.SemesterProjekt.Persistency
 
                 try
                 {
-                    var response = Client.PostAsJsonAsync("api/børn/", PostBarn).Result;
+                    var response = Client.PostAsJsonAsync(apibørn, PostBarn).Result;
 
                     if (response.IsSuccessStatusCode)
                     {
@@ -51,7 +52,7 @@ namespace _2.SemesterProjekt.Persistency
             using (var Client = new HttpClient())
             {
                 Client.BaseAddress = new Uri(serverUrl);
-                var response = Client.GetAsync("api/børn/").Result;
+                var response = Client.GetAsync(apibørn).Result;
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -69,7 +70,7 @@ namespace _2.SemesterProjekt.Persistency
             using (var Client = new HttpClient())
             {
                 Client.BaseAddress = new Uri(serverUrl);
-                string urlString = "api/børn/" + DeleteBarn.ID;
+                string urlString = apibørn + DeleteBarn.ID;
                 try
                 {
                     var response = Client.DeleteAsync(urlString).Result;
@@ -104,7 +105,7 @@ namespace _2.SemesterProjekt.Persistency
                 Client.DefaultRequestHeaders.Clear();
                 Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                string urlString = "api/børn/" + PutBarn.ID;
+                string urlString = apibørn + PutBarn.ID;
 
                 try
                 {
