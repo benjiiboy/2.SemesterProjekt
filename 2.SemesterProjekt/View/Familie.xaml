@@ -17,9 +17,9 @@
                       BorderBrush="Black"
                       BorderThickness="0.5"
                       Height="350"
-                      Width="250">
+                      Width="250" ItemsSource="{Binding VisMitBarn, Mode=TwoWay}">
                 <ListView.DataContext>
-                    <Viewmodel:VaccAppViewModel/>
+                    <Viewmodel:FamilieViewModel/>
                 </ListView.DataContext>
             </ListView>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
