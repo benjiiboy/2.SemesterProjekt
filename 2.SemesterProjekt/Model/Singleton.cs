@@ -14,7 +14,7 @@ namespace _2.SemesterProjekt.Model
 
         private ObservableCollection<Barn> børn;
 
-        public  ObservableCollection<Barn> Børn
+        public ObservableCollection<Barn> Børn
         {
             get { return børn; }
             set { børn = value; }
@@ -38,7 +38,7 @@ namespace _2.SemesterProjekt.Model
         public Singleton()
         {
             Børn = new ObservableCollection<Barn>();
-            //TODO: der skal lægges hent json ind her
+            hent();
         }
 
         public void TilføjBarn(Barn g)
@@ -57,6 +57,15 @@ namespace _2.SemesterProjekt.Model
            //TODO: barn = PersistencyService.(loadbarnfromjsonasync)();
         }
 
+
+
+
+        //test
+
+        public void hent()
+        {
+            Børn = PersistencyService.GetBarn();
+        }
 
 
 

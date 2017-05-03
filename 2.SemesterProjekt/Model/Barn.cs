@@ -14,5 +14,13 @@ namespace _2.SemesterProjekt.Model
         //husk år først altså fx 19921210 for 12 10 1992
         public int Fødselsdato { get; set; }
         public int TelefonNr { get; set; }
+
+        public override string ToString()
+        {
+            return $"{ID} {Fornavn} {Efternavn}";
+        }
+
     }
+
+    
 }
