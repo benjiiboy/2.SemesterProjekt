@@ -19,66 +19,34 @@ namespace _2.SemesterProjekt.Persistency
 
         public static void PostBarn(Barn PostBarn)
         {
-            using (var client = new HttpClient())
+
+            using (var Client = new HttpClient())
             {
-                client.BaseAddress = new Uri(serverUrl);
-                client.DefaultRequestHeaders.Clear();
+                Client.BaseAddress = new Uri(serverUrl);
+                Client.DefaultRequestHeaders.Clear();
+                Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 try
                 {
-                    var response = client.PostAsJsonAsync<Barn>("api/børn", PostBarn).Result;
+                    var response = Client.PostAsJsonAsync(apibørn, PostBarn).Result;
+
                     if (response.IsSuccessStatusCode)
                     {
-                        ShowMessage("Du har oprettet en ny guest");
-                    }
-                    else
-                    {
-                        ShowMessage("FEJL, Guest blev ikke oprettet: " + response.StatusCode);
+                        MessageDialog BarnAdded = new MessageDialog("Dit barn blev tilføjet");
+                        BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
+                        BarnAdded.ShowAsync().AsTask();
                     }
                 }
                 catch (Exception e)
                 {
-
-                    ShowMessage("Der er sket en fejl: " + e.Message);
+                    MessageDialog BarnAdded = new MessageDialog("Fejl, barn blev ikke tilføjet" + e);
+                    BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
+                    BarnAdded.ShowAsync().AsTask();
+                    throw;
                 }
+
             }
         }
-
-        public static async void ShowMessage(string content)
-        {
-            MessageDialog messageDialog = new MessageDialog(content);
-            await messageDialog.ShowAsync();
-        } 
-            
-            //{
-
-            //using (var Client = new HttpClient())
-            //{
-            //    Client.BaseAddress = new Uri(serverUrl);
-            //    Client.DefaultRequestHeaders.Clear();
-            //    Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-            //    try
-            //    {
-            //        var response = Client.PostAsJsonAsync(apibørn, PostBarn).Result;
-
-            //        if (response.IsSuccessStatusCode)
-            //        {
-            //            MessageDialog BarnAdded = new MessageDialog("Dit barn blev tilføjet");
-            //            BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
-            //            BarnAdded.ShowAsync().AsTask();
-            //        }
-            //    }
-        //        catch (Exception e)
-        //        {
-        //            MessageDialog BarnAdded = new MessageDialog("Fejl, barn blev ikke tilføjet" + e);
-        //            BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
-        //            BarnAdded.ShowAsync().AsTask();
-        //            throw;
-        //        }
-
-        //    }
-        //}
 
         public static ObservableCollection<Barn> GetBarn()
         {
