@@ -19,39 +19,73 @@ namespace _2.SemesterProjekt.Persistency
 
         public static void PostBarn(Barn PostBarn)
         {
-            using (var Client = new HttpClient())
+            using (var client = new HttpClient())
             {
-                Client.BaseAddress = new Uri(serverUrl);
-                Client.DefaultRequestHeaders.Clear();
-                Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.BaseAddress = new Uri(serverUrl);
+                client.DefaultRequestHeaders.Clear();
 
                 try
                 {
-                    var response = Client.PostAsJsonAsync(apibørn, PostBarn).Result;
-
+                    var response = client.PostAsJsonAsync<Barn>("api/børn", PostBarn).Result;
                     if (response.IsSuccessStatusCode)
                     {
-                        MessageDialog BarnAdded = new MessageDialog("Dit barn blev tilføjet");
-                        BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
-                        BarnAdded.ShowAsync().AsTask();
+                        ShowMessage("Du har oprettet en ny guest");
+                    }
+                    else
+                    {
+                        ShowMessage("FEJL, Guest blev ikke oprettet: " + response.StatusCode);
                     }
                 }
                 catch (Exception e)
                 {
-                    MessageDialog BarnAdded = new MessageDialog("Fejl, barn blev ikke tilføjet" + e);
-                    BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
-                    BarnAdded.ShowAsync().AsTask();
-                    throw;
-                }
 
+                    ShowMessage("Der er sket en fejl: " + e.Message);
+                }
             }
         }
+
+        public static async void ShowMessage(string content)
+        {
+            MessageDialog messageDialog = new MessageDialog(content);
+            await messageDialog.ShowAsync();
+        } 
+            
+            //{
+
+            //using (var Client = new HttpClient())
+            //{
+            //    Client.BaseAddress = new Uri(serverUrl);
+            //    Client.DefaultRequestHeaders.Clear();
+            //    Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            //    try
+            //    {
+            //        var response = Client.PostAsJsonAsync(apibørn, PostBarn).Result;
+
+            //        if (response.IsSuccessStatusCode)
+            //        {
+            //            MessageDialog BarnAdded = new MessageDialog("Dit barn blev tilføjet");
+            //            BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
+            //            BarnAdded.ShowAsync().AsTask();
+            //        }
+            //    }
+        //        catch (Exception e)
+        //        {
+        //            MessageDialog BarnAdded = new MessageDialog("Fejl, barn blev ikke tilføjet" + e);
+        //            BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
+        //            BarnAdded.ShowAsync().AsTask();
+        //            throw;
+        //        }
+
+        //    }
+        //}
 
         public static ObservableCollection<Barn> GetBarn()
         {
             using (var Client = new HttpClient())
             {
                 Client.BaseAddress = new Uri(serverUrl);
+                Client.DefaultRequestHeaders.Clear();
                 var response = Client.GetAsync(apibørn).Result;
 
                 if (response.IsSuccessStatusCode)
@@ -70,6 +104,7 @@ namespace _2.SemesterProjekt.Persistency
             using (var Client = new HttpClient())
             {
                 Client.BaseAddress = new Uri(serverUrl);
+                Client.DefaultRequestHeaders.Clear();
                 string urlString = apibørn + DeleteBarn.ID;
                 try
                 {

@@ -32,7 +32,7 @@
                 <Run Text="Fødselsdag:"/>
             </TextBlock>
             <TextBox x:Name="OpretbarnFødselsdag" PlaceholderText="YYYYDDMM" Text="{Binding Fødselsdato, Converter={StaticResource IntToString}, Mode=TwoWay}"/>
-            <Button Margin="0,5,0,0" Content="Opret"/>
+            <Button Margin="0,5,0,0" Content="Opret" Command="{Binding OpretBarnCommand}"/>
         </StackPanel>
 
     </Grid>

@@ -41,14 +41,16 @@ namespace _2.SemesterProjekt.Model
             hent();
         }
 
-        public void TilføjBarn(Barn g)
+        public void TilføjBarn(Barn b)
         {
-            Børn.Add(g);
+            Børn.Add(b);
         }
 
-        public void FjernBarn(Barn g)
+        public void FjernBarn(Barn b)
         {
-            Børn.Remove(g);
+            Børn.Remove(b);
+            PersistencyService.PutBarn(b);
+
             //TODO: PersistencyService.(opdaterbarnliste)(g); fra persistencyservice classen som kan opdatere tabellen med børn i
         }
 

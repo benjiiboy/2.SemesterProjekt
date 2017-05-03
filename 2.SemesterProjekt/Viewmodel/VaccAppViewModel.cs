@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using _2.SemesterProjekt.Model;
 using System.ComponentModel;
+using System.Windows.Input;
+using _2.SemesterProjekt.Common;
 
 namespace _2.SemesterProjekt.Viewmodel
 {
@@ -61,6 +63,15 @@ namespace _2.SemesterProjekt.Viewmodel
 
         //TODO: Mangler at implenmtere Commands til knapper
 
+        private ICommand opretBarnCommand;
+        
+        public ICommand OpretBarnCommand
+        {
+            get { return opretBarnCommand; }
+            set { opretBarnCommand = value; }
+        }
+
+
         public Handler.BarnHandler BarnHandler { get; set; }
 
         public VaccAppViewModel()
@@ -68,7 +79,9 @@ namespace _2.SemesterProjekt.Viewmodel
             BarnHandler = new Handler.BarnHandler(this);
             Singleton = Singleton.VaccAppSingletion;
 
-            //TODO: insitaliserer knapper 
+            OpretBarnCommand = new RelayCommand(BarnHandler.OpretBarn);
+
+            //TODO: insitaliserer knappen opdater/rediger 
         }
 
     }
