@@ -96,6 +96,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Converter\IntToString.cs" />
     <Compile Include="Handler\BarnHandler.cs" />
     <Compile Include="Handler\Notifikation.cs" />
     <Compile Include="Handler\VacSkema.cs" />

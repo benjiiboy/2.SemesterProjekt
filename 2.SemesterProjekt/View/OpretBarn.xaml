@@ -1,23 +1,39 @@
 ﻿<Page
-    x:Class="_2.SemesterProjekt.View.OpretBarn"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:_2.SemesterProjekt.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Viewmodel="using:_2.SemesterProjekt.Viewmodel"
+    x:Class="_2.SemesterProjekt.View.OpretBarn"
+        xmlns:converters="using:_2.SemesterProjekt.Converter"
     mc:Ignorable="d">
+
+    <Page.Resources>
+        <converters:IntToString x:Name="IntToString"/>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+        <Grid.DataContext>
+            <Viewmodel:VaccAppViewModel/>
+        </Grid.DataContext>
+
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="250">
-            <TextBlock>Skriv fornavn:</TextBlock>
-            <TextBox Name="OpretbarnFornavn"></TextBox>
-            <TextBlock>Skriv efternavn:</TextBlock>
-            <TextBox Name="OpretBarnEfternavn"></TextBox>
-            <TextBlock>Fødselsdag:</TextBlock>
-            <TextBox Name="OpretbarnFødselsdag" PlaceholderText="Skriv år først fx: 19921210"></TextBox>
-            <Button Margin="0,5,0,0">Opret</Button>
+            <TextBlock>
+                <Run Text="Skriv fornavn:"/>
+            </TextBlock>
+            <TextBox x:Name="OpretbarnFornavn" Text="{Binding ForNavn, Mode=TwoWay}"/>
+            <TextBlock>
+                <Run Text="Skriv efternavn:"/>
+            </TextBlock>
+            <TextBox x:Name="OpretBarnEfternavn" Text="{Binding EfterNavn, Mode=TwoWay}" />
+            <TextBlock>
+                <Run Text="Fødselsdag:"/>
+            </TextBlock>
+            <TextBox x:Name="OpretbarnFødselsdag" PlaceholderText="YYYYDDMM" Text="{Binding Fødselsdato, Converter={StaticResource IntToString}, Mode=TwoWay}"/>
+            <Button Margin="0,5,0,0" Content="Opret"/>
         </StackPanel>
-        
+
     </Grid>
 </Page>

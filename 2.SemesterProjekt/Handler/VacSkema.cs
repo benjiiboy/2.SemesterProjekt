@@ -12,7 +12,7 @@ namespace _2.SemesterProjekt.Handler
 
         public string HepatitsB1()
         {
-         return"Hepatitis B vaccination 1, 1 måned";
+         return "Hepatitis B vaccination 1, 1 måned";
         }
 
         public string HepatitsB2()
