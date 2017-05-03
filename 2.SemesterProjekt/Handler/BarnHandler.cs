@@ -25,8 +25,7 @@ namespace _2.SemesterProjekt.Handler
             tempbarn.Efternavn = VaccAppVievModel.EfterNavn;
 
             Model.Singleton.VaccAppSingletion.TilføjBarn(tempbarn);
-
-            //TODO: gemme midlertidige gæsteliste som json
+            _2.SemesterProjekt.Persistency.PersistencyService.PostBarn(tempbarn);
         }
 
         public void SletBarn()
