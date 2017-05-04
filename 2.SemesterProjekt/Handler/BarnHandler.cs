@@ -34,6 +34,11 @@ namespace _2.SemesterProjekt.Handler
             VaccAppVievModel.Singleton.FjernBarn(VaccAppVievModel.SelectedBarn);
         }
 
+        public void PutBarn()
+        {
+            Model.Singleton.VaccAppSingletion.PutBarn(VaccAppVievModel.SelectedBarn);
+        }
+
 
     }
 }

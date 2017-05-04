@@ -64,6 +64,8 @@ namespace _2.SemesterProjekt.Viewmodel
 
         //TODO: Mangler at implenmtere Commands til knapper
 
+        public ICommand PutBarnCommand { get; set; }
+
         private ICommand opretBarnCommand;
         
         public ICommand OpretBarnCommand
@@ -91,6 +93,8 @@ namespace _2.SemesterProjekt.Viewmodel
 
             OpretBarnCommand = new RelayCommand(BarnHandler.OpretBarn);
             SletBarnCommand = new RelayCommand(BarnHandler.SletBarn);
+
+            PutBarnCommand = new RelayCommand(BarnHandler.PutBarn);
 
             SelectedBarn = new Barn();
             
