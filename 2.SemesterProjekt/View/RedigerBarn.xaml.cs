@@ -20,21 +20,11 @@ namespace _2.SemesterProjekt.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Familie : Page
+    public sealed partial class RedigerBarn : Page
     {
-        public Familie()
+        public RedigerBarn()
         {
             this.InitializeComponent();
-        }
-
-        private void opretBarn_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(OpretBarn));
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(RedigerBarn));
         }
     }
 }

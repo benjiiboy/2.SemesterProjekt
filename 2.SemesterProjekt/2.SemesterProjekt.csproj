@@ -118,6 +118,9 @@
     <Compile Include="View\OpretBarn.xaml.cs">
       <DependentUpon>OpretBarn.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\RedigerBarn.xaml.cs">
+      <DependentUpon>RedigerBarn.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Wiki.xaml.cs">
       <DependentUpon>Wiki.xaml</DependentUpon>
     </Compile>
@@ -157,6 +160,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\OpretBarn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RedigerBarn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
