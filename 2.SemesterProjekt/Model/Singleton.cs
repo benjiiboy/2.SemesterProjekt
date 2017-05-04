@@ -49,13 +49,13 @@ namespace _2.SemesterProjekt.Model
         public void FjernBarn(Barn b)
         {
             Børn.Remove(b);
-            PersistencyService.PutBarn(b);
-
-            //TODO: PersistencyService.(opdaterbarnliste)(g); fra persistencyservice classen som kan opdatere tabellen med børn i
+            PersistencyService.DeleteBarn(b);
         }
 
         public void HentJson()
         {
+            Børn = PersistencyService.GetBarn();
+
            //TODO: barn = PersistencyService.(loadbarnfromjsonasync)();
         }
 

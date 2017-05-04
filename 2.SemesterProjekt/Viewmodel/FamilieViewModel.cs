@@ -6,7 +6,6 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using _2.SemesterProjekt.Model;
 
 namespace _2.SemesterProjekt.Viewmodel
 {

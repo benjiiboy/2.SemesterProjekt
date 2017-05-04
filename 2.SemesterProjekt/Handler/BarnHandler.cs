@@ -25,13 +25,13 @@ namespace _2.SemesterProjekt.Handler
             tempbarn.Efternavn = VaccAppVievModel.EfterNavn;
 
             Model.Singleton.VaccAppSingletion.TilføjBarn(tempbarn);
-            _2.SemesterProjekt.Persistency.PersistencyService.PostBarn(tempbarn);
+            Persistency.PersistencyService.PostBarn(tempbarn);
+            Model.Singleton.VaccAppSingletion.hent();
         }
 
         public void SletBarn()
         {
             VaccAppVievModel.Singleton.FjernBarn(VaccAppVievModel.SelectedBarn);
-            //TODO: save json skal lægges ind her
         }
 
 

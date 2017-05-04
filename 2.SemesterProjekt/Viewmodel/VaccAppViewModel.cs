@@ -7,6 +7,7 @@ using _2.SemesterProjekt.Model;
 using System.ComponentModel;
 using System.Windows.Input;
 using _2.SemesterProjekt.Common;
+using System.Collections.ObjectModel;
 
 namespace _2.SemesterProjekt.Viewmodel
 {
@@ -48,7 +49,7 @@ namespace _2.SemesterProjekt.Viewmodel
             set { selectedbarn = value; OnPropertyChanged(nameof(SelectedBarn)); }
         }
         #endregion 
-        #region propertycahnged
+        #region propertychanged
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)
@@ -71,6 +72,15 @@ namespace _2.SemesterProjekt.Viewmodel
             set { opretBarnCommand = value; }
         }
 
+        private ICommand sletBarnCommand;
+
+        public ICommand SletBarnCommand
+        {
+            get { return sletBarnCommand; }
+            set { sletBarnCommand = value; }
+        }
+
+
 
         public Handler.BarnHandler BarnHandler { get; set; }
 
@@ -80,7 +90,11 @@ namespace _2.SemesterProjekt.Viewmodel
             Singleton = Singleton.VaccAppSingletion;
 
             OpretBarnCommand = new RelayCommand(BarnHandler.OpretBarn);
+            SletBarnCommand = new RelayCommand(BarnHandler.SletBarn);
 
+            SelectedBarn = new Barn();
+            
+            
             //TODO: insitaliserer knappen opdater/rediger 
         }
 

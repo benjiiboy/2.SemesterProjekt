@@ -20,10 +20,7 @@
                       BorderBrush="Black"
                       BorderThickness="0.5"
                       Height="350"
-                      Width="250" ItemsSource="{Binding VisMitBarn, Mode=TwoWay}" SelectedItem="{Binding SelectedBarn, Mode=TwoWay}">
-                <ListView.DataContext>
-                    <Viewmodel:FamilieViewModel/>
-                </ListView.DataContext>
+                      Width="250" ItemsSource="{Binding Singleton.Børn, Mode=TwoWay}" SelectedItem="{Binding SelectedBarn, Mode=TwoWay}">
             </ListView>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="opretBarn" Click="opretBarn_Click"
