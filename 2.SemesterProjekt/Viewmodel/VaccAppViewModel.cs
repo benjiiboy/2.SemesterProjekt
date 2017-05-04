@@ -15,12 +15,29 @@ namespace _2.SemesterProjekt.Viewmodel
     {
         public Singleton Singleton { get; set; }
 
+
+        private int _TeleFonNr;
+
+        public int TelefonNr
+        {
+            get { return _TeleFonNr; ; }
+            set { _TeleFonNr = value; OnPropertyChanged(nameof(TelefonNr)); }
+        }
+
+        private int _ID;
+
+        public int ID
+        {
+            get { return _ID; ; }
+            set { _ID = value; OnPropertyChanged(nameof(ID)); }
+        }
+
         private int fødselsdato;
 
         public int Fødselsdato
         {
             get { return fødselsdato;; }
-            set { fødselsdato = value; }
+            set { fødselsdato = value; OnPropertyChanged(nameof(Fødselsdato)); }
         }
 
         private string fornavn;
@@ -28,7 +45,7 @@ namespace _2.SemesterProjekt.Viewmodel
         public string ForNavn
         {
             get { return fornavn; }
-            set { fornavn = value; }
+            set { fornavn = value; OnPropertyChanged(nameof(ForNavn)); }
         }
 
         private string efternavn;
@@ -36,12 +53,12 @@ namespace _2.SemesterProjekt.Viewmodel
         public string EfterNavn
         {
             get { return efternavn; }
-            set { efternavn = value; }
+            set { efternavn = value; OnPropertyChanged(nameof(EfterNavn)); }
         }
 
         #region Selectedbarn metode
         /*Valgte barn*/
-        private Barn selectedbarn;
+        private static Barn selectedbarn;
 
         public Barn SelectedBarn
         {
@@ -96,7 +113,6 @@ namespace _2.SemesterProjekt.Viewmodel
 
             PutBarnCommand = new RelayCommand(BarnHandler.PutBarn);
 
-            SelectedBarn = new Barn();
             
             
             //TODO: insitaliserer knappen opdater/rediger 

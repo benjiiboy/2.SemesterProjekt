@@ -15,6 +15,15 @@ namespace _2.SemesterProjekt.Model
         public int Fødselsdato { get; set; }
         public int TelefonNr { get; set; }
 
+        public Barn(int id, string fornavn, string efternavn, int føds, int tlf)
+        {
+            this.ID = id;
+            this.Fornavn = fornavn;
+            this.Efternavn = efternavn;
+            this.Fødselsdato = føds;
+            this.TelefonNr = tlf;
+        }
+
         public override string ToString()
         {
             return $"{ID} {Fornavn} {Efternavn}";

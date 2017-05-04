@@ -14,6 +14,9 @@
     </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.DataContext>
+            <Viewmodel:VaccAppViewModel/>
+        </Grid.DataContext>
 
 
 
@@ -23,16 +26,16 @@
             <TextBlock>
                 <Run Text="Ændre fornavn:"/>
             </TextBlock>
-            <TextBox x:Name="OpretbarnFornavn"/>
+            <TextBox x:Name="OpretbarnFornavn" Text="{Binding SelectedBarn.Fornavn, Mode=TwoWay}"/>
             <TextBlock>
                 <Run Text="Ændre efternavn:"/>
             </TextBlock>
-            <TextBox x:Name="OpretBarnEfternavn" />
+            <TextBox x:Name="OpretBarnEfternavn" Text="{Binding SelectedBarn.Efternavn, Mode=TwoWay}" />
             <TextBlock>
                 <Run Text="Ændre Fødselsdag:"/>
             </TextBlock>
-            <TextBox x:Name="OpretbarnFødselsdag" PlaceholderText="YYYYDDMM"/>
-            <Button Margin="0,5,0,0" Content="Rediger"/>
+            <TextBox x:Name="OpretbarnFødselsdag" PlaceholderText="YYYYDDMM" Text="{Binding SelectedBarn.Fødselsdato, Mode=TwoWay}"/>
+            <Button Margin="0,5,0,0" Content="Rediger" Command="{Binding PutBarnCommand}"/>
         </StackPanel>
 
     </Grid>

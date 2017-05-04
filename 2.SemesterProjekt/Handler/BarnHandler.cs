@@ -19,14 +19,9 @@ namespace _2.SemesterProjekt.Handler
 
         public void OpretBarn()
         {
-            Model.Barn tempbarn = new Model.Barn();
-            tempbarn.Fødselsdato = VaccAppVievModel.Fødselsdato;
-            tempbarn.Fornavn = VaccAppVievModel.ForNavn;
-            tempbarn.Efternavn = VaccAppVievModel.EfterNavn;
-
-            Model.Singleton.VaccAppSingletion.TilføjBarn(tempbarn);
-            Persistency.PersistencyService.PostBarn(tempbarn);
-            Model.Singleton.VaccAppSingletion.hent();
+            Model.Barn tempbarn = new Model.Barn(VaccAppVievModel.ID, VaccAppVievModel.ForNavn, VaccAppVievModel.EfterNavn, VaccAppVievModel.Fødselsdato,VaccAppVievModel.TelefonNr);
+            VaccAppVievModel.Singleton.TilføjBarn(tempbarn);
+            VaccAppVievModel.Singleton.hent();
         }
 
         public void SletBarn()

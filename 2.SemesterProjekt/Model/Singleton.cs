@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using _2.SemesterProjekt.Persistency;
+using System.ComponentModel;
 
 namespace _2.SemesterProjekt.Model
 {
-   public class Singleton
+   public class Singleton : INotifyPropertyChanged
     {
 
 
@@ -75,7 +76,12 @@ namespace _2.SemesterProjekt.Model
             Børn = PersistencyService.GetBarn();
         }
 
-
+        //PropetyChanged
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
     }
 }
