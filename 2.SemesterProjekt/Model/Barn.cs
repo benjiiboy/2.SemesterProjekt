@@ -37,17 +37,9 @@ namespace _2.SemesterProjekt.Model
 
 
         //husk år først altså fx 19921210 for 12 10 1992
-        private int fødselsdato;
-        public int Fødselsdato
-        {
-            get { return fødselsdato; }
-            set {
-                if (int.MaxValue.Equals(10000000) || int.MinValue.Equals(9999999))
-                
-                    throw new ArgumentException("Husk at angive Fødselsdato korrekt med YYYYDDMM");
-                    fødselsdato = value;
-            }
-        }
+
+        public int Fødselsdato { get; set; }
+
 
 
 
