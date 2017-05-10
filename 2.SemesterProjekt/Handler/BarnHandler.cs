@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using _2.SemesterProjekt.Viewmodel;
+using Windows.UI.Popups;
 
 namespace _2.SemesterProjekt.Handler
 {
@@ -17,11 +18,21 @@ namespace _2.SemesterProjekt.Handler
             VaccAppVievModel = vaccappViewModel;
         }
 
-        public void OpretBarn()
+        public async void OpretBarn()
         {
-            Model.Barn tempbarn = new Model.Barn(VaccAppVievModel.ID, VaccAppVievModel.ForNavn, VaccAppVievModel.EfterNavn, VaccAppVievModel.Fødselsdato,VaccAppVievModel.TelefonNr);
-            VaccAppVievModel.Singleton.TilføjBarn(tempbarn);
-            VaccAppVievModel.Singleton.hent();
+            try
+            {
+                Model.Barn tempbarn = new Model.Barn(VaccAppVievModel.ID, VaccAppVievModel.ForNavn, VaccAppVievModel.EfterNavn, VaccAppVievModel.Fødselsdato, VaccAppVievModel.TelefonNr);
+                VaccAppVievModel.Singleton.TilføjBarn(tempbarn);
+                VaccAppVievModel.Singleton.hent();
+            }
+            catch (Exception x)
+            {
+
+                var dialog = new MessageDialog(x.Message);
+                await dialog.ShowAsync();
+            }
+
         }
 
         public void SletBarn()

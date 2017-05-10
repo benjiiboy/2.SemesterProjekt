@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using _2.SemesterProjekt.Persistency;
 using System.ComponentModel;
+using _2.SemesterProjekt.Handler;
 
 namespace _2.SemesterProjekt.Model
 {
@@ -45,6 +46,7 @@ namespace _2.SemesterProjekt.Model
         public void TilføjBarn(Barn b)
         {
             Børn.Add(b);
+            PersistencyService.PostBarn(b);
         }
 
         public void FjernBarn(Barn b)
