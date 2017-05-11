@@ -199,6 +199,84 @@ Familie &amp; Menu</body>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="d54c4ae1-4835-42a7-8da7-97060fee7f6b"
+            isDerived="false"
+            sourceEndRoleName="Familie"
+            targetEndRoleName="VaccAppViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b34c92fb-6cba-41b6-9b8d-033cee59ae86"
+              LastKnownName="VaccAppViewModel"
+              LastKnownLocation="Package2_1257.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="26ad7207-b290-400e-83f3-7d7c315b1ced"
+                  name="Familie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2d4361b6-20cc-40cc-8b6d-07d9ed5e4109"
+                  name="VaccAppViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b67e39e9-243a-4513-8fe5-c049c856dee8"
+            isDerived="false"
+            sourceEndRoleName="Familie"
+            targetEndRoleName="RedigerBarn"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="0140045b-1e92-4a90-a5f3-f17e065703d3"
+              LastKnownName="RedigerBarn"
+              LastKnownLocation="Package_1303.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8334e753-0d66-4078-8754-4cf0d4e3aadd"
+                  name="Familie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bf1a467e-c398-431e-b053-c9293bfe6e5e"
+                  name="RedigerBarn"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </class>
     </packageHasNamedElement>
@@ -216,7 +294,49 @@ Familie &amp; Menu</body>
         name="opret barn"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="2fa9b20e-6716-445f-9913-3502d35b1040"
+            isDerived="false"
+            sourceEndRoleName="opret barn"
+            targetEndRoleName="VaccAppViewModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b34c92fb-6cba-41b6-9b8d-033cee59ae86"
+              LastKnownName="VaccAppViewModel"
+              LastKnownLocation="Package2_1257.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a79f5fb8-073f-447c-819f-f718b6de2eb8"
+                  name="opret barn"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c744edcc-b775-479c-9fed-2c6c9fec28aa"
+                  name="VaccAppViewModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -231,6 +351,14 @@ Familie &amp; Menu</body>
         Id="c8f5d268-7504-49d2-b968-bcf6dbe8eeaf"
         LastKnownName="Package1"
         LastKnownLocation="Package_1308.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0140045b-1e92-4a90-a5f3-f17e065703d3"
+        name="RedigerBarn"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

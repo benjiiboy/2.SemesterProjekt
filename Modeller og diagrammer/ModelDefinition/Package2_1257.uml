@@ -13,7 +13,7 @@
         isActiveClass="false">
         <ownedAttributesInternal>
           <property
-            Id="01cec98f-df0b-49fd-aea0-0070734c26d1"
+            Id="2745cc85-c854-4a09-9334-7c16dc8c68d9"
             name="Singleton"
             isLeaf="false"
             isStatic="false"
@@ -24,8 +24,8 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="95d312e9-6b5d-441d-8662-21c6f8fd32f5"
-            name="int fødselsdato"
+            Id="441e3860-677d-41c7-9540-72bdbc6ec99e"
+            name="TelefonNr"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -35,8 +35,8 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="721d3c8f-4205-487f-8738-c256dc8f787a"
-            name="fornavn"
+            Id="3688fbbf-ef42-45be-bbce-25acc3615b0c"
+            name="ID"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -46,8 +46,8 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="dbfcdf24-0aad-4b2d-b192-adda88f6da25"
-            name="efternavn"
+            Id="9aadf135-333c-4f72-917d-e4b6c988add5"
+            name="Fødseslsdag"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -57,8 +57,30 @@
             aggregation="None"
             isComposite="false" />
           <property
-            Id="36a16752-a659-4ce1-a255-0f99624b6e42"
-            name="selectedbarn"
+            Id="24f42893-5390-4134-bf14-cae453f72330"
+            name="ForNavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b6e8f07f-abc2-4cfe-93c0-88facf106077"
+            name="EfterNavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="2ad3df60-b095-4a5d-b4f5-44b2ddd45496"
+            name="Selected"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -70,8 +92,8 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="d447e2d9-805f-4e9c-b336-81b3d578d87e"
-            name="Operation1"
+            Id="0eef6541-d624-4e8f-a23a-f76b70a172d8"
+            name="OnPropertyChanged"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
