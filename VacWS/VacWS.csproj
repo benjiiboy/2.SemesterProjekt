@@ -197,6 +197,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Barn.cs" />
+    <Compile Include="Controllers\Barns1Controller.cs" />
     <Compile Include="Controllers\BarnsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\VaccinersController.cs" />

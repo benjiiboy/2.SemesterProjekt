@@ -32,9 +32,9 @@ namespace _2.SemesterProjekt.Viewmodel
             set { _ID = value; OnPropertyChanged(nameof(ID)); }
         }
 
-        private int fødselsdato;
+        private DateTime fødselsdato;
 
-        public int Fødselsdato
+        public DateTime Fødselsdato
         {
             get { return fødselsdato;; }
             set { fødselsdato = value; OnPropertyChanged(nameof(Fødselsdato)); }

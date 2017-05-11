@@ -38,6 +38,7 @@ namespace _2.SemesterProjekt.Handler
         public void SletBarn()
         {
             VaccAppVievModel.Singleton.FjernBarn(VaccAppVievModel.SelectedBarn);
+            
         }
 
         public void PutBarn()

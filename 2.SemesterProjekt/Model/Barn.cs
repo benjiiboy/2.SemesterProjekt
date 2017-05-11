@@ -8,7 +8,7 @@ namespace _2.SemesterProjekt.Model
 {
    public class Barn
     {
-        public int ID { get; set; }
+        public int Barn_Id { get; set; }
 
         private string forNavn;
         public string Fornavn
@@ -38,16 +38,16 @@ namespace _2.SemesterProjekt.Model
 
         //husk år først altså fx 19921210 for 12 10 1992
 
-        public int Fødselsdato { get; set; }
+        public DateTime Fødselsdato { get; set; }
 
 
 
 
         public int TelefonNr { get; set; }
 
-        public Barn(int id, string fornavn, string efternavn, int føds, int tlf)
+        public Barn(int id, string fornavn, string efternavn, DateTime føds, int tlf)
         {
-            this.ID = id;
+            this.Barn_Id = id;
             this.Fornavn = fornavn;
             this.Efternavn = efternavn;
             this.Fødselsdato = føds;
@@ -56,7 +56,7 @@ namespace _2.SemesterProjekt.Model
 
         public override string ToString()
         {
-            return $"{ID} {Fornavn} {Efternavn}";
+            return $"{Barn_Id} {Fornavn} {Efternavn}";
         }
 
     }
