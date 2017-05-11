@@ -204,7 +204,7 @@
             isQuery="false" />
           <operation
             Id="e5459efd-c819-4bf4-8720-3274eee09cdb"
-            name="HentJson"
+            name="Hent"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"

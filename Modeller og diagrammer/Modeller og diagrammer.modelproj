@@ -29,7 +29,17 @@
       <SubType>Content</SubType>
       <DependentUpon>Domain model af usecase(Notifikation).classdiagram</DependentUpon>
     </Content>
+    <Content Include="DomainModel.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DomainModel.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DomainModel.classdiagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\Package1_1257.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1335.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package2_1257.uml">
@@ -50,6 +60,15 @@
     <Content Include="ModelDefinition\Package_1314.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package_1318.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1326.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1335.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package_1422.uml">
       <SubType>Content</SubType>
     </Content>
@@ -61,12 +80,12 @@
       <SubType>Content</SubType>
       <DependentUpon>Design sekvensdiagram.sequencediagram</DependentUpon>
     </Content>
-    <Content Include="Domain Model.classdiagram">
+    <Content Include="Klassediagram.classdiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Domain Model.classdiagram.layout">
+    <Content Include="Klassediagram.classdiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>Domain Model.classdiagram</DependentUpon>
+      <DependentUpon>Klassediagram.classdiagram</DependentUpon>
     </Content>
     <Content Include="ModelDefinition\Modeller og diagrammer.uml">
       <SubType>Content</SubType>

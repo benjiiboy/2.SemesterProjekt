@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="a1a4dfb3-01ef-40f1-9375-38c0d0dcc6ed" name="DomainModel" linkedPackageId="4aa616ed-b9b5-465f-903f-2f55b44369ae" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="7d5d5127-a2a9-4839-9227-8a83a4e8ae66">
+      <profileInstance Id="a5b57977-071b-4f60-aae0-f6334b1e4edf" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="96769109-5877-4a30-904a-cb4b60caee2a">
+      <profileInstance Id="966cbbf7-bca5-4355-9dc7-23f3066f7b75" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4ba10e49-4b83-4f5e-b58e-645275ef931a" name="Login" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4b30d256-bdc2-436b-ab23-aafa73ef41c6" />
+        <targetEnds>
+          <association Id="05ba2ca0-c574-4ed6-9f29-a6581b6c3102" isDerived="false" sourceEndRoleName="Login" targetEndRoleName="Forældre" isLeaf="false" isAbstract="false">
+            <classMoniker Id="2018ee84-48c4-4477-82b8-a4b40b1d3331" LastKnownName="Forældre" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="60a3333e-577e-4644-be91-d814ac310212" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="24e6dff1-1e97-4c9d-8951-b6400b810425" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cf166e1c-b1d1-4f00-ad1e-9102514c62bf" name="Forældre" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b83e1edf-57d5-4fcd-86f1-b349740f0261" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4163ab5a-4a29-4dd6-b922-8ecdd5f89496" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="7e95f94f-8d96-4c5f-985d-e1b278353596" name="BrugerNavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="aa6eeaf3-e33d-455e-aeaa-d6d7e6cb5b65" />
+          </property>
+          <property Id="43770b19-0c8d-4bab-a9e8-5af8415dcb83" name="Kodeord" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d08034dc-3d41-46c3-b39d-c0f9fa317772" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2018ee84-48c4-4477-82b8-a4b40b1d3331" name="Forældre" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="30c63bbd-bf80-4ed8-87cc-d3a606eadd55" />
+        <targetEnds>
+          <association Id="560c94e3-d69c-4115-8d5a-4d24deffe40d" isDerived="false" sourceEndRoleName="Forældre" targetEndRoleName="Familie" isLeaf="false" isAbstract="false">
+            <classMoniker Id="76313787-c5e0-4efe-ae5d-00372613ca4b" LastKnownName="Familie" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9606418c-4909-418f-8e08-7b2cbc705523" name="Forældre" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="649b7f20-3084-43cb-8660-d2dc5e79a823" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8c4d9d71-8794-4371-bccf-1a07df8df216" name="Familie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="6ca0e4d0-9d3e-43fd-b8bc-47bcd602558d" name="Lower" value="1">
+                      <elementDefinition Id="55228772-eaf0-4cca-ab31-ef32ea2ff66f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="f21468b5-67f0-4e0d-8381-445fcf0cc1d0" name="Upper" value=".*">
+                      <elementDefinition Id="81bcc227-fe0b-4909-a172-7b948142b0f4" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="d4f6684e-3cc6-4315-be63-db68094afec4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="11df2aec-5946-4a89-9a2f-97bad5688bf8" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="a6781466-cebf-4512-a720-d11517de487b" name="Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="afedbaa6-94d4-44ff-8894-70edb600429f" />
+          </property>
+          <property Id="ac2e4c4b-a30c-4d5c-92d6-75d25a790391" name="TelefonNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c1333eb7-8d57-46dd-8fdb-fb75ec6eb854" />
+          </property>
+          <property Id="1eed6c2f-f488-4d70-8578-22ece28a8ad0" name="Adresse" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9f5c3600-99ad-43f0-a71c-f639f0886a20" />
+          </property>
+          <property Id="69bcb2e6-685a-4f6c-8801-125a8f64ff9c" name="Efternavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="738b1fbc-f86d-4f8a-8709-848bd817ba9f" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="76313787-c5e0-4efe-ae5d-00372613ca4b" name="Familie" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9615297a-68ec-4279-9d33-a224bbda4e19" />
+        <targetEnds>
+          <association Id="0c889c6d-7575-4807-87fe-ad397a213263" isDerived="false" sourceEndRoleName="Familie" targetEndRoleName="SletBarn" isLeaf="false" isAbstract="false">
+            <classMoniker Id="00d0574f-0d03-423f-aa06-f2455bfc7d5a" LastKnownName="SletBarn" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0dc1dd67-58f5-4d77-a135-d4312957474e" name="Familie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="36cf234c-7fb2-4596-ab7d-697c5e6c56a3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="208cb09c-1f96-45ac-9d86-f8c505ca9c20" name="SletBarn" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="ee77ce9a-6867-4f2b-b38f-3b57df2ddb76" name="Lower" value="1">
+                      <elementDefinition Id="ef2fcff5-4614-43a0-b6e8-23eec5c31a11" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="ba6012e3-a048-4530-8edb-c90ff78657ae" name="Upper" value=".*">
+                      <elementDefinition Id="1d0a49f0-88b9-47e6-b1bc-e7a15e92e903" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="36c7face-bcab-4665-bde2-6e66a91e05a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4c6d1094-0a16-48c2-b2f6-345e907ba9f1" />
+          </association>
+          <association Id="233ad411-fb69-4d43-9b3c-edcdc1bb155e" isDerived="false" sourceEndRoleName="Familie" targetEndRoleName="OpretBarn" isLeaf="false" isAbstract="false">
+            <classMoniker Id="31291e85-6d1c-490d-8f80-7e7794776dad" LastKnownName="OpretBarn" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3e6b8a53-63bf-485c-81e5-1cf22ee6d734" name="Familie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f677bdec-e228-4b6b-8de7-39efa5e06f55" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c9a874f3-9312-4b01-9bb6-18ac4d732a26" name="OpretBarn" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="8bae4e43-3531-4ffa-b92d-138dec98eef4" name="Lower" value="1">
+                      <elementDefinition Id="e9dea549-c543-445d-861d-7fb6a4d758e2" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="9146df89-e8dc-42cd-a951-d2480363d8b6" name="Upper" value=".*">
+                      <elementDefinition Id="1ef5e573-2520-403f-a7ad-56c0b5b68072" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="0ef97996-2143-40c8-9da0-c97d699249e1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6d7c4c5f-735c-4e5b-8f72-0e48b4a9d572" />
+          </association>
+          <association Id="1980d245-84d7-4bbd-b045-40ec50e017c8" isDerived="false" sourceEndRoleName="Familie" targetEndRoleName="Notifikation" isLeaf="false" isAbstract="false">
+            <classMoniker Id="63bd2be2-e3ef-447b-9b79-c9981191328e" LastKnownName="Notifikation" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f5b83e00-6cd2-4e93-82f1-c6ee9cf11fc5" name="Familie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a0c3d18a-07da-4426-8738-86b88bce3b63" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bee93586-2fd3-4761-80c2-62e04f01631a" name="Notifikation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="a97bb79b-5e86-49ae-9989-74783a9cb3d0" name="Lower" value="0">
+                      <elementDefinition Id="2fd43a7e-88d0-4d9e-b327-0b67df9852fc" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="7e35b9c8-e4fe-4dd6-9729-c4e58f19e9e3" name="Upper" value=".*">
+                      <elementDefinition Id="c6291dd3-7cc5-41d1-b950-de893503cbcd" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="fabfc791-2d71-4e0a-8918-b63702454556" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ad92f8d6-1299-44d2-b5b0-e7f09e5a7480" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="ec4018d6-722f-44e2-b32c-296b07496062" name="Børn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d0047c0b-9be6-49ad-ab77-1d96b77b293e" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="31291e85-6d1c-490d-8f80-7e7794776dad" name="OpretBarn" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5575d06a-151f-42ef-a944-b563d4af5d6f" />
+        <ownedAttributesInternal>
+          <property Id="1b8281b3-6d15-45eb-8ae6-272cfedb675a" name="Fødselsdato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e53fc5b6-e321-472c-bfcd-3d50100ad884" />
+          </property>
+          <property Id="0617d51a-84ca-4fda-9219-83b4e9368357" name="Fornavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e81a10db-8153-4e9f-9138-cad2ce0ed422" />
+          </property>
+          <property Id="c46a3210-f0e0-406c-beaf-940bc436b0d8" name="Efternavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8c3a1d50-c7f5-4ac8-8a16-344f6269133b" />
+          </property>
+          <property Id="30d341be-2541-476f-b5ec-cf3b80c42874" name="ID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6c7db787-3a97-4361-9689-7e47c3553ae0" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="00d0574f-0d03-423f-aa06-f2455bfc7d5a" name="SletBarn" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2000bf09-e1a9-48d5-88dd-c47e0255fbaf" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="63bd2be2-e3ef-447b-9b79-c9981191328e" name="Notifikation" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="677a932b-fa7e-49ec-8f52-3ffde000ac0c" />
+        <targetEnds>
+          <association Id="e5daee81-e408-4814-991f-13f75a2124c0" isDerived="false" sourceEndRoleName="" targetEndRoleName="Forældre" isLeaf="false" isAbstract="false">
+            <classMoniker Id="2018ee84-48c4-4477-82b8-a4b40b1d3331" LastKnownName="Forældre" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3317eec3-f917-4ff2-a5db-e486d222c7d4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f260b147-0cad-4985-89db-e1c47af8be4d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c8b67788-5c4f-4e32-8cd8-035b2e0f265d" name="Forældre" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="02e70a9c-6cbb-4dba-8233-f435caa225df" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4dc535ee-a40f-40fd-9be0-18ffa72a1727" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="60e247b7-a4d6-4c11-86bc-bf9e8b406033" name="Notifikation" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d6daf050-eb80-417f-948b-c70545134bc8" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="4aa616ed-b9b5-465f-903f-2f55b44369ae" name="Modeller og diagrammer">
+    <elementDefinition Id="7601ee2e-aac9-4ea4-99b1-8ff3250c0c10" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,43 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
-  Id="9c4378ee-2cff-482e-a8ef-4a712597c971"
-  name="Handler" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  Id="c8c34085-26e2-4611-bd49-333da64c8f57"
+  name="Persistency" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <packagedElements>
     <packageHasNamedElement>
       <class
-        Id="9e60562e-d0eb-416a-b86c-115929c972c8"
-        name="Notifikation"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <ownedAttributesInternal>
-          <property
-            Id="4e196f34-dc64-47ca-b48b-898cbec63eaa"
-            name="Push Notifikation"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isUnique="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false" />
-        </ownedAttributesInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="2998ac9b-44a6-4394-ac1c-170de964b61f"
-        name="BarnHandler"
+        Id="39fe3866-eb9e-4ef9-ac02-69079345d32d"
+        name="PersistencyService"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="8f926bb3-1834-432b-83fc-134d9d8b21f3"
+            Id="9882b90c-c0a1-47b1-ad65-f6c7f15afe00"
             isDerived="false"
-            sourceEndRoleName="BarnHandler"
+            sourceEndRoleName="PersistencyService"
             targetEndRoleName="Singleton"
             isLeaf="false"
             isAbstract="false">
@@ -48,8 +26,8 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="287f766f-cfc4-472e-8ddd-7524f911f2b4"
-                  name="BarnHandler"
+                  Id="762aa0e8-59d2-43be-9731-802347293155"
+                  name="PersistencyService"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -61,7 +39,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="426a19c8-cd0d-4926-9e83-028d3b8e0804"
+                  Id="b43304e6-e635-4d87-9a31-01b379f71607"
                   name="Singleton"
                   isLeaf="false"
                   isStatic="false"
@@ -74,45 +52,72 @@
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="1271ccb1-1a26-4d8f-b656-250d9b555f96"
+            name="String"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="c9f48ac4-64ee-4d3b-9297-833583e739d4"
+                LastKnownName="ApiBørn"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="02b7a025-a9ae-42ae-9ab7-6b21edf3926d"
+            name="String"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="6ad16fdf-3e02-4e63-ac47-3f7942a65ead"
+                LastKnownName="ServuerUrl"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="a4c0ba61-56ee-4eaa-885b-5ebacf8ed2ab"
-            name="SletBarn"
+            Id="2dbf5a50-2326-4276-906d-230904fdcd39"
+            name="PostBarn"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="02e56c24-b159-4da4-8923-dfc55176c020"
-            name="OpretBarn"
+            Id="a8b591b4-9408-4086-8cd9-809b3400da53"
+            name="GetBarn"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="0299b2bb-1aaf-4ab9-99f7-8274d454fdff"
+            Id="013d714a-9703-4d90-af2d-3088d0d4ab09"
+            name="DeleteBarn"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ff673303-d82c-4caf-9c90-7f44b18dc730"
             name="PutBarn"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-        </ownedOperationsInternal>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="20dab33d-778a-4547-9909-47d995fe29b4"
-        name="VacSkema"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <ownedOperationsInternal>
-          <operation
-            Id="4b1988a7-9248-4030-b7ea-7a072c1e293e"
-            name="Return vaccine navn"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"

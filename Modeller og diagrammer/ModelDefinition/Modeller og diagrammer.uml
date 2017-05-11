@@ -3,12 +3,6 @@
   dslVersion="1.0.0.0"
   Id="7601ee2e-aac9-4ea4-99b1-8ff3250c0c10"
   name="Modeller og diagrammer" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
-  <ownedCommentsInternal>
-    <comment
-      Id="eb4e8d8d-11c3-4858-b168-ffbe43e8a8c9">
-      <body>Der er ingen kobling imellem Viewmodel og view endnu</body>
-    </comment>
-  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -259,24 +253,6 @@
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
-            Id="2f895fab-35b2-45de-a893-5d603c213611"
-            name="ExecutionOccurrenceSpecification12">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="ec18b167-9ef3-4b47-a1c6-9970690702a4"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="Modeller og diagrammer.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="93d6e003-e62b-4897-85f5-21592dc0646c"
-                LastKnownName="Forældre"
-                LastKnownLocation="Modeller og diagrammer.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
             Id="b3639fcc-006a-4354-828c-b1d185a63b31"
             name="ExecutionOccurrenceSpecification6">
             <event>
@@ -291,6 +267,24 @@
               <lifelineMoniker
                 Id="15446cee-065e-4def-a5df-6cebdfbcd672"
                 LastKnownName="Notifikation"
+                LastKnownLocation="Modeller og diagrammer.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="2f895fab-35b2-45de-a893-5d603c213611"
+            name="ExecutionOccurrenceSpecification12">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ec18b167-9ef3-4b47-a1c6-9970690702a4"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Modeller og diagrammer.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="93d6e003-e62b-4897-85f5-21592dc0646c"
+                LastKnownName="Forældre"
                 LastKnownLocation="Modeller og diagrammer.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -352,7 +346,7 @@
         <messages>
           <message
             Id="a7cb2d99-b0ad-48f7-8df0-b46f417a7342"
-            name="Oprettelse af barn"
+            name="OpretBarn"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -371,7 +365,7 @@
           </message>
           <message
             Id="5dd10482-0e41-4031-b616-dca5581cc259"
-            name="Tiden før en notifikation sættes"
+            name="SetNotifikation"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -390,7 +384,7 @@
           </message>
           <message
             Id="9fba3c04-afa9-44e3-a400-231e53cd0147"
-            name="Return&gt; Når tiden er inde sker modtagelsen af notifikationen"
+            name="&lt;return&gt; påmindelse"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -489,6 +483,516 @@
         Id="0d407d90-1a42-41f0-9de0-8f2b566978dc"
         LastKnownName="View"
         LastKnownLocation="Package_1303.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4b30d256-bdc2-436b-ab23-aafa73ef41c6"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="4163ab5a-4a29-4dd6-b922-8ecdd5f89496"
+            isDerived="false"
+            sourceEndRoleName="Login"
+            targetEndRoleName="Forældre"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="30c63bbd-bf80-4ed8-87cc-d3a606eadd55"
+              LastKnownName="Forældre"
+              LastKnownLocation="Modeller og diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="24e6dff1-1e97-4c9d-8951-b6400b810425"
+                  name="Login"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b83e1edf-57d5-4fcd-86f1-b349740f0261"
+                  name="Forældre"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="aa6eeaf3-e33d-455e-aeaa-d6d7e6cb5b65"
+            name="BrugerNavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d08034dc-3d41-46c3-b39d-c0f9fa317772"
+            name="Kodeord"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="30c63bbd-bf80-4ed8-87cc-d3a606eadd55"
+        name="Forældre"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="11df2aec-5946-4a89-9a2f-97bad5688bf8"
+            isDerived="false"
+            sourceEndRoleName="Forældre"
+            targetEndRoleName="Familie"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9615297a-68ec-4279-9d33-a224bbda4e19"
+              LastKnownName="Familie"
+              LastKnownLocation="Modeller og diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="649b7f20-3084-43cb-8660-d2dc5e79a823"
+                  name="Forældre"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d4f6684e-3cc6-4315-be63-db68094afec4"
+                  name="Familie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="55228772-eaf0-4cca-ab31-ef32ea2ff66f"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="81bcc227-fe0b-4909-a172-7b948142b0f4"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="afedbaa6-94d4-44ff-8894-70edb600429f"
+            name="Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c1333eb7-8d57-46dd-8fdb-fb75ec6eb854"
+            name="TelefonNr"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9f5c3600-99ad-43f0-a71c-f639f0886a20"
+            name="Adresse"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="738b1fbc-f86d-4f8a-8709-848bd817ba9f"
+            name="Efternavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9615297a-68ec-4279-9d33-a224bbda4e19"
+        name="Familie"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="4c6d1094-0a16-48c2-b2f6-345e907ba9f1"
+            isDerived="false"
+            sourceEndRoleName="Familie"
+            targetEndRoleName="SletBarn"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2000bf09-e1a9-48d5-88dd-c47e0255fbaf"
+              LastKnownName="SletBarn"
+              LastKnownLocation="Modeller og diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="36cf234c-7fb2-4596-ab7d-697c5e6c56a3"
+                  name="Familie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="36c7face-bcab-4665-bde2-6e66a91e05a1"
+                  name="SletBarn"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ef2fcff5-4614-43a0-b6e8-23eec5c31a11"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1d0a49f0-88b9-47e6-b1bc-e7a15e92e903"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6d7c4c5f-735c-4e5b-8f72-0e48b4a9d572"
+            isDerived="false"
+            sourceEndRoleName="Familie"
+            targetEndRoleName="OpretBarn"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5575d06a-151f-42ef-a944-b563d4af5d6f"
+              LastKnownName="OpretBarn"
+              LastKnownLocation="Modeller og diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f677bdec-e228-4b6b-8de7-39efa5e06f55"
+                  name="Familie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0ef97996-2143-40c8-9da0-c97d699249e1"
+                  name="OpretBarn"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e9dea549-c543-445d-861d-7fb6a4d758e2"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1ef5e573-2520-403f-a7ad-56c0b5b68072"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ad92f8d6-1299-44d2-b5b0-e7f09e5a7480"
+            isDerived="false"
+            sourceEndRoleName="Familie"
+            targetEndRoleName="Notifikation"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="677a932b-fa7e-49ec-8f52-3ffde000ac0c"
+              LastKnownName="Notifikation"
+              LastKnownLocation="Modeller og diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a0c3d18a-07da-4426-8738-86b88bce3b63"
+                  name="Familie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fabfc791-2d71-4e0a-8918-b63702454556"
+                  name="Notifikation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="2fd43a7e-88d0-4d9e-b327-0b67df9852fc"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c6291dd3-7cc5-41d1-b950-de893503cbcd"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="d0047c0b-9be6-49ad-ab77-1d96b77b293e"
+            name="Børn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5575d06a-151f-42ef-a944-b563d4af5d6f"
+        name="OpretBarn"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="e53fc5b6-e321-472c-bfcd-3d50100ad884"
+            name="Fødselsdato"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e81a10db-8153-4e9f-9138-cad2ce0ed422"
+            name="Fornavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="8c3a1d50-c7f5-4ac8-8a16-344f6269133b"
+            name="Efternavn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="6c7db787-3a97-4361-9689-7e47c3553ae0"
+            name="ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2000bf09-e1a9-48d5-88dd-c47e0255fbaf"
+        name="SletBarn"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="677a932b-fa7e-49ec-8f52-3ffde000ac0c"
+        name="Notifikation"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="4dc535ee-a40f-40fd-9be0-18ffa72a1727"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="Forældre"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="30c63bbd-bf80-4ed8-87cc-d3a606eadd55"
+              LastKnownName="Forældre"
+              LastKnownLocation="Modeller og diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f260b147-0cad-4985-89db-e1c47af8be4d"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="02e70a9c-6cbb-4dba-8233-f435caa225df"
+                  name="Forældre"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="d6daf050-eb80-417f-948b-c70545134bc8"
+            name="Notifikation"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c9f48ac4-64ee-4d3b-9297-833583e739d4"
+        name="ApiBørn" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6ad16fdf-3e02-4e63-ac47-3f7942a65ead"
+        name="ServuerUrl" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c8c34085-26e2-4611-bd49-333da64c8f57"
+        LastKnownName="Persistency"
+        LastKnownLocation="Package_1318.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="26950fe2-4f0e-416a-83b2-bd7fbe2f469b"
+        LastKnownName="WebService"
+        LastKnownLocation="Package_1326.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
