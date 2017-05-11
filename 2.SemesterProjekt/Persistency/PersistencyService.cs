@@ -13,8 +13,8 @@ namespace _2.SemesterProjekt.Persistency
 {
     public class PersistencyService
     {
-        const string serverUrl = "http://vacws.azurewebsites.net/";
-        const string apibørn = "api/Barns/";
+        const string serverUrl = "http://vaccappws20170511012237.azurewebsites.net/";
+        const string apibørn = "api/barn/";
 
 
         public static void PostBarn(Barn PostBarn)
