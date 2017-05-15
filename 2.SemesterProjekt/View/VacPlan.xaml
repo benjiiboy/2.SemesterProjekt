@@ -19,13 +19,13 @@
                 <TextBlock x:Name="HepatitisBvaccination2" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
             </StackPanel>
             <StackPanel Height="100">
-                <TextBlock x:Name="Di-Te-Ki-Pol-hibvaccination1" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
+                <TextBlock x:Name="DiTeKiPolhibvaccination1" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
             </StackPanel>
             <StackPanel Height="100">
                 <TextBlock x:Name="Pnoumokokvaccination1" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
             </StackPanel>
             <StackPanel Height="100">
-                <TextBlock x:Name="Di-Te-Ki-Pol-hibvaccination2" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
+                <TextBlock x:Name="DiTeKiPolhibvaccination2" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
             </StackPanel>
             <StackPanel Height="100">
                 <TextBlock x:Name="textBlock6" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
