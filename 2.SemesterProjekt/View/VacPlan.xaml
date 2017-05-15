@@ -7,34 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="71*"/>
-        </Grid.ColumnDefinitions>
-        <StackPanel HorizontalAlignment="Left" Height="571" VerticalAlignment="Top" Width="340" Margin="5.063,69,0,0" Grid.Column="1">
-            <StackPanel Height="100">
-                <TextBlock x:Name="HepatitisBvaccination1" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
-            </StackPanel>
-            <StackPanel Height="100">
-                <TextBlock x:Name="HepatitisBvaccination2" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
-            </StackPanel>
-            <StackPanel Height="100">
-                <TextBlock x:Name="DiTeKiPolhibvaccination1" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
-            </StackPanel>
-            <StackPanel Height="100">
-                <TextBlock x:Name="Pnoumokokvaccination1" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
-            </StackPanel>
-            <StackPanel Height="100">
-                <TextBlock x:Name="DiTeKiPolhibvaccination2" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
-            </StackPanel>
-            <StackPanel Height="100">
-                <TextBlock x:Name="textBlock6" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
-            </StackPanel>
 
-
-        </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="360" Grid.ColumnSpan="2"/>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="5,-5,0,0" VerticalAlignment="Top" Width="100"/>
-
+        <TextBlock Text="Kommende vac's" HorizontalAlignment="Center" FontSize="36"
+                   ></TextBlock>
+        <ListView Name="VacPlanListView"
+                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                  SelectionChanged="VacPlanListView_SelectionChanged" Margin="0,60,0,0"/>
     </Grid>
 </Page>
