@@ -104,6 +104,7 @@
     <Compile Include="Model\Barn.cs" />
     <Compile Include="Model\Singleton.cs" />
     <Compile Include="Model\VacPlan.cs" />
+    <Compile Include="Viewmodel\VacPlanViewModel.cs" />
     <Compile Include="View\Familie.xaml.cs">
       <DependentUpon>Familie.xaml</DependentUpon>
     </Compile>
