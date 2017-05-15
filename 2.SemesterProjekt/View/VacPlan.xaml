@@ -12,6 +12,7 @@
                    ></TextBlock>
         <ListView Name="VacPlanListView"
                   ScrollViewer.VerticalScrollBarVisibility="Visible"
-                  SelectionChanged="VacPlanListView_SelectionChanged" Margin="0,60,0,0"/>
+                  Margin="0,60,0,0"
+                  />
     </Grid>
 </Page>

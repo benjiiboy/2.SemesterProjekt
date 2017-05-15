@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2.SemesterProjekt.Model
 {
-    class VacPlan
+  public  class VacPlan
     {
         public int Plan_Id;
         public DateTime Tid;

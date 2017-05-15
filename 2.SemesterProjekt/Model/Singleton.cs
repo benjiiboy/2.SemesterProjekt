@@ -10,7 +10,7 @@ using _2.SemesterProjekt.Handler;
 
 namespace _2.SemesterProjekt.Model
 {
-   public class Singleton : INotifyPropertyChanged
+    public class Singleton : INotifyPropertyChanged
     {
 
 
@@ -41,6 +41,9 @@ namespace _2.SemesterProjekt.Model
         {
             Børn = new ObservableCollection<Barn>();
             hent();
+
+            //mik
+            VacPlanCollection = new ObservableCollection<VacPlan>();
         }
 
         public void TilføjBarn(Barn b)
@@ -74,5 +77,22 @@ namespace _2.SemesterProjekt.Model
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+
+        #region Mik Test
+
+
+        public ObservableCollection<VacPlan> VacPlanCollection { get; set; }
+
+        public async Task GetVacPlan()
+        {
+            foreach (var i in await PersistencyService.GetVacPlan())
+            {
+                this.VacPlanCollection.Add(i);
+            }
+        }
+        #endregion
+
+
     }
 }
+

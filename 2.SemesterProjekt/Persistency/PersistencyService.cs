@@ -120,5 +120,34 @@ namespace _2.SemesterProjekt.Persistency
                 }
             }
         }
+
+
+        //mik VacPlan
+
+        const string apiVacPlan = "api/VacPlan/";
+
+        public static async Task<ObservableCollection<VacPlan>> GetVacPlan()
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(serverUrl);
+                client.DefaultRequestHeaders.Clear();
+
+
+
+                HttpResponseMessage respone = await client.GetAsync(apiVacPlan);
+
+                if (respone.IsSuccessStatusCode)
+                {
+                    var VacPlanListe = await respone.Content.ReadAsAsync<ObservableCollection<VacPlan>>();
+                    //evt query for spec'? -> return
+
+                    return VacPlanListe;
+                }
+                return null;
+            }
+        }
+
+
     }
 }
