@@ -6,12 +6,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Viewmodel="using:_2.SemesterProjekt.Viewmodel"
     x:Class="_2.SemesterProjekt.View.OpretBarn"
-        xmlns:converters="using:_2.SemesterProjekt.Converter"
     mc:Ignorable="d">
 
-    <Page.Resources>
-        <converters:IntToString x:Name="IntToString"/>
-    </Page.Resources>
+
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -19,7 +16,7 @@
             <Viewmodel:VaccAppViewModel/>
         </Grid.DataContext>
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="250">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="297" Height="213">
             <TextBlock>
                 <Run Text="Skriv fornavn:"/>
             </TextBlock>
@@ -31,7 +28,7 @@
             <TextBlock>
                 <Run Text="Fødselsdag:"/>
             </TextBlock>
-            <TextBox x:Name="OpretbarnFødselsdag" PlaceholderText="YYYYDDMM" Text="{Binding Fødselsdato, Converter={StaticResource IntToString}, Mode=TwoWay}"/>
+            <DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Date="{Binding Fødselsdato}"/>
             <Button Margin="0,5,0,0" Content="Opret" Command="{Binding OpretBarnCommand}"/>
         </StackPanel>
 

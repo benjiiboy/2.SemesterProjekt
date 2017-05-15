@@ -24,17 +24,17 @@ namespace _2.SemesterProjekt.Viewmodel
             set { _TeleFonNr = value; OnPropertyChanged(nameof(TelefonNr)); }
         }
 
-        private int _ID;
+        private int barn_Id;
 
-        public int ID
+        public int Barn_Id
         {
-            get { return _ID; ; }
-            set { _ID = value; OnPropertyChanged(nameof(ID)); }
+            get { return barn_Id; ; }
+            set { barn_Id = value; OnPropertyChanged(nameof(Barn_Id)); }
         }
 
-        private int fødselsdato;
+        private DateTimeOffset fødselsdato;
 
-        public int Fødselsdato
+        public DateTimeOffset Fødselsdato
         {
             get { return fødselsdato;; }
             set { fødselsdato = value; OnPropertyChanged(nameof(Fødselsdato)); }
@@ -113,10 +113,11 @@ namespace _2.SemesterProjekt.Viewmodel
 
             PutBarnCommand = new RelayCommand(BarnHandler.PutBarn);
 
-            
-            
-            //TODO: insitaliserer knappen opdater/rediger 
+
+            DateTime dt = System.DateTime.Now;
+            fødselsdato = new DateTimeOffset(dt.Year, dt.Month, dt.Day, 0, 0, 0, 0, new TimeSpan());
         }
+
 
     }
 }

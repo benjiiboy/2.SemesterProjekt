@@ -96,13 +96,13 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Common\RelayCommand.cs" />
+    <Compile Include="Converter\DateTimeConverter.cs" />
     <Compile Include="Converter\IntToString.cs" />
     <Compile Include="Handler\BarnHandler.cs" />
     <Compile Include="Handler\Notifikation.cs" />
     <Compile Include="Handler\VacSkema.cs" />
     <Compile Include="Model\Barn.cs" />
     <Compile Include="Model\Singleton.cs" />
-    <Compile Include="Viewmodel\FamilieViewModel.cs" />
     <Compile Include="View\Familie.xaml.cs">
       <DependentUpon>Familie.xaml</DependentUpon>
     </Compile>

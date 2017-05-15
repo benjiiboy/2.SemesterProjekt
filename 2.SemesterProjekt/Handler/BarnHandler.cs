@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using _2.SemesterProjekt.Viewmodel;
 using Windows.UI.Popups;
+using _2.SemesterProjekt.Converter;
 
 namespace _2.SemesterProjekt.Handler
 {
@@ -22,7 +23,7 @@ namespace _2.SemesterProjekt.Handler
         {
             try
             {
-                Model.Barn tempbarn = new Model.Barn(VaccAppVievModel.ID, VaccAppVievModel.ForNavn, VaccAppVievModel.EfterNavn, VaccAppVievModel.Fødselsdato, VaccAppVievModel.TelefonNr);
+                Model.Barn tempbarn = new Model.Barn(VaccAppVievModel.Barn_Id, VaccAppVievModel.ForNavn, VaccAppVievModel.EfterNavn, DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime(VaccAppVievModel.Fødselsdato), VaccAppVievModel.TelefonNr);
                 VaccAppVievModel.Singleton.TilføjBarn(tempbarn);
                 VaccAppVievModel.Singleton.hent();
             }
@@ -38,6 +39,7 @@ namespace _2.SemesterProjekt.Handler
         public void SletBarn()
         {
             VaccAppVievModel.Singleton.FjernBarn(VaccAppVievModel.SelectedBarn);
+            
         }
 
         public void PutBarn()

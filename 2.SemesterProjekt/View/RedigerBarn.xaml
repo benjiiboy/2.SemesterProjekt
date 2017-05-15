@@ -9,9 +9,6 @@
     x:Class="_2.SemesterProjekt.View.RedigerBarn"
     mc:Ignorable="d">
 
-    <Page.Resources>
-        <converters:IntToString x:Name="IntToString"/>
-    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.DataContext>
@@ -22,7 +19,7 @@
 
 
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="250">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="297" Height="213">
             <TextBlock>
                 <Run Text="Ændre fornavn:"/>
             </TextBlock>
@@ -34,7 +31,7 @@
             <TextBlock>
                 <Run Text="Ændre Fødselsdag:"/>
             </TextBlock>
-            <TextBox x:Name="OpretbarnFødselsdag" PlaceholderText="YYYYDDMM" Text="{Binding SelectedBarn.Fødselsdato, Mode=TwoWay}"/>
+            <DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Date="{Binding SelectedBarn.Fødselsdato, Mode=TwoWay}"/>
             <Button Margin="0,5,0,0" Content="Rediger" Command="{Binding PutBarnCommand}"/>
         </StackPanel>
 

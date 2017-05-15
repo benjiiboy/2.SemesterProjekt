@@ -61,17 +61,6 @@ namespace _2.SemesterProjekt.Model
             hent();
         }
 
-        public void HentJson()
-        {
-            Børn = PersistencyService.GetBarn();
-
-           //TODO: barn = PersistencyService.(loadbarnfromjsonasync)();
-        }
-
-
-
-
-        //test
 
         public void hent()
         {

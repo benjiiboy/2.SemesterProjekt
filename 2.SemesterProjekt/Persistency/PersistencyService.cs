@@ -13,8 +13,8 @@ namespace _2.SemesterProjekt.Persistency
 {
     public class PersistencyService
     {
-        const string serverUrl = "http://vaccappws.azurewebsites.net/";
-        const string apibørn = "api/børn/";
+        const string serverUrl = "http://vaccappws20170511012237.azurewebsites.net/";
+        const string apibørn = "api/barn/";
 
 
         public static void PostBarn(Barn PostBarn)
@@ -42,7 +42,6 @@ namespace _2.SemesterProjekt.Persistency
                     MessageDialog BarnAdded = new MessageDialog("Fejl, barn blev ikke tilføjet" + e);
                     BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
                     BarnAdded.ShowAsync().AsTask();
-                    throw;
                 }
 
             }
@@ -73,7 +72,7 @@ namespace _2.SemesterProjekt.Persistency
             {
                 Client.BaseAddress = new Uri(serverUrl);
                 Client.DefaultRequestHeaders.Clear();
-                string urlString = apibørn + DeleteBarn.ID;
+                string urlString = apibørn + DeleteBarn.Barn_Id;
                 try
                 {
                     var response = Client.DeleteAsync(urlString).Result;
@@ -101,7 +100,7 @@ namespace _2.SemesterProjekt.Persistency
                 Client.DefaultRequestHeaders.Clear();
                 Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                string urlString = apibørn + PutBarn.ID;
+                string urlString = apibørn + PutBarn.Barn_Id;
 
                 try
                 {
