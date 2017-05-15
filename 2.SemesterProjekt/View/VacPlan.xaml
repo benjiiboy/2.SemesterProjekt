@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="_2.SemesterProjekt.View.VacPlan"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_2.SemesterProjekt.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="71*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Left" Height="571" VerticalAlignment="Top" Width="340" Margin="5.063,69,0,0" Grid.Column="1">
+            <StackPanel Height="100">
+                <TextBlock x:Name="HepatitisBvaccination1" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
+            </StackPanel>
+            <StackPanel Height="100">
+                <TextBlock x:Name="HepatitisBvaccination2" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
+            </StackPanel>
+            <StackPanel Height="100">
+                <TextBlock x:Name="Di-Te-Ki-Pol-hibvaccination1" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
+            </StackPanel>
+            <StackPanel Height="100">
+                <TextBlock x:Name="Pnoumokokvaccination1" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
+            </StackPanel>
+            <StackPanel Height="100">
+                <TextBlock x:Name="Di-Te-Ki-Pol-hibvaccination2" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
+            </StackPanel>
+            <StackPanel Height="100">
+                <TextBlock x:Name="textBlock6" TextWrapping="Wrap" Text="" Height="99" Margin="0,0,100,0"/>
+            </StackPanel>
+
+
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="360" Grid.ColumnSpan="2"/>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="5,-5,0,0" VerticalAlignment="Top" Width="100"/>
+
+    </Grid>
+</Page>
