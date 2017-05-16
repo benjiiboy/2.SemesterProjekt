@@ -11,6 +11,8 @@ namespace _2.SemesterProjekt.Viewmodel
     class VacPlanViewModel : INotifyPropertyChanged
     {
 
+        public Singleton Singleton  { get; set; }
+
         #region valg af plan
         private VacPlan _valgtPlan;
 
@@ -30,6 +32,8 @@ namespace _2.SemesterProjekt.Viewmodel
         //ctor
         public VacPlanViewModel()
         {
+
+            Singleton = Singleton.VaccAppSingletion;
 
         }
 

@@ -36,5 +36,10 @@ namespace _2.SemesterProjekt.View
         {
             Frame.Navigate(typeof(RedigerBarn));
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(VacPlan));
+        }
     }
 }

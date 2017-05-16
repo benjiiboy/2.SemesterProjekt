@@ -44,6 +44,7 @@ namespace _2.SemesterProjekt.Model
 
             //mik
             VacPlanCollection = new ObservableCollection<VacPlan>();
+            GetVacPlan();
         }
 
         public void TilføjBarn(Barn b)
