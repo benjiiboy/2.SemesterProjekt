@@ -13,44 +13,44 @@ using VacWS;
 
 namespace VacWS.Controllers
 {
-    public class VaccinersController : ApiController
+    public class BarnController : ApiController
     {
-        private VacContext db = new VacContext();
+        private DataBaseContext db = new DataBaseContext();
 
-        // GET: api/Vacciners
-        public IQueryable<Vacciner> GetVacciner()
+        // GET: api/Barn
+        public IQueryable<Barn> GetBarn()
         {
-            return db.Vacciner;
+            return db.Barn;
         }
 
-        // GET: api/Vacciners/5
-        [ResponseType(typeof(Vacciner))]
-        public async Task<IHttpActionResult> GetVacciner(int id)
+        // GET: api/Barn/5
+        [ResponseType(typeof(Barn))]
+        public async Task<IHttpActionResult> GetBarn(int id)
         {
-            Vacciner vacciner = await db.Vacciner.FindAsync(id);
-            if (vacciner == null)
+            Barn barn = await db.Barn.FindAsync(id);
+            if (barn == null)
             {
                 return NotFound();
             }
 
-            return Ok(vacciner);
+            return Ok(barn);
         }
 
-        // PUT: api/Vacciners/5
+        // PUT: api/Barn/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutVacciner(int id, Vacciner vacciner)
+        public async Task<IHttpActionResult> PutBarn(int id, Barn barn)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != vacciner.Vac_Id)
+            if (id != barn.Barn_Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(vacciner).State = EntityState.Modified;
+            db.Entry(barn).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +58,7 @@ namespace VacWS.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!VaccinerExists(id))
+                if (!BarnExists(id))
                 {
                     return NotFound();
                 }
@@ -71,35 +71,35 @@ namespace VacWS.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Vacciners
-        [ResponseType(typeof(Vacciner))]
-        public async Task<IHttpActionResult> PostVacciner(Vacciner vacciner)
+        // POST: api/Barn
+        [ResponseType(typeof(Barn))]
+        public async Task<IHttpActionResult> PostBarn(Barn barn)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Vacciner.Add(vacciner);
+            db.Barn.Add(barn);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = vacciner.Vac_Id }, vacciner);
+            return CreatedAtRoute("DefaultApi", new { id = barn.Barn_Id }, barn);
         }
 
-        // DELETE: api/Vacciners/5
-        [ResponseType(typeof(Vacciner))]
-        public async Task<IHttpActionResult> DeleteVacciner(int id)
+        // DELETE: api/Barn/5
+        [ResponseType(typeof(Barn))]
+        public async Task<IHttpActionResult> DeleteBarn(int id)
         {
-            Vacciner vacciner = await db.Vacciner.FindAsync(id);
-            if (vacciner == null)
+            Barn barn = await db.Barn.FindAsync(id);
+            if (barn == null)
             {
                 return NotFound();
             }
 
-            db.Vacciner.Remove(vacciner);
+            db.Barn.Remove(barn);
             await db.SaveChangesAsync();
 
-            return Ok(vacciner);
+            return Ok(barn);
         }
 
         protected override void Dispose(bool disposing)
@@ -111,9 +111,9 @@ namespace VacWS.Controllers
             base.Dispose(disposing);
         }
 
-        private bool VaccinerExists(int id)
+        private bool BarnExists(int id)
         {
-            return db.Vacciner.Count(e => e.Vac_Id == id) > 0;
+            return db.Barn.Count(e => e.Barn_Id == id) > 0;
         }
     }
 }

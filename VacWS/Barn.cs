@@ -26,7 +26,6 @@ namespace VacWS
         [StringLength(50)]
         public string Efternavn { get; set; }
 
-        [Column(TypeName = "date")]
         public DateTime Fødselsdato { get; set; }
 
         public int TelefonNr { get; set; }

@@ -9,48 +9,48 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using VacAppWS;
+using VacWS;
 
-namespace VacAppWS.Controllers
+namespace VacWS.Controllers
 {
-    public class VacPlanController : ApiController
+    public class SkemaController : ApiController
     {
-        private VaccAppContext db = new VaccAppContext();
+        private DataBaseContext db = new DataBaseContext();
 
-        // GET: api/VacPlan
-        public IQueryable<VacPlan> GetVacPlan()
+        // GET: api/Skema
+        public IQueryable<Skema> GetSkema()
         {
-            return db.VacPlan;
+            return db.Skema;
         }
 
-        // GET: api/VacPlan/5
-        [ResponseType(typeof(VacPlan))]
-        public async Task<IHttpActionResult> GetVacPlan(int id)
+        // GET: api/Skema/5
+        [ResponseType(typeof(Skema))]
+        public async Task<IHttpActionResult> GetSkema(int id)
         {
-            VacPlan vacPlan = await db.VacPlan.FindAsync(id);
-            if (vacPlan == null)
+            Skema skema = await db.Skema.FindAsync(id);
+            if (skema == null)
             {
                 return NotFound();
             }
 
-            return Ok(vacPlan);
+            return Ok(skema);
         }
 
-        // PUT: api/VacPlan/5
+        // PUT: api/Skema/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutVacPlan(int id, VacPlan vacPlan)
+        public async Task<IHttpActionResult> PutSkema(int id, Skema skema)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != vacPlan.Plan_Id)
+            if (id != skema.Vac_Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(vacPlan).State = EntityState.Modified;
+            db.Entry(skema).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +58,7 @@ namespace VacAppWS.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!VacPlanExists(id))
+                if (!SkemaExists(id))
                 {
                     return NotFound();
                 }
@@ -71,35 +71,35 @@ namespace VacAppWS.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/VacPlan
-        [ResponseType(typeof(VacPlan))]
-        public async Task<IHttpActionResult> PostVacPlan(VacPlan vacPlan)
+        // POST: api/Skema
+        [ResponseType(typeof(Skema))]
+        public async Task<IHttpActionResult> PostSkema(Skema skema)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.VacPlan.Add(vacPlan);
+            db.Skema.Add(skema);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = vacPlan.Plan_Id }, vacPlan);
+            return CreatedAtRoute("DefaultApi", new { id = skema.Vac_Id }, skema);
         }
 
-        // DELETE: api/VacPlan/5
-        [ResponseType(typeof(VacPlan))]
-        public async Task<IHttpActionResult> DeleteVacPlan(int id)
+        // DELETE: api/Skema/5
+        [ResponseType(typeof(Skema))]
+        public async Task<IHttpActionResult> DeleteSkema(int id)
         {
-            VacPlan vacPlan = await db.VacPlan.FindAsync(id);
-            if (vacPlan == null)
+            Skema skema = await db.Skema.FindAsync(id);
+            if (skema == null)
             {
                 return NotFound();
             }
 
-            db.VacPlan.Remove(vacPlan);
+            db.Skema.Remove(skema);
             await db.SaveChangesAsync();
 
-            return Ok(vacPlan);
+            return Ok(skema);
         }
 
         protected override void Dispose(bool disposing)
@@ -111,9 +111,9 @@ namespace VacAppWS.Controllers
             base.Dispose(disposing);
         }
 
-        private bool VacPlanExists(int id)
+        private bool SkemaExists(int id)
         {
-            return db.VacPlan.Count(e => e.Plan_Id == id) > 0;
+            return db.Skema.Count(e => e.Vac_Id == id) > 0;
         }
     }
 }

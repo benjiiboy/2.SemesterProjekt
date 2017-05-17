@@ -6,11 +6,11 @@ namespace VacWS
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Vacciner")]
-    public partial class Vacciner
+    [Table("Skema")]
+    public partial class Skema
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Vacciner()
+        public Skema()
         {
             VacPlan = new HashSet<VacPlan>();
         }
@@ -18,13 +18,15 @@ namespace VacWS
         [Key]
         public int Vac_Id { get; set; }
 
-        [Required]
-        [StringLength(1000)]
-        public string Note { get; set; }
+        public DateTime Tid { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string Navn { get; set; }
+        public string VaccineNavn { get; set; }
+
+        [Required]
+        [StringLength(1000)]
+        public string Note { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VacPlan> VacPlan { get; set; }

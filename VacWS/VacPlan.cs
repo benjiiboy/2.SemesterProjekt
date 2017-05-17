@@ -12,17 +12,16 @@ namespace VacWS
         [Key]
         public int Plan_Id { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime Tid { get; set; }
+        public DateTime VaccineTid { get; set; }
 
-        public bool TrueFlase { get; set; }
+        public bool TrueFalse { get; set; }
 
-        public int Barn_Id { get; set; }
+        public int? Barn_Id { get; set; }
 
-        public int Vac_Id { get; set; }
+        public int? Vac_Id { get; set; }
 
         public virtual Barn Barn { get; set; }
 
-        public virtual Vacciner Vacciner { get; set; }
+        public virtual Skema Skema { get; set; }
     }
 }

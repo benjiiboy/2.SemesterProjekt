@@ -13,44 +13,44 @@ using VacWS;
 
 namespace VacWS.Controllers
 {
-    public class Barns1Controller : ApiController
+    public class VacPlanController : ApiController
     {
-        private VacContext db = new VacContext();
+        private DataBaseContext db = new DataBaseContext();
 
-        // GET: api/Barns1
-        public IQueryable<Barn> GetBarn()
+        // GET: api/VacPlan
+        public IQueryable<VacPlan> GetVacPlan()
         {
-            return db.Barn;
+            return db.VacPlan;
         }
 
-        // GET: api/Barns1/5
-        [ResponseType(typeof(Barn))]
-        public async Task<IHttpActionResult> GetBarn(int id)
+        // GET: api/VacPlan/5
+        [ResponseType(typeof(VacPlan))]
+        public async Task<IHttpActionResult> GetVacPlan(int id)
         {
-            Barn barn = await db.Barn.FindAsync(id);
-            if (barn == null)
+            VacPlan vacPlan = await db.VacPlan.FindAsync(id);
+            if (vacPlan == null)
             {
                 return NotFound();
             }
 
-            return Ok(barn);
+            return Ok(vacPlan);
         }
 
-        // PUT: api/Barns1/5
+        // PUT: api/VacPlan/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutBarn(int id, Barn barn)
+        public async Task<IHttpActionResult> PutVacPlan(int id, VacPlan vacPlan)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != barn.Barn_Id)
+            if (id != vacPlan.Plan_Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(barn).State = EntityState.Modified;
+            db.Entry(vacPlan).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +58,7 @@ namespace VacWS.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!BarnExists(id))
+                if (!VacPlanExists(id))
                 {
                     return NotFound();
                 }
@@ -71,35 +71,35 @@ namespace VacWS.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Barns1
-        [ResponseType(typeof(Barn))]
-        public async Task<IHttpActionResult> PostBarn(Barn barn)
+        // POST: api/VacPlan
+        [ResponseType(typeof(VacPlan))]
+        public async Task<IHttpActionResult> PostVacPlan(VacPlan vacPlan)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Barn.Add(barn);
+            db.VacPlan.Add(vacPlan);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = barn.Barn_Id }, barn);
+            return CreatedAtRoute("DefaultApi", new { id = vacPlan.Plan_Id }, vacPlan);
         }
 
-        // DELETE: api/Barns1/5
-        [ResponseType(typeof(Barn))]
-        public async Task<IHttpActionResult> DeleteBarn(int id)
+        // DELETE: api/VacPlan/5
+        [ResponseType(typeof(VacPlan))]
+        public async Task<IHttpActionResult> DeleteVacPlan(int id)
         {
-            Barn barn = await db.Barn.FindAsync(id);
-            if (barn == null)
+            VacPlan vacPlan = await db.VacPlan.FindAsync(id);
+            if (vacPlan == null)
             {
                 return NotFound();
             }
 
-            db.Barn.Remove(barn);
+            db.VacPlan.Remove(vacPlan);
             await db.SaveChangesAsync();
 
-            return Ok(barn);
+            return Ok(vacPlan);
         }
 
         protected override void Dispose(bool disposing)
@@ -111,9 +111,9 @@ namespace VacWS.Controllers
             base.Dispose(disposing);
         }
 
-        private bool BarnExists(int id)
+        private bool VacPlanExists(int id)
         {
-            return db.Barn.Count(e => e.Barn_Id == id) > 0;
+            return db.VacPlan.Count(e => e.Plan_Id == id) > 0;
         }
     }
 }
