@@ -125,8 +125,9 @@ namespace _2.SemesterProjekt.Persistency
         //mik VacPlan
 
         const string apiVacPlan = "api/VacPlan/";
+        const string apiSkema = "api/skema/";
 
-        public static async Task<ObservableCollection<PlanBarn>> GetVacPlanAsync()
+        public static async Task<ObservableCollection<VacSkemaBarnPlan>> GetVacPlanAsync()
         {
             using (var client = new HttpClient())
             {
@@ -137,31 +138,46 @@ namespace _2.SemesterProjekt.Persistency
 
                 HttpResponseMessage vacplanrespone = await client.GetAsync(apiVacPlan);
                 HttpResponseMessage barnrespone = await client.GetAsync(apibørn);
+                HttpResponseMessage skemarespone = await client.GetAsync(apiSkema);
 
-                if (vacplanrespone.IsSuccessStatusCode && barnrespone.IsSuccessStatusCode)
+                if (vacplanrespone.IsSuccessStatusCode && barnrespone.IsSuccessStatusCode && skemarespone.IsSuccessStatusCode)
                 {
                     ObservableCollection<VacPlan> VacPlanListe = await vacplanrespone.Content.ReadAsAsync<ObservableCollection<VacPlan>>();
 
                     ObservableCollection<Barn> VacBarnListe = await barnrespone.Content.ReadAsAsync<ObservableCollection<Barn>>();
 
-                    ObservableCollection<PlanBarn> derp = new ObservableCollection<PlanBarn>();
+                    ObservableCollection<Skema> SkemaListe = await skemarespone.Content.ReadAsAsync<ObservableCollection<Skema>>();
 
-                    var listejoin = from barn in VacBarnListe
+                    ObservableCollection<VacSkemaBarnPlan> vacplanogbarnListe = new ObservableCollection<VacSkemaBarnPlan>();
+
+                    var Vacplanogbarnjoin = from barn in VacBarnListe
                                     join plan in VacPlanListe on barn.Barn_Id equals plan.Barn_Id
-                                    select new { barn.Fornavn, barn.Efternavn, plan.VaccineNavn, plan.TrueFalse, plan.Tid };
+                                    select new { barn.Fornavn, barn.Efternavn, barn.Fødselsdato, plan.VaccineTid, plan.TrueFalse};
 
-
-
-                    foreach (var item in listejoin)
+                    foreach (var item in Vacplanogbarnjoin)
                     {
-                        PlanBarn derpbarn = new PlanBarn(item.Fornavn, item.Efternavn, item.VaccineNavn, item.TrueFalse, item.Tid);
 
-                        derp.Add(derpbarn);
+                       VacSkemaBarnPlan derpbarn = new VacSkemaBarnPlan(item.VaccineTid, item.Fornavn, item.Efternavn, item.Fødselsdato, item.TrueFalse);
+                        vacplanogbarnListe.Add(derpbarn);
                     }
+
+                    ObservableCollection<VacSkemaBarnPlan> VacPlanBarnSkemaListe = new ObservableCollection<VacSkemaBarnPlan>();
+
+                    var Vacplanbarnskemajoin = from skema in SkemaListe
+                                               join vacplanbarn in vacplanogbarnListe on skema.Vac_Id equals vacplanbarn.Vac_Id
+                                               select new {skema.Tid, skema.VaccineNavn, vacplanbarn.VaccineTid, vacplanbarn.TrueFalse, vacplanbarn.Fornavn, vacplanbarn.Efternavn, vacplanbarn.Fødselsdato};
+
+                    foreach (var item in Vacplanbarnskemajoin)
+                    {
+                        VacSkemaBarnPlan derpbarn = new VacSkemaBarnPlan(item.Tid, item.Fornavn, item.Efternavn, item.VaccineNavn, item.TrueFalse, item.Fødselsdato, item.VaccineTid);
+                        VacPlanBarnSkemaListe.Add(derpbarn);
+                    }
+
+
 
                     //evt query for spec'? -> return
 
-                    return derp;
+                    return VacPlanBarnSkemaListe;
                 }
                 return null;
             }
