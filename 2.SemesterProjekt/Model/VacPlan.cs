@@ -14,9 +14,9 @@ namespace _2.SemesterProjekt.Model
 
         public bool TrueFalse { get; set; }
 
-        public int? Barn_Id { get; set; }
+        public int Barn_Id { get; set; }
 
-        public int? Vac_Id { get; set; }
+        public int Vac_Id { get; set; }
 
         public VacPlan()
         {

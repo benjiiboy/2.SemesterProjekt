@@ -18,7 +18,7 @@ namespace VacWS
         [Key]
         public int Vac_Id { get; set; }
 
-        public DateTime Tid { get; set; }
+        public int Tid { get; set; }
 
         [Required]
         [StringLength(100)]
