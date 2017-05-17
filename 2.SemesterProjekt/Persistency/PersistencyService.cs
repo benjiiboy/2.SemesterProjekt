@@ -126,7 +126,7 @@ namespace _2.SemesterProjekt.Persistency
 
         const string apiVacPlan = "api/VacPlan/";
 
-        public static async Task<ObservableCollection<VacPlan>> GetVacPlan()
+        public static async Task<ObservableCollection<PlanBarn>> GetVacPlanAsync()
         {
             using (var client = new HttpClient())
             {
@@ -135,14 +135,33 @@ namespace _2.SemesterProjekt.Persistency
 
 
 
-                HttpResponseMessage respone = await client.GetAsync(apiVacPlan);
+                HttpResponseMessage vacplanrespone = await client.GetAsync(apiVacPlan);
+                HttpResponseMessage barnrespone = await client.GetAsync(apibørn);
 
-                if (respone.IsSuccessStatusCode)
+                if (vacplanrespone.IsSuccessStatusCode && barnrespone.IsSuccessStatusCode)
                 {
-                    var VacPlanListe = await respone.Content.ReadAsAsync<ObservableCollection<VacPlan>>();
+                    ObservableCollection<VacPlan> VacPlanListe = await vacplanrespone.Content.ReadAsAsync<ObservableCollection<VacPlan>>();
+
+                    ObservableCollection<Barn> VacBarnListe = await barnrespone.Content.ReadAsAsync<ObservableCollection<Barn>>();
+
+                    ObservableCollection<PlanBarn> derp = new ObservableCollection<PlanBarn>();
+
+                    var listejoin = from barn in VacBarnListe
+                                    join plan in VacPlanListe on barn.Barn_Id equals plan.Barn_Id
+                                    select new { barn.Fornavn, barn.Efternavn, plan.VaccineNavn, plan.TrueFalse, plan.Tid };
+
+
+
+                    foreach (var item in listejoin)
+                    {
+                        PlanBarn derpbarn = new PlanBarn(item.Fornavn, item.Efternavn, item.VaccineNavn, item.TrueFalse, item.Tid);
+
+                        derp.Add(derpbarn);
+                    }
+
                     //evt query for spec'? -> return
 
-                    return VacPlanListe;
+                    return derp;
                 }
                 return null;
             }

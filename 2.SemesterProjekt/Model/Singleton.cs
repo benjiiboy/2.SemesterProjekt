@@ -43,7 +43,7 @@ namespace _2.SemesterProjekt.Model
             hent();
 
             //mik
-            VacPlanCollection = new ObservableCollection<VacPlan>();
+            VacPlanCollection = new ObservableCollection<PlanBarn>();
             GetVacPlan();
         }
 
@@ -82,11 +82,11 @@ namespace _2.SemesterProjekt.Model
         #region Mik Test
 
 
-        public ObservableCollection<VacPlan> VacPlanCollection { get; set; }
+        public ObservableCollection<PlanBarn> VacPlanCollection { get; set; }
 
         public async Task GetVacPlan()
         {
-            foreach (var i in await PersistencyService.GetVacPlan())
+            foreach (var i in await PersistencyService.GetVacPlanAsync())
             {
                 this.VacPlanCollection.Add(i);
             }

@@ -102,6 +102,7 @@
     <Compile Include="Handler\Notifikation.cs" />
     <Compile Include="Handler\VacSkema.cs" />
     <Compile Include="Model\Barn.cs" />
+    <Compile Include="Model\PlanBarn.cs" />
     <Compile Include="Model\Singleton.cs" />
     <Compile Include="Model\VacPlan.cs" />
     <Compile Include="Viewmodel\VacPlanViewModel.cs" />

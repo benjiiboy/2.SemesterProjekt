@@ -14,9 +14,9 @@ namespace _2.SemesterProjekt.Viewmodel
         public Singleton Singleton  { get; set; }
 
         #region valg af plan
-        private VacPlan _valgtPlan;
+        private PlanBarn _valgtPlan;
 
-        public VacPlan ValgtPlan
+        public PlanBarn ValgtPlan
         {
             get { return _valgtPlan; }
             set
