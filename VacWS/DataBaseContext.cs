@@ -5,17 +5,17 @@ namespace VacWS
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class DataBaseContext : DbContext
+    public partial class DatabaseContext : DbContext
     {
-        public DataBaseContext()
-            : base("name=DataBaseContext")
+        public DatabaseContext()
+            : base("name=DatabaseContext")
         {
             Configuration.ProxyCreationEnabled = false;
         }
 
         public virtual DbSet<Barn> Barn { get; set; }
-        public virtual DbSet<Skema> Skema { get; set; }
-        public virtual DbSet<VacPlan> VacPlan { get; set; }
+        public virtual DbSet<Vaccine> Vaccine { get; set; }
+        public virtual DbSet<Vacplan> Vacplan { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -27,13 +27,23 @@ namespace VacWS
                 .Property(e => e.Efternavn)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Skema>()
-                .Property(e => e.VaccineNavn)
+            modelBuilder.Entity<Barn>()
+                .HasMany(e => e.Vacplan)
+                .WithRequired(e => e.Barn)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Vaccine>()
+                .Property(e => e.Navn)
                 .IsFixedLength();
 
-            modelBuilder.Entity<Skema>()
+            modelBuilder.Entity<Vaccine>()
                 .Property(e => e.Note)
                 .IsFixedLength();
+
+            modelBuilder.Entity<Vaccine>()
+                .HasMany(e => e.Vacplan)
+                .WithRequired(e => e.Vaccine)
+                .WillCascadeOnDelete(false);
         }
     }
 }
