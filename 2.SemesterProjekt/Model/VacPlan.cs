@@ -1,44 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace _2.SemesterProjekt.Model
 {
-  public  class VacPlan
+   public class VacPlan
     {
         public int Plan_Id { get; set; }
-        public DateTime Tid { get; set; }
+
+        public DateTime VaccineTid { get; set; }
+
         public bool TrueFalse { get; set; }
-        public string Note { get; set; }
-        public string VaccineNavn { get; set; }
-        public int Barn_Id { get; set; }
+
+        public int? Barn_Id { get; set; }
+
+        public int? Vac_Id { get; set; }
 
         public VacPlan()
         {
 
         }
 
-        public VacPlan(int planID, DateTime Tid, bool TrueFalse, string Note, string name, int Barn)
+        public VacPlan(int plan, DateTime vaccinetid, bool tf, int barn, int vac)
         {
-
-            this.Plan_Id = planID;
-            this.Tid = Tid;
-            this.TrueFalse = TrueFalse;
-            this.Note = Note;
-            this.VaccineNavn = name;
-            this.Barn_Id = Barn;
-
+            this.Plan_Id = plan;
+            this.VaccineTid = vaccinetid;
+            this.TrueFalse = tf;
+            this.Barn_Id = barn;
+            this.Vac_Id = vac;
         }
-
-        public override string ToString()
-        {
-            return $"{Tid} modtaget vac:{TrueFalse} note:{Note} navn på vac:{VaccineNavn}";
-        }
-
     }
 }
-
-

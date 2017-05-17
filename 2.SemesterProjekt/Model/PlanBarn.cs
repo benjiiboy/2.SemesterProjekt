@@ -28,25 +28,6 @@ namespace _2.SemesterProjekt.Model
             this.Tid = tid;
         }
 
-        //public PlanBarn(int plan, DateTime tid, bool tf, string note, string vacnavn, int barn, string fornavn, string efternavn, DateTime føds, int tlf)
-        //{
-        //    this.Plan_Id = plan;
-        //    this.Tid = tid;
-        //    this.TrueFalse = tf;
-        //    this.Note = note;
-        //    this.VaccineNavn = vacnavn;
-        //    this.Barn_Id = barn;
-        //    this.Fornavn = fornavn;
-        //    this.Efternavn = efternavn;
-        //    this.Fødselsdato = føds;
-        //    this.TelefonNr = tlf;
-        //}
-
-        //public PlanBarn()
-        //{
-
-        //}
-
         public override string ToString()
         {
             return $"Navn: {Fornavn} {Efternavn}, Dato: {Tid}, VacNavn: {VaccineNavn}, Fået vaccine {TrueFalse} ";

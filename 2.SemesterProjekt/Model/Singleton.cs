@@ -43,7 +43,7 @@ namespace _2.SemesterProjekt.Model
             hent();
 
             //mik
-            VacPlanCollection = new ObservableCollection<PlanBarn>();
+            VacPlanCollection = new ObservableCollection<VacSkemaBarnPlan>();
             GetVacPlan();
         }
 
@@ -82,7 +82,7 @@ namespace _2.SemesterProjekt.Model
         #region Mik Test
 
 
-        public ObservableCollection<PlanBarn> VacPlanCollection { get; set; }
+        public ObservableCollection<VacSkemaBarnPlan> VacPlanCollection { get; set; }
 
         public async Task GetVacPlan()
         {
