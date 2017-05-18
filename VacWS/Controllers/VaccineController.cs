@@ -13,44 +13,44 @@ using VacWS;
 
 namespace VacWS.Controllers
 {
-    public class VacplanController : ApiController
+    public class VaccineController : ApiController
     {
         private DatabaseContext db = new DatabaseContext();
 
-        // GET: api/Vacplan
-        public IQueryable<Vacplan> GetVacplan()
+        // GET: api/Vaccine
+        public IQueryable<Vaccine> GetVaccine()
         {
-            return db.Vacplan;
+            return db.Vaccine;
         }
 
-        // GET: api/Vacplan/5
-        [ResponseType(typeof(Vacplan))]
-        public async Task<IHttpActionResult> GetVacplan(int id)
+        // GET: api/Vaccine/5
+        [ResponseType(typeof(Vaccine))]
+        public async Task<IHttpActionResult> GetVaccine(int id)
         {
-            Vacplan vacplan = await db.Vacplan.FindAsync(id);
-            if (vacplan == null)
+            Vaccine vaccine = await db.Vaccine.FindAsync(id);
+            if (vaccine == null)
             {
                 return NotFound();
             }
 
-            return Ok(vacplan);
+            return Ok(vaccine);
         }
 
-        // PUT: api/Vacplan/5
+        // PUT: api/Vaccine/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutVacplan(int id, Vacplan vacplan)
+        public async Task<IHttpActionResult> PutVaccine(int id, Vaccine vaccine)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != vacplan.Plan_Id)
+            if (id != vaccine.Vac_Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(vacplan).State = EntityState.Modified;
+            db.Entry(vaccine).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +58,7 @@ namespace VacWS.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!VacplanExists(id))
+                if (!VaccineExists(id))
                 {
                     return NotFound();
                 }
@@ -71,16 +71,16 @@ namespace VacWS.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Vacplan
-        [ResponseType(typeof(Vacplan))]
-        public async Task<IHttpActionResult> PostVacplan(Vacplan vacplan)
+        // POST: api/Vaccine
+        [ResponseType(typeof(Vaccine))]
+        public async Task<IHttpActionResult> PostVaccine(Vaccine vaccine)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Vacplan.Add(vacplan);
+            db.Vaccine.Add(vaccine);
 
             try
             {
@@ -88,7 +88,7 @@ namespace VacWS.Controllers
             }
             catch (DbUpdateException)
             {
-                if (VacplanExists(vacplan.Plan_Id))
+                if (VaccineExists(vaccine.Vac_Id))
                 {
                     return Conflict();
                 }
@@ -98,23 +98,23 @@ namespace VacWS.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = vacplan.Plan_Id }, vacplan);
+            return CreatedAtRoute("DefaultApi", new { id = vaccine.Vac_Id }, vaccine);
         }
 
-        // DELETE: api/Vacplan/5
-        [ResponseType(typeof(Vacplan))]
-        public async Task<IHttpActionResult> DeleteVacplan(int id)
+        // DELETE: api/Vaccine/5
+        [ResponseType(typeof(Vaccine))]
+        public async Task<IHttpActionResult> DeleteVaccine(int id)
         {
-            Vacplan vacplan = await db.Vacplan.FindAsync(id);
-            if (vacplan == null)
+            Vaccine vaccine = await db.Vaccine.FindAsync(id);
+            if (vaccine == null)
             {
                 return NotFound();
             }
 
-            db.Vacplan.Remove(vacplan);
+            db.Vaccine.Remove(vaccine);
             await db.SaveChangesAsync();
 
-            return Ok(vacplan);
+            return Ok(vaccine);
         }
 
         protected override void Dispose(bool disposing)
@@ -126,9 +126,9 @@ namespace VacWS.Controllers
             base.Dispose(disposing);
         }
 
-        private bool VacplanExists(int id)
+        private bool VaccineExists(int id)
         {
-            return db.Vacplan.Count(e => e.Plan_Id == id) > 0;
+            return db.Vaccine.Count(e => e.Vac_Id == id) > 0;
         }
     }
 }

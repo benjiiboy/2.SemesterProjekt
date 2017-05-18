@@ -15,7 +15,7 @@ namespace VacWS.Controllers
 {
     public class BarnController : ApiController
     {
-        private DataBaseContext db = new DataBaseContext();
+        private DatabaseContext db = new DatabaseContext();
 
         // GET: api/Barn
         public IQueryable<Barn> GetBarn()
