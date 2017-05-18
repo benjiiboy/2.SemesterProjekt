@@ -10,26 +10,26 @@
 
 
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
 
         <Grid.DataContext>
             <Viewmodel:VaccAppViewModel/>
         </Grid.DataContext>
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="297" Height="213">
-            <TextBlock>
+            <TextBlock Style="{StaticResource setFamilie}">
                 <Run Text="Skriv fornavn:"/>
             </TextBlock>
             <TextBox x:Name="OpretbarnFornavn" Text="{Binding ForNavn, Mode=TwoWay}"/>
-            <TextBlock>
+            <TextBlock Style="{StaticResource setFamilie}">
                 <Run Text="Skriv efternavn:"/>
             </TextBlock>
             <TextBox x:Name="OpretBarnEfternavn" Text="{Binding EfterNavn, Mode=TwoWay}" />
-            <TextBlock>
+            <TextBlock Style="{StaticResource setFamilie}">
                 <Run Text="Fødselsdag:"/>
             </TextBlock>
             <DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Date="{Binding Fødselsdato}"/>
-            <Button Margin="0,5,0,0" Content="Opret" Command="{Binding OpretBarnCommand}"/>
+            <Button Margin="0,5,0,0" Content="Opret" Command="{Binding OpretBarnCommand}" Style="{StaticResource Familie}"/>
         </StackPanel>
 
     </Grid>

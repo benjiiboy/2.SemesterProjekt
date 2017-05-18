@@ -10,7 +10,7 @@
     mc:Ignorable="d">
 
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
         <Grid.DataContext>
             <Viewmodel:VaccAppViewModel/>
         </Grid.DataContext>
@@ -20,19 +20,19 @@
 
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="297" Height="213">
-            <TextBlock>
+            <TextBlock Style="{StaticResource setFamilie}">
                 <Run Text="Ændre fornavn:"/>
             </TextBlock>
-            <TextBox x:Name="OpretbarnFornavn" Text="{Binding SelectedBarn.Fornavn, Mode=TwoWay}"/>
-            <TextBlock>
+            <TextBox x:Name="OpretbarnFornavn" Text="{Binding SelectedBarn.Fornavn, Mode=TwoWay}" />
+            <TextBlock Style="{StaticResource setFamilie}">
                 <Run Text="Ændre efternavn:"/>
             </TextBlock>
             <TextBox x:Name="OpretBarnEfternavn" Text="{Binding SelectedBarn.Efternavn, Mode=TwoWay}" />
-            <TextBlock>
+            <TextBlock Style="{StaticResource setFamilie}">
                 <Run Text="Ændre Fødselsdag:"/>
             </TextBlock>
             <DatePicker HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Date="{Binding SelectedBarn.Fødselsdato, Mode=TwoWay}"/>
-            <Button Margin="0,5,0,0" Content="Rediger" Command="{Binding PutBarnCommand}"/>
+            <Button Margin="0,5,0,0" Content="Rediger" Command="{Binding PutBarnCommand}" Style="{StaticResource Familie}"/>
         </StackPanel>
 
     </Grid>

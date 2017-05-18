@@ -8,28 +8,31 @@
     x:Class="_2.SemesterProjekt.View.Familie"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
         <Grid.DataContext>
             <Viewmodel:VaccAppViewModel/>
         </Grid.DataContext>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" >
-            <TextBlock FontSize="28" Margin="0,40,0,0" HorizontalAlignment="Center">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
+            <TextBlock FontSize="28" Margin="0,40,0,0" HorizontalAlignment="Center" Foreground="White">
                 <Run Text="Børn"/>
+                
             </TextBlock>
             <ListView x:Name="ListViewBørn"
+                      Background="WhiteSmoke"
                       BorderBrush="Black"
                       BorderThickness="0.5"
                       Height="350"
-                      Width="250" ItemsSource="{Binding Singleton.Børn, Mode=TwoWay}" SelectedItem="{Binding SelectedBarn, Mode=TwoWay}">
-            </ListView>
+                      Width="250" ItemsSource="{Binding Singleton.Børn, Mode=TwoWay}" SelectedItem="{Binding SelectedBarn, Mode=TwoWay}" IsSynchronizedWithCurrentItem="False"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="opretBarn" Click="opretBarn_Click"
                         Content="Opret"
+                       Style="{StaticResource Familie}"
+                        
                         />
-                <Button x:Name="SletBarn" Margin="50,0,0,0" Content="Slet" Command="{Binding SletBarnCommand, Mode=TwoWay}"/>
+                <Button x:Name="SletBarn" Margin="50,0,0,0" Content="Slet" Command="{Binding SletBarnCommand, Mode=TwoWay}" Style="{StaticResource Familie}"/>
             </StackPanel>
-            <Button HorizontalAlignment="Center" Margin="0,20,0,0" Content="Rediger valgt barn" Click="Button_Click" Width="147.33332824707"/>
-            <Button HorizontalAlignment="Center" Margin="0,10,0,0" Content="Se vaccinationskort" Click="Button_Click_1"/>
+            <Button Style="{StaticResource Familie}" HorizontalAlignment="Center" Margin="0,20,0,0" Content="Rediger valgt barn" Click="Button_Click" Width="147.33332824707"/>
+            <Button Style="{StaticResource Familie}" HorizontalAlignment="Center" Margin="0,10,0,0" Content="Se vaccinationskort" Click="Button_Click_1"/>
         </StackPanel>
     </Grid>
 </Page>
