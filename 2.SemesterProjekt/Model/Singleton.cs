@@ -36,12 +36,24 @@ namespace _2.SemesterProjekt.Model
             }
         }
 
+        //Benji ide
+        private ObservableCollection<Skema> vaccineSkemaListe;
+
+        public ObservableCollection<Skema> VaccineSkemaListe
+        {
+            get { return vaccineSkemaListe; }
+            set { vaccineSkemaListe = value; }
+        }
+
+
+
         /*CTOR*/
         public Singleton()
         {
             Børn = new ObservableCollection<Barn>();
             hent();
-
+            //bejamin Ide
+            VaccineSkemaListe = new ObservableCollection<Skema>();
             //mik
             VacPlanCollection = new ObservableCollection<VacSkemaBarnPlan>();
             GetVacPlan();

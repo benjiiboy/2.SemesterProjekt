@@ -32,6 +32,17 @@ namespace _2.SemesterProjekt.Persistency
 
                     if (response.IsSuccessStatusCode)
                     {
+                        // ide til post fra daniel
+                        //TODO: kig om det virker
+                        List<Skema> sList = Singleton.VaccAppSingletion.VaccineSkemaListe.ToList();
+                        foreach (Skema s in sList)
+                        {
+                            DateTime injDate = PostBarn.Fødselsdato.AddMonths(s.Tid);
+                            VacPlan vp = new VacPlan(injDate, false, PostBarn.Barn_Id, s.Vac_Id);
+                            PostVacPlan(vp);
+                        }
+
+
                         MessageDialog BarnAdded = new MessageDialog("Dit barn blev tilføjet");
                         BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
                         BarnAdded.ShowAsync().AsTask();
@@ -151,13 +162,13 @@ namespace _2.SemesterProjekt.Persistency
                     ObservableCollection<VacSkemaBarnPlan> vacplanogbarnListe = new ObservableCollection<VacSkemaBarnPlan>();
 
                     var Vacplanogbarnjoin = from barn in VacBarnListe
-                                    join plan in VacPlanListe on barn.Barn_Id equals plan.Barn_Id
-                                    select new { barn.Fornavn, barn.Efternavn, barn.Fødselsdato, plan.VaccineTid, plan.TrueFalse};
+                                            join plan in VacPlanListe on barn.Barn_Id equals plan.Barn_Id
+                                            select new { barn.Fornavn, barn.Efternavn, barn.Fødselsdato, plan.VaccineTid, plan.TrueFalse };
 
                     foreach (var item in Vacplanogbarnjoin)
                     {
 
-                       VacSkemaBarnPlan derpbarn = new VacSkemaBarnPlan(item.VaccineTid, item.Fornavn, item.Efternavn, item.Fødselsdato, item.TrueFalse);
+                        VacSkemaBarnPlan derpbarn = new VacSkemaBarnPlan(item.VaccineTid, item.Fornavn, item.Efternavn, item.Fødselsdato, item.TrueFalse);
                         vacplanogbarnListe.Add(derpbarn);
                     }
 
@@ -165,7 +176,7 @@ namespace _2.SemesterProjekt.Persistency
 
                     var Vacplanbarnskemajoin = from skema in SkemaListe
                                                join vacplanbarn in vacplanogbarnListe on skema.Vac_Id equals vacplanbarn.Vac_Id
-                                               select new {skema.Tid, skema.VaccineNavn, vacplanbarn.VaccineTid, vacplanbarn.TrueFalse, vacplanbarn.Fornavn, vacplanbarn.Efternavn, vacplanbarn.Fødselsdato};
+                                               select new { skema.Tid, skema.VaccineNavn, vacplanbarn.VaccineTid, vacplanbarn.TrueFalse, vacplanbarn.Fornavn, vacplanbarn.Efternavn, vacplanbarn.Fødselsdato };
 
                     foreach (var item in Vacplanbarnskemajoin)
                     {
@@ -183,6 +194,42 @@ namespace _2.SemesterProjekt.Persistency
             }
         }
 
+        /*Benjamin ide til post vacplan*/
 
+        public static void PostVacPlan(VacPlan PostVacPlan)
+        {
+
+            using (var Client = new HttpClient())
+            {
+                Client.BaseAddress = new Uri(serverUrl);
+                Client.DefaultRequestHeaders.Clear();
+                Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                try
+                {
+                    var response = Client.PostAsJsonAsync(apiVacPlan, PostVacPlan).Result;
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        //MessageDialog BarnAdded = new MessageDialog("Dit barn blev tilføjet");
+                        //BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
+                        //BarnAdded.ShowAsync().AsTask();
+                        // den skal da ikke gøre noget når den er succes, daa det ville poppe op hele tiden
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageDialog BarnAdded = new MessageDialog("Fejl, barn blev ikke tilføjet til VacPlan" + e);
+                    BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
+                    BarnAdded.ShowAsync().AsTask();
+                }
+
+
+
+
+
+
+            }
+        }
     }
 }

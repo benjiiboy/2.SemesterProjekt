@@ -36,8 +36,6 @@ namespace _2.SemesterProjekt.Model
         }
 
 
-        //husk år først altså fx 19921210 for 12 10 1992
-
         public DateTime Fødselsdato { get; set; }
 
 
