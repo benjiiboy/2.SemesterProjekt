@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5CA51B1B-A2E8-4D8C-AE23-BE7C89F8177B}</ProjectGuid>
+    <ProjectGuid>{8E7F503D-D9FB-4C1D-85EF-E9706517CE33}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -200,7 +200,7 @@
     <Compile Include="Controllers\BarnController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\VaccineController.cs" />
-    <Compile Include="Controllers\VacplanController.cs" />
+    <Compile Include="Controllers\VacPlanController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -208,7 +208,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vaccine.cs" />
-    <Compile Include="Vacplan.cs" />
+    <Compile Include="VacPlan.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -294,7 +294,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>11844</DevelopmentServerPort>
+          <DevelopmentServerPort>14745</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:4500/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

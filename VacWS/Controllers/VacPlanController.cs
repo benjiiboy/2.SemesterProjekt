@@ -13,44 +13,44 @@ using VacWS;
 
 namespace VacWS.Controllers
 {
-    public class VacplanController : ApiController
+    public class VacPlanController : ApiController
     {
         private DatabaseContext db = new DatabaseContext();
 
-        // GET: api/Vacplan
-        public IQueryable<Vacplan> GetVacplan()
+        // GET: api/VacPlan
+        public IQueryable<VacPlan> GetVacPlan()
         {
-            return db.Vacplan;
+            return db.VacPlan;
         }
 
-        // GET: api/Vacplan/5
-        [ResponseType(typeof(Vacplan))]
-        public async Task<IHttpActionResult> GetVacplan(int id)
+        // GET: api/VacPlan/5
+        [ResponseType(typeof(VacPlan))]
+        public async Task<IHttpActionResult> GetVacPlan(int id)
         {
-            Vacplan vacplan = await db.Vacplan.FindAsync(id);
-            if (vacplan == null)
+            VacPlan vacPlan = await db.VacPlan.FindAsync(id);
+            if (vacPlan == null)
             {
                 return NotFound();
             }
 
-            return Ok(vacplan);
+            return Ok(vacPlan);
         }
 
-        // PUT: api/Vacplan/5
+        // PUT: api/VacPlan/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutVacplan(int id, Vacplan vacplan)
+        public async Task<IHttpActionResult> PutVacPlan(int id, VacPlan vacPlan)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != vacplan.Plan_Id)
+            if (id != vacPlan.Plan_Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(vacplan).State = EntityState.Modified;
+            db.Entry(vacPlan).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +58,7 @@ namespace VacWS.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!VacplanExists(id))
+                if (!VacPlanExists(id))
                 {
                     return NotFound();
                 }
@@ -71,50 +71,35 @@ namespace VacWS.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Vacplan
-        [ResponseType(typeof(Vacplan))]
-        public async Task<IHttpActionResult> PostVacplan(Vacplan vacplan)
+        // POST: api/VacPlan
+        [ResponseType(typeof(VacPlan))]
+        public async Task<IHttpActionResult> PostVacPlan(VacPlan vacPlan)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Vacplan.Add(vacplan);
+            db.VacPlan.Add(vacPlan);
+            await db.SaveChangesAsync();
 
-            try
-            {
-                await db.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (VacplanExists(vacplan.Plan_Id))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return CreatedAtRoute("DefaultApi", new { id = vacplan.Plan_Id }, vacplan);
+            return CreatedAtRoute("DefaultApi", new { id = vacPlan.Plan_Id }, vacPlan);
         }
 
-        // DELETE: api/Vacplan/5
-        [ResponseType(typeof(Vacplan))]
-        public async Task<IHttpActionResult> DeleteVacplan(int id)
+        // DELETE: api/VacPlan/5
+        [ResponseType(typeof(VacPlan))]
+        public async Task<IHttpActionResult> DeleteVacPlan(int id)
         {
-            Vacplan vacplan = await db.Vacplan.FindAsync(id);
-            if (vacplan == null)
+            VacPlan vacPlan = await db.VacPlan.FindAsync(id);
+            if (vacPlan == null)
             {
                 return NotFound();
             }
 
-            db.Vacplan.Remove(vacplan);
+            db.VacPlan.Remove(vacPlan);
             await db.SaveChangesAsync();
 
-            return Ok(vacplan);
+            return Ok(vacPlan);
         }
 
         protected override void Dispose(bool disposing)
@@ -126,9 +111,9 @@ namespace VacWS.Controllers
             base.Dispose(disposing);
         }
 
-        private bool VacplanExists(int id)
+        private bool VacPlanExists(int id)
         {
-            return db.Vacplan.Count(e => e.Plan_Id == id) > 0;
+            return db.VacPlan.Count(e => e.Plan_Id == id) > 0;
         }
     }
 }

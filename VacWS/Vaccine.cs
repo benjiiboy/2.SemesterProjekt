@@ -12,7 +12,7 @@ namespace VacWS
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Vaccine()
         {
-            Vacplan = new HashSet<Vacplan>();
+            VacPlan = new HashSet<VacPlan>();
         }
 
         [Key]
@@ -22,14 +22,14 @@ namespace VacWS
         public int Tid { get; set; }
 
         [Required]
-        [StringLength(50)]
-        public string Navn { get; set; }
+        [StringLength(100)]
+        public string VaccineNavn { get; set; }
 
         [Required]
         [StringLength(1000)]
         public string Note { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Vacplan> Vacplan { get; set; }
+        public virtual ICollection<VacPlan> VacPlan { get; set; }
     }
 }

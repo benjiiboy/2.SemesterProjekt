@@ -15,7 +15,7 @@ namespace VacWS
 
         public virtual DbSet<Barn> Barn { get; set; }
         public virtual DbSet<Vaccine> Vaccine { get; set; }
-        public virtual DbSet<Vacplan> Vacplan { get; set; }
+        public virtual DbSet<VacPlan> VacPlan { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -28,12 +28,12 @@ namespace VacWS
                 .IsFixedLength();
 
             modelBuilder.Entity<Barn>()
-                .HasMany(e => e.Vacplan)
+                .HasMany(e => e.VacPlan)
                 .WithRequired(e => e.Barn)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Vaccine>()
-                .Property(e => e.Navn)
+                .Property(e => e.VaccineNavn)
                 .IsFixedLength();
 
             modelBuilder.Entity<Vaccine>()
@@ -41,7 +41,7 @@ namespace VacWS
                 .IsFixedLength();
 
             modelBuilder.Entity<Vaccine>()
-                .HasMany(e => e.Vacplan)
+                .HasMany(e => e.VacPlan)
                 .WithRequired(e => e.Vaccine)
                 .WillCascadeOnDelete(false);
         }

@@ -12,18 +12,18 @@ namespace VacWS
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Barn()
         {
-            Vacplan = new HashSet<Vacplan>();
+            VacPlan = new HashSet<VacPlan>();
         }
 
         [Key]
         public int Barn_Id { get; set; }
 
         [Required]
-        [StringLength(100)]
+        [StringLength(50)]
         public string Fornavn { get; set; }
 
         [Required]
-        [StringLength(100)]
+        [StringLength(50)]
         public string Efternavn { get; set; }
 
         public DateTime Fødselsdato { get; set; }
@@ -31,6 +31,6 @@ namespace VacWS
         public int TelefonNr { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Vacplan> Vacplan { get; set; }
+        public virtual ICollection<VacPlan> VacPlan { get; set; }
     }
 }
