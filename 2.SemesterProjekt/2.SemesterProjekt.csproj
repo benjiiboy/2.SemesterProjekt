@@ -141,15 +141,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\baggrund.png" />
+    <Content Include="Assets\logo176.png" />
+    <Content Include="Assets\logo44.png" />
+    <Content Include="Assets\logo88.png" />
     <Content Include="Assets\regionsjaelland40x40.png" />
     <Content Include="Assets\regionsjaelland88x88.png" />
+    <Content Include="Assets\rød176176.scale-100.png" />
+    <Content Include="Assets\rød176176.scale-200.png" />
+    <Content Include="Assets\rød176176.scale-400.png" />
     <Content Include="Assets\thisone.png" />
     <Content Include="Assets\vaccine.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
