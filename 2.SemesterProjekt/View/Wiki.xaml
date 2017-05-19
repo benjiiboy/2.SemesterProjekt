@@ -9,7 +9,7 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer>
-            <ListView HorizontalAlignment="Center" VerticalAlignment="Center" Height="300">
+            <ListView HorizontalAlignment="Center" VerticalAlignment="Center" Height="300" SelectionMode="None">
                 <Border Name=" border" BorderBrush="Black" BorderThickness="1" Padding="5" Margin="5">
                     <Grid Height="auto" Width="240" >
                         <StackPanel>
@@ -18,11 +18,9 @@
                                 <TextBlock Text="HER-ER-NAVN"></TextBlock>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Note "/>
+                                <TextBlock Text="Note" TextWrapping="WrapWholeWords"/>
                             </StackPanel>
                         </StackPanel>
-
-
                     </Grid>
                 </Border>
             </ListView>
