@@ -121,6 +121,6 @@ namespace VacWS.Controllers
         private bool BarnExists(int id)
         {
             return db.Barn.Count(e => e.Barn_Id == id) > 0;
-        }
+        }     
     }
 }
