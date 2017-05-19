@@ -114,24 +114,6 @@ namespace VacWS.Controllers
         private bool BarnExists(int id)
         {
             return db.Barn.Count(e => e.Barn_Id == id) > 0;
-        }
-
-
-
-
-        //Custom controller til at få sidst addet barn
-        [Route("GetLastBarn")]
-        [HttpGet]
-        public IHttpActionResult GetLastBarn()
-        {
-            Barn barn = db.Barn.Last();
-
-            if (barn == null)
-            {
-                return BadRequest();
-            }
-
-            return Ok(barn);
-        }
+        }     
     }
 }
