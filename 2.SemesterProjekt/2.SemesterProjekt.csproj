@@ -141,6 +141,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\baggrund.png" />
+    <Content Include="Assets\regionsjaelland40x40.png" />
+    <Content Include="Assets\regionsjaelland88x88.png" />
     <Content Include="Assets\thisone.png" />
     <Content Include="Assets\vaccine.jpg" />
     <Content Include="Properties\Default.rd.xml" />
