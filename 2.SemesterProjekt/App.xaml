@@ -15,7 +15,7 @@
             <Setter Property="FontSize" Value="28"/>
             <Setter Property="Height" Value="100"/>
             <Setter Property="Foreground" Value="Blue"/>
-            <Setter Property="FontFamily" Value="Britannic Bold"/>
+            <Setter Property="FontFamily" Value=" Verdana"/>
             <Setter Property="Margin" Value="0,0,0,9"/>
         </Style>
 
@@ -25,14 +25,14 @@
             <Setter Property="FontSize" Value="28"/>
             <Setter Property="Height" Value="32"/>
             <Setter Property="Foreground" Value="Blue"/>
-            <Setter Property="FontFamily" Value="Britannic Bold"/>
+            <Setter Property="FontFamily" Value="Verdana"/>
             <Setter Property="FontSize" Value="15"/>
 
         </Style>
 
 
         <Style TargetType="TextBlock" x:Key="setFamilie">
-            <Setter Property="FontFamily" Value="Britannic Bold"/>
+            <Setter Property="FontFamily" Value=" Verdana"/>
             <Setter Property="Foreground" Value="Blue"/>
         </Style>
         
