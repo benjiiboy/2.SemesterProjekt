@@ -19,9 +19,10 @@ namespace _2.SemesterProjekt.Model
         public int Tid { get; set; }
         public string VaccineNavn { get; set; }
 
-        public VacSkemaBarnPlan(DateTime tid, string fornavn, string efternavn, DateTime Føds, bool tf)
+
+        public VacSkemaBarnPlan(DateTime vaccinetid, string fornavn, string efternavn, DateTime Føds, bool tf)
         {
-            this.VaccineTid = tid;
+            this.VaccineTid = vaccinetid;
             this.Fornavn = fornavn;
             this.Efternavn = efternavn;
             this.TrueFalse = tf;

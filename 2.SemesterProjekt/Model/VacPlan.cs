@@ -23,8 +23,9 @@ namespace _2.SemesterProjekt.Model
 
         }
 
-        public VacPlan(DateTime vaccinetid, bool tf, int barn, int vac)
+        public VacPlan(int id, DateTime vaccinetid, bool tf, int barn, int vac)
         {
+            this.Plan_Id = id;
             this.VaccineTid = vaccinetid;
             this.TrueFalse = tf;
             this.Barn_Id = barn;

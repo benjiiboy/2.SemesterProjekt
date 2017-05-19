@@ -22,27 +22,27 @@ namespace _2.SemesterProjekt.Model
             set { børn = value; }
         }
 
-        private static Singleton vaccAppSingleton;
+        private static Singleton instance;
 
-        public static Singleton VaccAppSingletion
+        public static Singleton Instance
         {
             get
             {
-                if (vaccAppSingleton == null)
+                if (instance == null)
                 {
-                    vaccAppSingleton = new Singleton();
+                    instance = new Singleton();
                 }
-                return vaccAppSingleton;
+                return instance;
             }
         }
 
         //Benji ide
-        private ObservableCollection<Skema> vaccineSkemaListe;
+        private ObservableCollection<Vaccine> vaccineListe;
 
-        public ObservableCollection<Skema> VaccineSkemaListe
+        public ObservableCollection<Vaccine> VaccineListe
         {
-            get { return vaccineSkemaListe; }
-            set { vaccineSkemaListe = value; }
+            get { return vaccineListe; }
+            set { vaccineListe = value; }
         }
 
 
@@ -52,8 +52,6 @@ namespace _2.SemesterProjekt.Model
         {
             Børn = new ObservableCollection<Barn>();
             hent();
-            //bejamin Ide
-            VaccineSkemaListe = new ObservableCollection<Skema>();
             //mik
             VacPlanCollection = new ObservableCollection<VacSkemaBarnPlan>();
             GetVacPlan();

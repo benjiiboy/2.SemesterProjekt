@@ -14,17 +14,17 @@ namespace _2.SemesterProjekt.Viewmodel
         public Singleton Singleton  { get; set; }
 
         #region valg af plan
-        private PlanBarn _valgtPlan;
+        //private  _valgtPlan;
 
-        public PlanBarn ValgtPlan
-        {
-            get { return _valgtPlan; }
-            set
-            {
-                _valgtPlan = value;
-                OnPropertyChanged(nameof(ValgtPlan));
-            }
-        }
+        //public PlanBarn ValgtPlan
+        //{
+        //    get { return _valgtPlan; }
+        //    set
+        //    {
+        //        _valgtPlan = value;
+        //        OnPropertyChanged(nameof(ValgtPlan));
+        //    }
+        //}
 #endregion
 
 
@@ -33,7 +33,7 @@ namespace _2.SemesterProjekt.Viewmodel
         public VacPlanViewModel()
         {
 
-            Singleton = Singleton.VaccAppSingletion;
+            Singleton = Singleton.Instance;
 
         }
 

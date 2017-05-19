@@ -151,7 +151,7 @@
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <class Id="e9e131ba-40b1-4f6c-9ea4-b53dbceab7c4" name="VacSkema" isAbstract="false" isLeaf="false" isActiveClass="false">
+            <class Id="e9e131ba-40b1-4f6c-9ea4-b53dbceab7c4" name="VacVaccine" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="20dab33d-778a-4547-9909-47d995fe29b4" />
               <ownedOperationsInternal>
                 <operation Id="e7a01516-5a35-4ff7-9a83-4eb9fb5eaf06" name="Return vaccine navn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -478,7 +478,7 @@ Familie &amp; Menu</body>
                 <property Id="db3d4ec6-5c0e-4867-9b81-ebbf55ef1101" name="Børn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="486045c9-292f-4b97-8a1c-6583625d7fc0" />
                 </property>
-                <property Id="c3da3d75-78f6-4796-b1af-fbd66dcb59c5" name="VacSkema" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="c3da3d75-78f6-4796-b1af-fbd66dcb59c5" name="VacVaccine" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="679a8d66-fe36-48f5-a558-01119701a41f" />
                 </property>
               </ownedAttributesInternal>

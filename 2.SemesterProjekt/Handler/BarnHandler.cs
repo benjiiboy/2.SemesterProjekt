@@ -44,7 +44,7 @@ namespace _2.SemesterProjekt.Handler
 
         public void PutBarn()
         {
-            Model.Singleton.VaccAppSingletion.PutBarn(VaccAppVievModel.SelectedBarn);
+            Model.Singleton.Instance.PutBarn(VaccAppVievModel.SelectedBarn);
         }
 
 

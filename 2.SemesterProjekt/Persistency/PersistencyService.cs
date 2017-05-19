@@ -29,17 +29,27 @@ namespace _2.SemesterProjekt.Persistency
                 try
                 {
                     var response = Client.PostAsJsonAsync(apibørn, PostBarn).Result;
+                    PostBarn = response.Content.ReadAsAsync<Barn>().Result;
 
                     if (response.IsSuccessStatusCode)
                     {
-                        // ide til post fra daniel
-                        //TODO: kig om det virker
-                        List<Skema> sList = Singleton.VaccAppSingletion.VaccineSkemaListe.ToList();
-                        foreach (Skema s in sList)
+
+                        VacPlan vp = new VacPlan();
+
+                        ObservableCollection<Vaccine> sList = GetVaccine();
+                        foreach (Vaccine s in sList)
                         {
                             DateTime injDate = PostBarn.Fødselsdato.AddMonths(s.Tid);
-                            VacPlan vp = new VacPlan(injDate, false, PostBarn.Barn_Id, s.Vac_Id);
+
+                            vp.Plan_Id = 0;
+                            vp.Barn_Id = PostBarn.Barn_Id;
+                            vp.TrueFalse = false;
+                            vp.VaccineTid = injDate;
+                            vp.Vac_Id = s.Vac_Id;
+
                             PostVacPlan(vp);
+
+
                         }
 
 
@@ -79,6 +89,7 @@ namespace _2.SemesterProjekt.Persistency
 
         public static void DeleteBarn(Barn DeleteBarn)
         {
+
             using (var Client = new HttpClient())
             {
                 Client.BaseAddress = new Uri(serverUrl);
@@ -86,6 +97,7 @@ namespace _2.SemesterProjekt.Persistency
                 string urlString = apibørn + DeleteBarn.Barn_Id;
                 try
                 {
+
                     var response = Client.DeleteAsync(urlString).Result;
                     if (response.IsSuccessStatusCode)
                     {
@@ -136,7 +148,7 @@ namespace _2.SemesterProjekt.Persistency
         //mik VacPlan
 
         const string apiVacPlan = "api/VacPlan/";
-        const string apiSkema = "api/skema/";
+        const string apiVaccine = "api/Vaccine/";
 
         public static async Task<ObservableCollection<VacSkemaBarnPlan>> GetVacPlanAsync()
         {
@@ -149,15 +161,15 @@ namespace _2.SemesterProjekt.Persistency
 
                 HttpResponseMessage vacplanrespone = await client.GetAsync(apiVacPlan);
                 HttpResponseMessage barnrespone = await client.GetAsync(apibørn);
-                HttpResponseMessage skemarespone = await client.GetAsync(apiSkema);
+                HttpResponseMessage Vaccinerespone = await client.GetAsync(apiVaccine);
 
-                if (vacplanrespone.IsSuccessStatusCode && barnrespone.IsSuccessStatusCode && skemarespone.IsSuccessStatusCode)
+                if (vacplanrespone.IsSuccessStatusCode && barnrespone.IsSuccessStatusCode && Vaccinerespone.IsSuccessStatusCode)
                 {
                     ObservableCollection<VacPlan> VacPlanListe = await vacplanrespone.Content.ReadAsAsync<ObservableCollection<VacPlan>>();
 
                     ObservableCollection<Barn> VacBarnListe = await barnrespone.Content.ReadAsAsync<ObservableCollection<Barn>>();
 
-                    ObservableCollection<Skema> SkemaListe = await skemarespone.Content.ReadAsAsync<ObservableCollection<Skema>>();
+                    ObservableCollection<Vaccine> VaccineListe = await Vaccinerespone.Content.ReadAsAsync<ObservableCollection<Vaccine>>();
 
                     ObservableCollection<VacSkemaBarnPlan> vacplanogbarnListe = new ObservableCollection<VacSkemaBarnPlan>();
 
@@ -168,27 +180,27 @@ namespace _2.SemesterProjekt.Persistency
                     foreach (var item in Vacplanogbarnjoin)
                     {
 
-                        VacSkemaBarnPlan derpbarn = new VacSkemaBarnPlan(item.VaccineTid, item.Fornavn, item.Efternavn, item.Fødselsdato, item.TrueFalse);
-                        vacplanogbarnListe.Add(derpbarn);
+                        VacSkemaBarnPlan derpbarn1 = new VacSkemaBarnPlan(item.VaccineTid, item.Fornavn, item.Efternavn, item.Fødselsdato, item.TrueFalse);
+                        vacplanogbarnListe.Add(derpbarn1);
                     }
 
-                    ObservableCollection<VacSkemaBarnPlan> VacPlanBarnSkemaListe = new ObservableCollection<VacSkemaBarnPlan>();
+                    ObservableCollection<VacSkemaBarnPlan> VacPlanBarnVaccineListe = new ObservableCollection<VacSkemaBarnPlan>();
 
-                    var Vacplanbarnskemajoin = from skema in SkemaListe
-                                               join vacplanbarn in vacplanogbarnListe on skema.Vac_Id equals vacplanbarn.Vac_Id
-                                               select new { skema.Tid, skema.VaccineNavn, vacplanbarn.VaccineTid, vacplanbarn.TrueFalse, vacplanbarn.Fornavn, vacplanbarn.Efternavn, vacplanbarn.Fødselsdato };
+                    var VacplanbarnVaccinejoin = from Vaccine in VaccineListe
+                                               join vacplanbarn in vacplanogbarnListe on Vaccine.Vac_Id equals vacplanbarn.Vac_Id
+                                               select new { Vaccine.Tid, Vaccine.VaccineNavn, vacplanbarn.VaccineTid, vacplanbarn.TrueFalse, vacplanbarn.Fornavn, vacplanbarn.Efternavn, vacplanbarn.Fødselsdato };
 
-                    foreach (var item in Vacplanbarnskemajoin)
+                    foreach (var item in VacplanbarnVaccinejoin)
                     {
                         VacSkemaBarnPlan derpbarn = new VacSkemaBarnPlan(item.Tid, item.Fornavn, item.Efternavn, item.VaccineNavn, item.TrueFalse, item.Fødselsdato, item.VaccineTid);
-                        VacPlanBarnSkemaListe.Add(derpbarn);
+                        VacPlanBarnVaccineListe.Add(derpbarn);
                     }
 
 
 
                     //evt query for spec'? -> return
 
-                    return VacPlanBarnSkemaListe;
+                    return VacPlanBarnVaccineListe;
                 }
                 return null;
             }
@@ -211,25 +223,64 @@ namespace _2.SemesterProjekt.Persistency
 
                     if (response.IsSuccessStatusCode)
                     {
-                        //MessageDialog BarnAdded = new MessageDialog("Dit barn blev tilføjet");
-                        //BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
-                        //BarnAdded.ShowAsync().AsTask();
-                        // den skal da ikke gøre noget når den er succes, daa det ville poppe op hele tiden
+                        //hvis  response code er positiv ville man få 12 beskeder, om at det gik godt, derfor er der ingen
                     }
                 }
                 catch (Exception e)
                 {
-                    MessageDialog BarnAdded = new MessageDialog("Fejl, barn blev ikke tilføjet til VacPlan" + e);
-                    BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
-                    BarnAdded.ShowAsync().AsTask();
+                    MessageDialog VacplanAdded = new MessageDialog("Fejl, Vacciner blev ikke oprettet til dit barn" + e);
+                    VacplanAdded.Commands.Add(new UICommand { Label = "Ok" });
+                    VacplanAdded.ShowAsync().AsTask();
                 }
-
-
-
-
-
 
             }
         }
+
+
+
+       public static ObservableCollection<Vaccine> GetVaccine()
+        {
+            using (var Client = new HttpClient())
+            {
+                Client.BaseAddress = new Uri(serverUrl);
+                Client.DefaultRequestHeaders.Clear();
+                var response = Client.GetAsync(apiVaccine).Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var VaccineList = response.Content.ReadAsAsync<ObservableCollection<Vaccine>>().Result;
+
+                    return VaccineList;
+                }
+
+                return null;
+            }
+        }
+
+        public static ObservableCollection<VacPlan> GetVacPlan()
+        {
+            using (var Client = new HttpClient())
+            {
+                Client.BaseAddress = new Uri(serverUrl);
+                Client.DefaultRequestHeaders.Clear();
+                var response = Client.GetAsync(apiVacPlan).Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var VacPlanList = response.Content.ReadAsAsync<ObservableCollection<VacPlan>>().Result;
+
+                    return VacPlanList;
+                }
+
+                return null;
+            }
+        }
+
+        
+        
+
+
+
+
     }
-}
+    }
