@@ -92,21 +92,6 @@ namespace VacWS.Controllers
         public async Task<IHttpActionResult> DeleteBarn(int id)
         {
 
-
-            var vliste = db.VacPlan; // Where(x => x.Barn_Id == id);
-
-            //db.VacPlan.RemoveRange(vliste);
-
-
-            foreach (var v in vliste)
-            {
-                if (v.Barn_Id == id)
-                {
-                    db.VacPlan.RemoveRange(vliste);
-                }
-            }
-
-
             Barn barn = await db.Barn.FindAsync(id);
             if (barn == null)
             {
