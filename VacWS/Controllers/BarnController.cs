@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
@@ -90,12 +91,6 @@ namespace VacWS.Controllers
         [ResponseType(typeof(Barn))]
         public async Task<IHttpActionResult> DeleteBarn(int id)
         {
-
-
-            var vliste = db.VacPlan.Where(x => x.Barn_Id == id);
-
-            db.VacPlan.RemoveRange(vliste);
-
 
             Barn barn = await db.Barn.FindAsync(id);
             if (barn == null)
