@@ -8,23 +8,26 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
         <ScrollViewer>
-            <ListView HorizontalAlignment="Center" VerticalAlignment="Center" Height="300" SelectionMode="None">
-                <Border Name=" border" BorderBrush="Black" BorderThickness="1" Padding="5" Margin="5">
-                    <Grid Height="auto" Width="240" >
-                        <StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontWeight="Bold">Navn: </TextBlock>
-                                <TextBlock Text="HER-ER-NAVN"></TextBlock>
+            <ListView Height="300" SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Height="auto" Width="240" >
+                            <StackPanel BorderBrush="Black" BorderThickness="1">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontWeight="Bold">Navn:</TextBlock>
+                                    <TextBlock Text="HER-ER-NAVN"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="Note" TextWrapping="WrapWholeWords"/>
+                                </StackPanel>
                             </StackPanel>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Note" TextWrapping="WrapWholeWords"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </Grid>
-                </Border>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </ScrollViewer>
-        
+
     </Grid>
 </Page>

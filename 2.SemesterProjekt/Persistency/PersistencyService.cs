@@ -276,7 +276,34 @@ namespace _2.SemesterProjekt.Persistency
             }
         }
 
-        
+        //mik hent vaccine
+        public static async Task<ObservableCollection<Vaccine>> GetVaccineAsync()
+        {
+            using (var Client = new HttpClient())
+            {
+                Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                Client.BaseAddress = new Uri(serverUrl);
+                Client.DefaultRequestHeaders.Clear();
+                try
+                {
+                    HttpResponseMessage GetVaccineResponse = await Client.GetAsync(apiVaccine);
+
+                    if (GetVaccineResponse.IsSuccessStatusCode)
+                    {
+                        var TempVaccineCollection = await GetVaccineResponse.Content.ReadAsAsync<ObservableCollection<Vaccine>>();
+                        return TempVaccineCollection;
+                    }
+                }
+                catch (Exception)
+                {
+                    //skal ændres!
+                    MessageDialog VacplanAdded = new MessageDialog("Fejl, Vacciner blev ikke oprettet til dit barn");
+                    VacplanAdded.Commands.Add(new UICommand { Label = "Ok" });
+                    await VacplanAdded.ShowAsync().AsTask();
+                }
+                return null;
+            }
+        }
         
 
 

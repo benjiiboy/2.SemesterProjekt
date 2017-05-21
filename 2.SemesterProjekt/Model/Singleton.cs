@@ -55,6 +55,9 @@ namespace _2.SemesterProjekt.Model
             //mik
             VacPlanCollection = new ObservableCollection<VacSkemaBarnPlan>();
             GetVacPlan();
+            //mik vaccine
+            VaccineCollection = new ObservableCollection<Model.Vaccine>();
+            GetVaccineAsync();
         }
 
         public void TilføjBarn(Barn b)
@@ -103,7 +106,17 @@ namespace _2.SemesterProjekt.Model
         }
         #endregion
 
+        //mik vaccine
 
+        public ObservableCollection<Vaccine> VaccineCollection { get; set; }
+
+        public async Task GetVaccineAsync()
+        {
+            foreach (var i in await PersistencyService.GetVaccineAsync())
+            {
+                this.VaccineCollection.Add(i);
+            }
+        }
     }
 }
 
