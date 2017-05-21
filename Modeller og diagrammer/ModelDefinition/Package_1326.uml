@@ -66,7 +66,7 @@
             isComposite="false" />
           <property
             Id="679a8d66-fe36-48f5-a558-01119701a41f"
-            name="VacSkema"
+            name="VacVaccine"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"

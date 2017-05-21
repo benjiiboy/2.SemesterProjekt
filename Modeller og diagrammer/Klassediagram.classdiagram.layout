@@ -39,7 +39,7 @@
           </nestedChildShapes>
         </classShape>
         <classShape Id="e001c4e1-52e7-4fc6-81cf-4556790e6ebc" absoluteBounds="7.25, 4.25, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
-          <classMoniker Id="e9e131ba-40b1-4f6c-9ea4-b53dbceab7c4" LastKnownName="VacSkema" />
+          <classMoniker Id="e9e131ba-40b1-4f6c-9ea4-b53dbceab7c4" LastKnownName="VacVaccine" />
           <nestedChildShapes>
             <AttributeElementListCompartment Id="decf2775-2de9-44b7-94cc-3251023667e4" absoluteBounds="7.2650000000000006, 4.64, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
             <OperationElementListCompartment Id="b0558f1f-c70a-43a6-9dd1-7b2e44d5a2df" isExpanded="false" absoluteBounds="7.265, 4.85117186754942, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />

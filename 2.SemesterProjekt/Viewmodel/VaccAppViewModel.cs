@@ -106,7 +106,7 @@ namespace _2.SemesterProjekt.Viewmodel
         public VaccAppViewModel()
         {
             BarnHandler = new Handler.BarnHandler(this);
-            Singleton = Singleton.VaccAppSingletion;
+            Singleton = Singleton.Instance;
 
             OpretBarnCommand = new RelayCommand(BarnHandler.OpretBarn);
             SletBarnCommand = new RelayCommand(BarnHandler.SletBarn);

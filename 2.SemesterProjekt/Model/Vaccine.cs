@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2.SemesterProjekt.Model
 {
-   public class Skema
+   public class Vaccine
     {
         public int Vac_Id { get; set; }
         public int Tid { get; set; }
@@ -14,15 +14,12 @@ namespace _2.SemesterProjekt.Model
         public string Note { get; set; }
 
 
-        public Skema(int vac, int vacinetid, string vacinenavn, string note)
+        public Vaccine(int vac, int vacinetid, string vacinenavn, string note)
         {
             this.Vac_Id = vac;
             this.Tid = vacinetid;
             this.VaccineNavn = vacinenavn;
             this.Note = note;
         }
-
-
-
     }
 }

@@ -17,7 +17,7 @@
                    />
         <ListView x:Name="VacPlanListView"
                   ScrollViewer.VerticalScrollBarVisibility="Visible"
-                  Margin="0,60,0,0" SelectedItem="{Binding ValgtPlan}" ItemsSource="{Binding Singleton.VaccAppSingletion.VacPlanCollection, Mode=TwoWay}"
+                  Margin="0,60,0,0" SelectedItem="{Binding ValgtPlan}" ItemsSource="{Binding Singleton.VacPlanCollection}"
                   />
     </Grid>
 </Page>
