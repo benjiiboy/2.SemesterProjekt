@@ -20,8 +20,10 @@ namespace _2.SemesterProjekt.Model
         public string VaccineNavn { get; set; }
 
 
-        public VacSkemaBarnPlan(DateTime vaccinetid, string fornavn, string efternavn, DateTime Føds, bool tf)
+        public VacSkemaBarnPlan(int vacid, int barnid, DateTime vaccinetid, string fornavn, string efternavn, DateTime Føds, bool tf)
         {
+            this.Vac_Id = vacid;
+            this.Barn_Id = barnid;
             this.VaccineTid = vaccinetid;
             this.Fornavn = fornavn;
             this.Efternavn = efternavn;
@@ -29,15 +31,15 @@ namespace _2.SemesterProjekt.Model
             this.Fødselsdato = Føds;
         }
 
-        public VacSkemaBarnPlan(int tid, string fornavn, string efternavn, string vacnavn, bool tf, DateTime føds, DateTime vacinetid)
+        public VacSkemaBarnPlan(int vacid,int barnid, string fornavn, string efternavn, string vacnavn, bool tf, DateTime vacinetid)
         {
+            this.Vac_Id = vacid;
             this.VaccineTid = vacinetid;
             this.Fornavn = fornavn;
             this.Efternavn = efternavn;
             this.VaccineNavn = vacnavn;
             this.TrueFalse = tf;
-            this.Fødselsdato = føds;
-            this.Tid = tid;
+            this.Barn_Id = barnid;
         }
 
         public VacSkemaBarnPlan()
