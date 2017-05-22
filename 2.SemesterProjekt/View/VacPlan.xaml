@@ -13,12 +13,37 @@
             <Viewmodel:VacPlanViewModel/>
         </Grid.DataContext>
 
-        <TextBlock Text="Kommende vacciner" HorizontalAlignment="Center" FontSize="36"
-                   />
-        <ListView x:Name="VacPlanListView"
-                  ScrollViewer.VerticalScrollBarVisibility="Visible"
-                  Margin="0,60,0,0" ItemsSource="{Binding Singleton.VacPlanCollection, Mode=TwoWay}"
-                  />
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="180,550,0,0" VerticalAlignment="Top" Click="button_Click"/>
+        <TextBlock Text="Kommende vacciner" HorizontalAlignment="Center" FontSize="36" Style="{StaticResource setFamilie}"/>
+
+
+
+        <ListView Height="500" SelectionMode="None" ItemsSource="{Binding Singleton.VacPlanCollection, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="auto" Width="auto" HorizontalAlignment="Center">
+                        <StackPanel Margin="0,0,0,6">
+                            <StackPanel.Background>
+                                <SolidColorBrush Color="White" Opacity="0.8"/>
+                            </StackPanel.Background>
+                            
+                            <!--her skal skrives hvad der skal vises-->
+                            
+                            
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
     </Grid>
 </Page>
+
+
+<!--<Button x:Name="Noti" Content="Noti" HorizontalAlignment="Left" Margin="180,550,0,0" VerticalAlignment="Top" Click="button_Click" Style="{StaticResource Familie}"/>-->
+
+
+<!--<ListView x:Name="VacPlanListView"
+                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                  Margin="0,60,0,0" ItemsSource="{Binding Singleton.VacPlanCollection, Mode=TwoWay}"/>-->
