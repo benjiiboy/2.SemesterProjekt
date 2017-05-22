@@ -13,11 +13,12 @@
             <Viewmodel:VacPlanViewModel/>
         </Grid.DataContext>
 
-        <TextBlock Text="Kommende vac's" HorizontalAlignment="Center" FontSize="36"
+        <TextBlock Text="Kommende vac's" HorizontalAlignment="Center" FontSize="36" Margin="46,0,46,10"
                    />
         <ListView x:Name="VacPlanListView"
                   ScrollViewer.VerticalScrollBarVisibility="Visible"
                   Margin="0,60,0,0" ItemsSource="{Binding Singleton.VacPlanCollection, Mode=TwoWay}"
                   />
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="180,550,0,0" VerticalAlignment="Top" Click="button_Click"/>
     </Grid>
 </Page>
