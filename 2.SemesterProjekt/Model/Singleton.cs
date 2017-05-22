@@ -58,6 +58,9 @@ namespace _2.SemesterProjekt.Model
             //mik vaccine
             VaccineCollection = new ObservableCollection<Model.Vaccine>();
             GetVaccineAsync();
+
+            VaccineCollectionIkkesort = new ObservableCollection<Vaccine>();
+            GetvaccineAsyncIkkeSort();
         }
 
         public void TilføjBarn(Barn b)
@@ -108,6 +111,19 @@ namespace _2.SemesterProjekt.Model
             foreach (var i in await PersistencyService.GetSorteredeVaccineAsync())
             {
                 this.VaccineCollection.Add(i);
+            }
+        }
+
+
+        //ikke sååårt
+
+        public ObservableCollection<Vaccine> VaccineCollectionIkkesort { get; set; }
+
+        public async Task GetvaccineAsyncIkkeSort()
+        {
+            foreach (var i in await PersistencyService.GetVaccineAsync())
+            {
+                this.VaccineCollectionIkkesort.Add(i);
             }
         }
     }

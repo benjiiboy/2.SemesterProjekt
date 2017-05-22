@@ -14,19 +14,21 @@
             <Viewmodel:VacPlanViewModel/>
         </Grid.DataContext>
 
-        <ListView Height="500" SelectionMode="None" ItemsSource="{Binding Singleton.VaccineCollection}" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <ListView Height="500" SelectionMode="None" ItemsSource="{Binding Singleton.VaccineCollectionIkkesort}" HorizontalAlignment="Center" VerticalAlignment="Center">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Height="auto" Width="auto" HorizontalAlignment="Center">
-                        <StackPanel Margin="0,0,0,6">
+                        <StackPanel Margin="0,0,0,6" Width="450">
                             <StackPanel.Background>
                                 <SolidColorBrush Color="White" Opacity="0.8"/>
                             </StackPanel.Background>
-                            <TextBlock Text="Navn" FontWeight="Bold"/>
-                            <TextBlock Text="Noget her?"/>
+
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock  Text="et eller andet lækkert her" Width="450" />
+                                <TextBlock  Text="Navn:"/>
+                                <TextBlock Text="{Binding VaccineNavn}"/>
                             </StackPanel>
+                            <TextBlock Text="antal måneder:" />
+                            <TextBlock Text="{Binding Tid}" />
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
