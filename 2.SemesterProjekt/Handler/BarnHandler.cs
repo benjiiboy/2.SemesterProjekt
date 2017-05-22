@@ -47,6 +47,11 @@ namespace _2.SemesterProjekt.Handler
             Model.Singleton.Instance.PutBarn(VaccAppVievModel.SelectedBarn);
         }
 
+        public void HentVacciner()
+        {
+            Model.Singleton.Instance.HentVacSkema();
+        }
+
 
     }
 }

@@ -99,6 +99,13 @@ namespace _2.SemesterProjekt.Viewmodel
             set { sletBarnCommand = value; }
         }
 
+        private ICommand seVaccinerCommand;
+
+        public ICommand SeVaccinerCommand
+        {
+            get { return seVaccinerCommand; }
+            set { seVaccinerCommand = value; }
+        }
 
 
         public Handler.BarnHandler BarnHandler { get; set; }
@@ -110,9 +117,8 @@ namespace _2.SemesterProjekt.Viewmodel
 
             OpretBarnCommand = new RelayCommand(BarnHandler.OpretBarn);
             SletBarnCommand = new RelayCommand(BarnHandler.SletBarn,TomListeCheck);
-
             PutBarnCommand = new RelayCommand(BarnHandler.PutBarn,TomListeCheck);
-
+            SeVaccinerCommand = new RelayCommand(BarnHandler.HentVacciner,TomListeCheck);
 
             DateTime dt = System.DateTime.Now;
             fødselsdato = new DateTimeOffset(dt.Year, dt.Month, dt.Day, 0, 0, 0, 0, new TimeSpan());
