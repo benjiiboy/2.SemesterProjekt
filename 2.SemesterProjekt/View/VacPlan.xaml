@@ -7,14 +7,14 @@
     xmlns:Viewmodel="using:_2.SemesterProjekt.Viewmodel"
     x:Class="_2.SemesterProjekt.View.VacPlan"
     mc:Ignorable="d">
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
 
         <Grid.DataContext>
             <Viewmodel:VacPlanViewModel/>
         </Grid.DataContext>
 
-        <TextBlock Text="Kommende vac's" HorizontalAlignment="Center" FontSize="36"
-                   />
+       
+            
         <ListView Height="500" SelectionMode="None" ItemsSource="{Binding Singleton.VacPlanCollection}" HorizontalAlignment="Center" VerticalAlignment="Center" IsSynchronizedWithCurrentItem="False">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -42,12 +42,13 @@
                                     <TextBlock Text="{Binding TrueFalse}"/>
                                 </StackPanel>
                             </StackPanel>
-
-
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <Button x:Name="Noti" Content="Noti" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Click="button_Click" Style="{StaticResource Familie}" Margin="0,0,0,30"/>
+
     </Grid>
 </Page>
