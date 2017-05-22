@@ -105,7 +105,7 @@ namespace _2.SemesterProjekt.Model
 
         public async Task GetVaccineAsync()
         {
-            foreach (var i in await PersistencyService.GetVaccineAsync())
+            foreach (var i in await PersistencyService.GetSorteredeVaccineAsync())
             {
                 this.VaccineCollection.Add(i);
             }
