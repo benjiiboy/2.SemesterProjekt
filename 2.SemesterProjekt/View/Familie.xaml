@@ -12,7 +12,7 @@
         <Grid.DataContext>
             <Viewmodel:VaccAppViewModel/>
         </Grid.DataContext>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,0">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0">
             <TextBlock FontSize="28" Margin="0,40,0,0" HorizontalAlignment="Center" Foreground="WhiteSmoke">
                 <Run Text="Børn"/>
             </TextBlock>
@@ -20,7 +20,7 @@
                       BorderBrush="Black"
                       BorderThickness="0.5"
                       Height="350"
-                      Width="250" ItemsSource="{Binding Singleton.Børn, Mode=TwoWay}" SelectedItem="{Binding SelectedBarn, Mode=TwoWay}">
+                      Width="250" ItemsSource="{Binding Singleton.Børn, Mode=TwoWay}" SelectedItem="{Binding SelectedBarn, Mode=TwoWay}" Background="White">
             </ListView>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="opretBarn" Click="opretBarn_Click"
