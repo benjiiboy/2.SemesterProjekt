@@ -39,7 +39,7 @@
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Name="ModtagetStack">
                                     <TextBlock Text="Modtaget:"/>
-                                    <TextBlock Text="{Binding TrueFalse}"/>
+                                    <TextBlock Text="{Binding FåetVaccine}"/>
                                 </StackPanel>
                             </StackPanel>
 
