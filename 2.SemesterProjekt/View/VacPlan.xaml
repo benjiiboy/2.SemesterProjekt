@@ -7,7 +7,7 @@
     xmlns:Viewmodel="using:_2.SemesterProjekt.Viewmodel"
     x:Class="_2.SemesterProjekt.View.VacPlan"
     mc:Ignorable="d">
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
 
         <Grid.DataContext>
             <Viewmodel:VacPlanViewModel/>
@@ -17,7 +17,7 @@
 
 
 
-        <ListView Height="500" SelectionMode="None" ItemsSource="{Binding Singleton.VacPlanCollection, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <!--<ListView Height="500" SelectionMode="None" ItemsSource="{Binding Singleton.VacPlanCollection, Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Height="auto" Width="auto" HorizontalAlignment="Center">
@@ -25,17 +25,67 @@
                             <StackPanel.Background>
                                 <SolidColorBrush Color="White" Opacity="0.8"/>
                             </StackPanel.Background>
-                            
-                            <!--her skal skrives hvad der skal vises-->
+
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Name="NameStack">
+                                    <TextBlock Text="Navn:" />
+                                    <TextBlock Text="{Binding Fornavn}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Name="VacNavnStack">
+                                    <TextBlock Text="Vaccine Navn:"/>
+                                    <TextBlock Text="{Binding VaccineNavn}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Name="TidStack">
+                                    <TextBlock Text="Tid:"/>
+                                    <TextBlock Text="{Binding VaccineTid.Date, Mode=OneWay}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Name="ModtagetStack">
+                                    <TextBlock Text="Modtaget:"/>
+                                    <TextBlock Text="{Binding TrueFalse}"/>
+                                </StackPanel>
+                            </StackPanel>
                             
                             
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
+        </ListView>-->
+
+        <ListView Height="500" SelectionMode="None" ItemsSource="{Binding Singleton.VaccineCollection}" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="auto" Width="auto" HorizontalAlignment="Center">
+                        <StackPanel Margin="0,0,0,6">
+                            <StackPanel.Background>
+                                <SolidColorBrush Color="White" Opacity="0.8"/>
+                            </StackPanel.Background>
+
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Name="NameStack">
+                                    <TextBlock Text="Navn:" />
+                                    <TextBlock Text="{Binding Fornavn}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Name="VacNavnStack">
+                                    <TextBlock Text="Vaccine Navn:"/>
+                                    <TextBlock Text="{Binding VaccineNavn}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Name="TidStack">
+                                    <TextBlock Text="Tid:"/>
+                                    <TextBlock Text="{Binding VaccineTid.Date, Mode=OneWay}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Name="ModtagetStack">
+                                    <TextBlock Text="Modtaget:"/>
+                                    <TextBlock Text="{Binding TrueFalse}"/>
+                                </StackPanel>
+                            </StackPanel>
+
+
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
-
-
 
     </Grid>
 </Page>
