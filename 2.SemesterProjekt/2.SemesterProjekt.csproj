@@ -140,6 +140,7 @@
     <None Include="2.SemesterProjekt_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\regionsjaelland88x88.png" />
     <Content Include="Assets\vaccine.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
