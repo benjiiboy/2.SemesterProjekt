@@ -18,14 +18,12 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Height="auto" Width="auto" HorizontalAlignment="Center">
-                        <StackPanel Margin="0,0,0,6" Background="WhiteSmoke">
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontWeight="Bold">
-                                        <Run Text="Navn:"/>
-                                </TextBlock>
-                                <TextBlock Text="{Binding VaccineNavn}"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
+                        <StackPanel Margin="0,0,0,6">
+                            <StackPanel.Background>
+                                <SolidColorBrush Color="White" Opacity="0.8"/>
+                            </StackPanel.Background>
+                            <TextBlock Text="{Binding VaccineNavn}" FontWeight="Bold"/>
+                                <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="{Binding Note}" TextWrapping="WrapWholeWords" Width="450" />
                             </StackPanel>
                         </StackPanel>
