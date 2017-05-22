@@ -13,38 +13,14 @@
             <Viewmodel:VaccAppViewModel/>
         </Grid.DataContext>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,0">
-            <TextBlock FontSize="28" Margin="0,40,0,0" HorizontalAlignment="Center" Foreground="White">
+            <TextBlock FontSize="28" Margin="0,40,0,0" HorizontalAlignment="Center">
                 <Run Text="Børn"/>
-                
             </TextBlock>
-            <ListView Height="220" SelectionMode="None" ItemsSource="{Binding Singleton.Børn}" HorizontalAlignment="Center" VerticalAlignment="Center" IsSynchronizedWithCurrentItem="False">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Height="auto" Width="auto" HorizontalAlignment="Center">
-                            <StackPanel Margin="0,0,0,6">
-                                <StackPanel.Background>
-                                    <SolidColorBrush Color="White" Opacity="0.8"/>
-                                </StackPanel.Background>
-
-                                <StackPanel Width="450">
-                                    <StackPanel Orientation="Horizontal" Name="FornavnStack">
-                                        <TextBlock Text="Fornavn:" />
-                                        <TextBlock Text="{Binding Fornavn}"/>
-                                    </StackPanel>
-                                    <StackPanel Orientation="Horizontal" Name="EfternavnStack">
-                                        <TextBlock Text="Efternavn:"/>
-                                        <TextBlock Text="{Binding Efternavn}"/>
-                                    </StackPanel>
-                                    <StackPanel Orientation="Horizontal" Name="TidStack">
-                                        <TextBlock Text="Fødselsdato:"/>
-                                        <TextBlock Text="{Binding Fødselsdato.Date}"/>
-                                    </StackPanel>
-                                    
-                                </StackPanel>
-                            </StackPanel>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
+            <ListView x:Name="ListViewBørn"
+                      BorderBrush="Black"
+                      BorderThickness="0.5"
+                      Height="350"
+                      Width="250" ItemsSource="{Binding Singleton.Børn, Mode=TwoWay}" SelectedItem="{Binding SelectedBarn, Mode=TwoWay}">
             </ListView>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button x:Name="opretBarn" Click="opretBarn_Click"
