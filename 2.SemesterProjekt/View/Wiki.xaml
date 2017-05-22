@@ -8,33 +8,31 @@
     x:Class="_2.SemesterProjekt.View.Wiki"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
 
         <Grid.DataContext>
             <Viewmodel:VacPlanViewModel/>
         </Grid.DataContext>
 
-        <ScrollViewer>
-            <ListView Height="300" SelectionMode="None" ItemsSource="{Binding Singleton.VaccineListe}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Height="auto" Width="240" >
-                            <StackPanel BorderBrush="Black" BorderThickness="1">
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontWeight="Bold">
+        <ListView Height="500" SelectionMode="None" ItemsSource="{Binding Singleton.VaccineCollection}" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="auto" Width="auto" HorizontalAlignment="Center">
+                        <StackPanel Margin="0,0,0,6" Background="WhiteSmoke">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontWeight="Bold">
                                         <Run Text="Navn:"/>
-                                    </TextBlock>
-                                    <TextBlock Text="{Binding VaccineNavn}"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding Note}" TextWrapping="WrapWholeWords"/>
-                                </StackPanel>
+                                </TextBlock>
+                                <TextBlock Text="{Binding VaccineNavn}"/>
                             </StackPanel>
-                        </Grid>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </ScrollViewer>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Note}" TextWrapping="WrapWholeWords" Width="450" />
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
     </Grid>
 </Page>
