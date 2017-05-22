@@ -248,7 +248,12 @@ namespace _2.SemesterProjekt.Persistency
 
                 if (response.IsSuccessStatusCode)
                 {
+
+
+
+
                     var VaccineList = response.Content.ReadAsAsync<ObservableCollection<Vaccine>>().Result;
+
 
                     return VaccineList;
                 }
@@ -277,7 +282,7 @@ namespace _2.SemesterProjekt.Persistency
         }
 
         //mik hent vaccine
-        public static async Task<ObservableCollection<Vaccine>> GetVaccineAsync()
+        public static async Task<List<Vaccine>> GetSorteredeVaccineAsync()
         {
             using (var Client = new HttpClient())
             {
@@ -290,8 +295,12 @@ namespace _2.SemesterProjekt.Persistency
 
                     if (GetVaccineResponse.IsSuccessStatusCode)
                     {
-                        var TempVaccineCollection = await GetVaccineResponse.Content.ReadAsAsync<ObservableCollection<Vaccine>>();
-                        return TempVaccineCollection;
+                        var TempVaccineCollection = await GetVaccineResponse.Content.ReadAsAsync<List<Vaccine>>();
+
+                        var sortedelist = TempVaccineCollection.GroupBy(x => x.VaccineNavn).Select(g => g.First()).ToList();
+                        
+
+                        return sortedelist;
                     }
                 }
                 catch (Exception)
