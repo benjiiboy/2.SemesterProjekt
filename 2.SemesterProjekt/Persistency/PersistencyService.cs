@@ -175,12 +175,12 @@ namespace _2.SemesterProjekt.Persistency
 
                     var Vacplanogbarnjoin = from barn in VacBarnListe
                                             join plan in VacPlanListe on barn.Barn_Id equals plan.Barn_Id
-                                            select new { barn.Fornavn, barn.Efternavn, barn.Fødselsdato, plan.VaccineTid, plan.TrueFalse };
+                                            select new {plan.Vac_Id, barn.Barn_Id, barn.Fornavn, barn.Efternavn, barn.Fødselsdato, plan.VaccineTid, plan.TrueFalse };
 
                     foreach (var item in Vacplanogbarnjoin)
                     {
 
-                        VacSkemaBarnPlan derpbarn1 = new VacSkemaBarnPlan(item.VaccineTid, item.Fornavn, item.Efternavn, item.Fødselsdato, item.TrueFalse);
+                        VacSkemaBarnPlan derpbarn1 = new VacSkemaBarnPlan(item.Vac_Id, item.Barn_Id, item.VaccineTid, item.Fornavn, item.Efternavn, item.Fødselsdato, item.TrueFalse);
                         vacplanogbarnListe.Add(derpbarn1);
                     }
 
@@ -188,11 +188,11 @@ namespace _2.SemesterProjekt.Persistency
 
                     var VacplanbarnVaccinejoin = from Vaccine in VaccineListe
                                                join vacplanbarn in vacplanogbarnListe on Vaccine.Vac_Id equals vacplanbarn.Vac_Id
-                                               select new { Vaccine.Tid, Vaccine.VaccineNavn, vacplanbarn.VaccineTid, vacplanbarn.TrueFalse, vacplanbarn.Fornavn, vacplanbarn.Efternavn, vacplanbarn.Fødselsdato };
+                                               select new {Vaccine.Vac_Id, vacplanbarn.Barn_Id, Vaccine.VaccineNavn, vacplanbarn.VaccineTid, vacplanbarn.TrueFalse, vacplanbarn.Fornavn, vacplanbarn.Efternavn};
 
                     foreach (var item in VacplanbarnVaccinejoin)
                     {
-                        VacSkemaBarnPlan derpbarn = new VacSkemaBarnPlan(item.Tid, item.Fornavn, item.Efternavn, item.VaccineNavn, item.TrueFalse, item.Fødselsdato, item.VaccineTid);
+                        VacSkemaBarnPlan derpbarn = new VacSkemaBarnPlan(item.Vac_Id, item.Barn_Id, item.Fornavn, item.Efternavn, item.VaccineNavn, item.TrueFalse, item.VaccineTid);
                         VacPlanBarnVaccineListe.Add(derpbarn);
                     }
 

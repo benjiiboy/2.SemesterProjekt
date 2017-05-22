@@ -109,13 +109,19 @@ namespace _2.SemesterProjekt.Viewmodel
             Singleton = Singleton.Instance;
 
             OpretBarnCommand = new RelayCommand(BarnHandler.OpretBarn);
-            SletBarnCommand = new RelayCommand(BarnHandler.SletBarn);
+            SletBarnCommand = new RelayCommand(BarnHandler.SletBarn,TomListeCheck);
 
-            PutBarnCommand = new RelayCommand(BarnHandler.PutBarn);
+            PutBarnCommand = new RelayCommand(BarnHandler.PutBarn,TomListeCheck);
 
 
             DateTime dt = System.DateTime.Now;
             fødselsdato = new DateTimeOffset(dt.Year, dt.Month, dt.Day, 0, 0, 0, 0, new TimeSpan());
+        }
+
+
+        public bool TomListeCheck()
+        {
+            return Model.Singleton.Instance.Børn.Count() > 0;
         }
 
 
