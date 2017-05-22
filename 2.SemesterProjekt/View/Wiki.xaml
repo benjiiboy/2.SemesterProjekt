@@ -1,26 +1,33 @@
 ﻿<Page
-    x:Class="_2.SemesterProjekt.View.Wiki"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:_2.SemesterProjekt.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Viewmodel="using:_2.SemesterProjekt.Viewmodel"
+    x:Class="_2.SemesterProjekt.View.Wiki"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        
+
+        <Grid.DataContext>
+            <Viewmodel:VacPlanViewModel/>
+        </Grid.DataContext>
+
         <ScrollViewer>
-            <ListView Height="300" SelectionMode="None">
+            <ListView Height="300" SelectionMode="None" ItemsSource="{Binding Singleton.VaccineListe}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid Height="auto" Width="240" >
                             <StackPanel BorderBrush="Black" BorderThickness="1">
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontWeight="Bold">Navn:</TextBlock>
-                                    <TextBlock Text="HER-ER-NAVN"></TextBlock>
+                                    <TextBlock FontWeight="Bold">
+                                        <Run Text="Navn:"/>
+                                    </TextBlock>
+                                    <TextBlock Text="{Binding VaccineNavn}"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="Note" TextWrapping="WrapWholeWords"/>
+                                    <TextBlock Text="{Binding Note}" TextWrapping="WrapWholeWords"/>
                                 </StackPanel>
                             </StackPanel>
                         </Grid>
