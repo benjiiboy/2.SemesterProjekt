@@ -29,7 +29,7 @@ Style="{StaticResource MainPageKnap}"
             <Button x:Name="HovedMenuVaccinationsKort" 
                     Style="{StaticResource MainPageKnap}"
                     Content="Vaccinekort" 
-                   ></Button>
+                  Click="HovedMenuVaccinationsKort_Click" ></Button>
 
         </StackPanel>
 
