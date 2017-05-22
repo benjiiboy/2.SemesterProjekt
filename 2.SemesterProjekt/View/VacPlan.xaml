@@ -52,7 +52,7 @@
             </ListView.ItemTemplate>
         </ListView>-->
 
-        <ListView Height="500" SelectionMode="None" ItemsSource="{Binding Singleton.VaccineCollection}" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <ListView Height="500" SelectionMode="None" ItemsSource="{Binding Singleton.VacPlanCollection[0]}" HorizontalAlignment="Center" VerticalAlignment="Center" IsSynchronizedWithCurrentItem="False">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Height="auto" Width="auto" HorizontalAlignment="Center">
@@ -61,7 +61,7 @@
                                 <SolidColorBrush Color="White" Opacity="0.8"/>
                             </StackPanel.Background>
 
-                            <StackPanel>
+                            <StackPanel Width="450">
                                 <StackPanel Orientation="Horizontal" Name="NameStack">
                                     <TextBlock Text="Navn:" />
                                     <TextBlock Text="{Binding Fornavn}"/>
@@ -86,6 +86,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button x:Name="Noti" Content="Noti" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Click="button_Click" Style="{StaticResource Familie}" Margin="0,0,0,30"/>
 
     </Grid>
 </Page>
