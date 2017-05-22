@@ -15,9 +15,39 @@
 
         <TextBlock Text="Kommende vac's" HorizontalAlignment="Center" FontSize="36"
                    />
-        <ListView x:Name="VacPlanListView"
-                  ScrollViewer.VerticalScrollBarVisibility="Visible"
-                  Margin="0,60,0,0" ItemsSource="{Binding Singleton.VacPlanCollection, Mode=TwoWay}"
-                  />
+        <ListView Height="500" SelectionMode="None" ItemsSource="{Binding Singleton.VacPlanCollection}" HorizontalAlignment="Center" VerticalAlignment="Center" IsSynchronizedWithCurrentItem="False">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="auto" Width="auto" HorizontalAlignment="Center">
+                        <StackPanel Margin="0,0,0,6">
+                            <StackPanel.Background>
+                                <SolidColorBrush Color="White" Opacity="0.8"/>
+                            </StackPanel.Background>
+
+                            <StackPanel Width="450">
+                                <StackPanel Orientation="Horizontal" Name="NameStack">
+                                    <TextBlock Text="Navn:" />
+                                    <TextBlock Text="{Binding Fornavn}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Name="VacNavnStack">
+                                    <TextBlock Text="Vaccine Navn:"/>
+                                    <TextBlock Text="{Binding VaccineNavn}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Name="TidStack">
+                                    <TextBlock Text="Tid:"/>
+                                    <TextBlock Text="{Binding VaccineTid.Date, Mode=OneWay}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Name="ModtagetStack">
+                                    <TextBlock Text="Modtaget:"/>
+                                    <TextBlock Text="{Binding TrueFalse}"/>
+                                </StackPanel>
+                            </StackPanel>
+
+
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>
