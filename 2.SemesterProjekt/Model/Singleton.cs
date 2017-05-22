@@ -54,7 +54,7 @@ namespace _2.SemesterProjekt.Model
             hent();
             //mik
             VacPlanCollection = new ObservableCollection<VacSkemaBarnPlan>();
-            GetVacPlan();
+            
             //mik vaccine
             VaccineCollection = new ObservableCollection<Model.Vaccine>();
             GetVaccineAsync();

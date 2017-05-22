@@ -13,7 +13,7 @@
         <StackPanel VerticalAlignment="Center">
             <Button x:Name="HovedMenuWiki"
 Style="{StaticResource MainPageKnap}"
-                     Content="Wiki" 
+                     Content="Vaccine info" 
 
                     Click="HovedMenuWiki_Click"
                     
@@ -28,7 +28,7 @@ Style="{StaticResource MainPageKnap}"
 
             <Button x:Name="HovedMenuVaccinationsKort" 
                     Style="{StaticResource MainPageKnap}"
-                    Content="Vaccination's kort" 
+                    Content="Vaccinekort" 
                    ></Button>
 
         </StackPanel>
