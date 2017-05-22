@@ -20,26 +20,11 @@ namespace _2.SemesterProjekt.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Menu : Page
+    public sealed partial class VaccineKort : Page
     {
-        public Menu()
+        public VaccineKort()
         {
             this.InitializeComponent();
-        }
-
-        private void HovedMenuFamilie_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Familie));
-        }
-
-        private void HovedMenuWiki_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Wiki));
-        }
-
-        private void HovedMenuVaccinationsKort_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(VaccineKort));
         }
     }
 }

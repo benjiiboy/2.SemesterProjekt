@@ -124,6 +124,9 @@
     <Compile Include="View\RedigerBarn.xaml.cs">
       <DependentUpon>RedigerBarn.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\VaccineKort.xaml.cs">
+      <DependentUpon>VaccineKort.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\VacPlan.xaml.cs">
       <DependentUpon>VacPlan.xaml</DependentUpon>
     </Compile>
@@ -180,6 +183,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\RedigerBarn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VaccineKort.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
