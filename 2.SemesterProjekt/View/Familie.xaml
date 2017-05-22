@@ -13,7 +13,7 @@
             <Viewmodel:VaccAppViewModel/>
         </Grid.DataContext>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,0">
-            <TextBlock FontSize="28" Margin="0,40,0,0" HorizontalAlignment="Center">
+            <TextBlock FontSize="28" Margin="0,40,0,0" HorizontalAlignment="Center" Foreground="WhiteSmoke">
                 <Run Text="Børn"/>
             </TextBlock>
             <ListView x:Name="ListViewBørn"
