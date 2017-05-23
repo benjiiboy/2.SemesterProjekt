@@ -39,7 +39,7 @@
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Name="ModtagetStack">
                                     <TextBlock Text="Modtaget:"/>
-                                    <TextBlock Text="{Binding TrueFalse}"/>
+                                    <TextBlock Text="{Binding VaccineModtaget}"/>
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>
@@ -48,7 +48,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button x:Name="Noti" Content="Noti" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Click="button_Click" Style="{StaticResource Familie}" Margin="0,0,0,30"/>
+        <Button x:Name="Noti" Content="Notifikation" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Click="button_Click" Style="{StaticResource Familie}" Margin="0,0,0,30"/>
 
     </Grid>
 </Page>

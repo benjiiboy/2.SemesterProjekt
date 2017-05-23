@@ -18,6 +18,7 @@ namespace _2.SemesterProjekt.Model
         public DateTime Fødselsdato { get; set; }
         public int Tid { get; set; }
         public string VaccineNavn { get; set; }
+        public string VaccineModtaget { get; set; }
 
 
         public VacSkemaBarnPlan(int vacid, int barnid, DateTime vaccinetid, string fornavn, string efternavn, DateTime Føds, bool tf)
@@ -27,8 +28,8 @@ namespace _2.SemesterProjekt.Model
             this.VaccineTid = vaccinetid;
             this.Fornavn = fornavn;
             this.Efternavn = efternavn;
-            this.TrueFalse = tf;
             this.Fødselsdato = Føds;
+            this.VaccineModtaget = tf ? "Ja":"Nej";
         }
 
         public VacSkemaBarnPlan(int vacid,int barnid, string fornavn, string efternavn, string vacnavn, bool tf, DateTime vacinetid)
@@ -38,8 +39,9 @@ namespace _2.SemesterProjekt.Model
             this.Fornavn = fornavn;
             this.Efternavn = efternavn;
             this.VaccineNavn = vacnavn;
-            this.TrueFalse = tf;
             this.Barn_Id = barnid;
+            this.VaccineModtaget = tf ? "Ja" : "Nej";
+
         }
 
         public VacSkemaBarnPlan()
@@ -47,9 +49,5 @@ namespace _2.SemesterProjekt.Model
 
         }
 
-        public override string ToString()
-        {
-            return $"Navn: {Fornavn} {Efternavn}, VaccineNavn: {VaccineNavn}, Tid: {VaccineTid}, Givet vaccine: {TrueFalse}"; 
-        }
     }
 }
