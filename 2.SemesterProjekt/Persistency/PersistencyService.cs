@@ -15,7 +15,9 @@ namespace _2.SemesterProjekt.Persistency
     {
         const string serverUrl = "http://vacws.azurewebsites.net/";
         const string apibørn = "api/barn/";
-
+        const string apiVacPlan = "api/VacPlan/";
+        const string apiVaccine = "api/Vaccine/";
+        
 
         public static void PostBarn(Barn PostBarn)
         {
@@ -48,10 +50,7 @@ namespace _2.SemesterProjekt.Persistency
                             vp.Vac_Id = s.Vac_Id;
 
                             PostVacPlan(vp);
-
-
                         }
-
 
                         MessageDialog BarnAdded = new MessageDialog("Dit barn blev tilføjet");
                         BarnAdded.Commands.Add(new UICommand { Label = "Ok" });
@@ -67,7 +66,6 @@ namespace _2.SemesterProjekt.Persistency
 
             }
         }
-
         public static ObservableCollection<Barn> GetBarn()
         {
             using (var Client = new HttpClient())
@@ -79,14 +77,12 @@ namespace _2.SemesterProjekt.Persistency
                 if (response.IsSuccessStatusCode)
                 {
                     var BørnList = response.Content.ReadAsAsync<ObservableCollection<Barn>>().Result;
-
                     return BørnList;
                 }
 
                 return null;
             }
         }
-
         public static void DeleteBarn(Barn DeleteBarn)
         {
 
@@ -114,7 +110,6 @@ namespace _2.SemesterProjekt.Persistency
                 }
             }
         }
-
         public static void PutBarn(Barn PutBarn)
         {
             using (var Client = new HttpClient())
@@ -144,20 +139,12 @@ namespace _2.SemesterProjekt.Persistency
             }
         }
 
-
-        //mik VacPlan
-
-        const string apiVacPlan = "api/VacPlan/";
-        const string apiVaccine = "api/Vaccine/";
-
         public static async Task<ObservableCollection<VacSkemaBarnPlan>> GetVacPlanAsync()
         {
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(serverUrl);
                 client.DefaultRequestHeaders.Clear();
-
-
 
                 HttpResponseMessage vacplanrespone = await client.GetAsync(apiVacPlan);
                 HttpResponseMessage barnrespone = await client.GetAsync(apibørn);
@@ -166,9 +153,7 @@ namespace _2.SemesterProjekt.Persistency
                 if (vacplanrespone.IsSuccessStatusCode && barnrespone.IsSuccessStatusCode && Vaccinerespone.IsSuccessStatusCode)
                 {
                     ObservableCollection<VacPlan> VacPlanListe = await vacplanrespone.Content.ReadAsAsync<ObservableCollection<VacPlan>>();
-
                     ObservableCollection<Barn> VacBarnListe = await barnrespone.Content.ReadAsAsync<ObservableCollection<Barn>>();
-
                     ObservableCollection<Vaccine> VaccineListe = await Vaccinerespone.Content.ReadAsAsync<ObservableCollection<Vaccine>>();
 
                     ObservableCollection<VacSkemaBarnPlan> vacplanogbarnListe = new ObservableCollection<VacSkemaBarnPlan>();
@@ -179,7 +164,6 @@ namespace _2.SemesterProjekt.Persistency
 
                     foreach (var item in Vacplanogbarnjoin)
                     {
-
                         VacSkemaBarnPlan derpbarn1 = new VacSkemaBarnPlan(item.Vac_Id, item.Barn_Id, item.VaccineTid, item.Fornavn, item.Efternavn, item.Fødselsdato, item.TrueFalse);
                         vacplanogbarnListe.Add(derpbarn1);
                     }
@@ -196,18 +180,11 @@ namespace _2.SemesterProjekt.Persistency
                         VacPlanBarnVaccineListe.Add(derpbarn);
                     }
 
-
-
-                    //evt query for spec'? -> return
-
                     return VacPlanBarnVaccineListe;
                 }
                 return null;
             }
         }
-
-        /*Benjamin ide til post vacplan*/
-
         public static void PostVacPlan(VacPlan PostVacPlan)
         {
 
@@ -221,10 +198,6 @@ namespace _2.SemesterProjekt.Persistency
                 {
                     var response = Client.PostAsJsonAsync(apiVacPlan, PostVacPlan).Result;
 
-                    if (response.IsSuccessStatusCode)
-                    {
-                        //hvis  response code er positiv ville man få 12 beskeder, om at det gik godt, derfor er der ingen
-                    }
                 }
                 catch (Exception e)
                 {
@@ -235,33 +208,6 @@ namespace _2.SemesterProjekt.Persistency
 
             }
         }
-
-
-
-       public static ObservableCollection<Vaccine> GetVaccine()
-        {
-            using (var Client = new HttpClient())
-            {
-                Client.BaseAddress = new Uri(serverUrl);
-                Client.DefaultRequestHeaders.Clear();
-                var response = Client.GetAsync(apiVaccine).Result;
-
-                if (response.IsSuccessStatusCode)
-                {
-
-
-
-
-                    var VaccineList = response.Content.ReadAsAsync<ObservableCollection<Vaccine>>().Result;
-
-
-                    return VaccineList;
-                }
-
-                return null;
-            }
-        }
-
         public static ObservableCollection<VacPlan> GetVacPlan()
         {
             using (var Client = new HttpClient())
@@ -281,7 +227,23 @@ namespace _2.SemesterProjekt.Persistency
             }
         }
 
-        //mik hent vaccine
+        public static ObservableCollection<Vaccine> GetVaccine()
+        {
+            using (var Client = new HttpClient())
+            {
+                Client.BaseAddress = new Uri(serverUrl);
+                Client.DefaultRequestHeaders.Clear();
+                var response = Client.GetAsync(apiVaccine).Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var VaccineList = response.Content.ReadAsAsync<ObservableCollection<Vaccine>>().Result;
+                    return VaccineList;
+                }
+
+                return null;
+            }
+        }
         public static async Task<List<Vaccine>> GetSorteredeVaccineAsync()
         {
             using (var Client = new HttpClient())
@@ -305,7 +267,6 @@ namespace _2.SemesterProjekt.Persistency
                 }
                 catch (Exception)
                 {
-                    //skal ændres!
                     MessageDialog VacplanAdded = new MessageDialog("Fejl, Vacciner blev ikke oprettet til dit barn");
                     VacplanAdded.Commands.Add(new UICommand { Label = "Ok" });
                     await VacplanAdded.ShowAsync().AsTask();
@@ -313,8 +274,6 @@ namespace _2.SemesterProjekt.Persistency
                 return null;
             }
         }
-
-        //mik hent vaccine
         public static async Task<List<Vaccine>> GetVaccineAsync()
         {
             using (var Client = new HttpClient())
@@ -329,14 +288,11 @@ namespace _2.SemesterProjekt.Persistency
                     if (GetVaccineResponse.IsSuccessStatusCode)
                     {
                         var TempVaccineCollection = await GetVaccineResponse.Content.ReadAsAsync<List<Vaccine>>();
-
-                        
                         return TempVaccineCollection;
                     }
                 }
                 catch (Exception)
                 {
-                    //skal ændres!
                     MessageDialog VacplanAdded = new MessageDialog("Fejl, Vacciner blev ikke oprettet til dit barn");
                     VacplanAdded.Commands.Add(new UICommand { Label = "Ok" });
                     await VacplanAdded.ShowAsync().AsTask();
@@ -346,6 +302,11 @@ namespace _2.SemesterProjekt.Persistency
         }
 
 
+        public static async void ShowMessage(string content)
+        {
+            MessageDialog messageDialog = new MessageDialog(content);
+            await messageDialog.ShowAsync();
+        }
 
     }
     }

@@ -11,7 +11,7 @@
     <Grid>
 
         <Grid.DataContext>
-            <Viewmodel:VacPlanViewModel/>
+            <Viewmodel:VaccAppViewModel/>
         </Grid.DataContext>
 
         <ListView Height="500" SelectionMode="None" ItemsSource="{Binding Singleton.VaccineCollection}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,120,0,0">

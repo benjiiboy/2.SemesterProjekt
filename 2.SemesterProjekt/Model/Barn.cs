@@ -8,9 +8,13 @@ namespace _2.SemesterProjekt.Model
 {
    public class Barn
     {
+        private string forNavn;
+        private string efterNavn;
+
+
         public int Barn_Id { get; set; }
 
-        private string forNavn;
+
         public string Fornavn
         {
             get { return forNavn; }
@@ -22,7 +26,6 @@ namespace _2.SemesterProjekt.Model
             }
         }
 
-        private string efterNavn;
         public string Efternavn
         {
             get { return efterNavn; }
@@ -35,12 +38,7 @@ namespace _2.SemesterProjekt.Model
             }
         }
 
-
         public DateTime Fødselsdato { get; set; }
-
-
-
-
         public int TelefonNr { get; set; }
 
         public Barn(int id, string fornavn, string efternavn, DateTime føds, int tlf)
@@ -52,12 +50,9 @@ namespace _2.SemesterProjekt.Model
             this.TelefonNr = tlf;
         }
 
-        public override string ToString()
+        public Barn()
         {
-            return $"{Barn_Id} {Fornavn} {Efternavn}";
         }
 
     }
-
-    
 }
