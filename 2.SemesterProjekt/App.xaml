@@ -17,6 +17,7 @@
             <Setter Property="Foreground" Value="#FF0097FF"/>
             <Setter Property="FontFamily" Value=" Verdana"/>
             <Setter Property="Margin" Value="0,0,0,9"/>
+            <Setter Property="Opacity" Value="0.9"/>
         </Style>
 
 
@@ -27,6 +28,7 @@
             <Setter Property="Foreground" Value="#FF0097FF"/>
             <Setter Property="FontFamily" Value="Verdana"/>
             <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Opacity" Value="0.9"/>
 
         </Style>
 
@@ -34,6 +36,7 @@
         <Style TargetType="TextBlock" x:Key="setFamilie">
             <Setter Property="FontFamily" Value=" Verdana"/>
             <Setter Property="Foreground" Value="WhiteSmoke"/>
+            <Setter Property="Opacity" Value="0.9"/>
         </Style>
         
         
