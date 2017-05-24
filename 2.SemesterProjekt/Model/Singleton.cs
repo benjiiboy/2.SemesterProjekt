@@ -52,15 +52,15 @@ namespace _2.SemesterProjekt.Model
             VaccineCollectionIkkesort = new ObservableCollection<Vaccine>();
             VacPlanCollection = new ObservableCollection<VacSkemaBarnPlan>();
             VaccineCollection = new ObservableCollection<Vaccine>();
-            GetVaccineAsync();
+            //GetVaccineAsync();
             hent();
-            GetvaccineAsyncIkkeSort();
+            //GetvaccineAsyncIkkeSort();
         }
 
         public void TilføjBarn(Barn b)
         {
-            Børn.Add(b);
             PersistencyService.PostBarn(b);
+            Børn.Add(b);
         }
 
         public void FjernBarn(Barn b)
@@ -78,7 +78,7 @@ namespace _2.SemesterProjekt.Model
         public async Task HentVacSkema()
         {
             VacPlanCollection.Clear();
-            foreach (var item in await PersistencyService.GetVacPlanAsync())
+            foreach (var item in await PersistencyService.GetVacSkemaBarnPlanAsync())
             {
                 VacPlanCollection.Add(item);
             }

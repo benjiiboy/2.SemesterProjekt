@@ -31,28 +31,7 @@ namespace _2.SemesterProjekt.View
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            main();
         }
-
-
-        public void main()
-        {
-            ToastTemplateType toastTemplate = ToastTemplateType.ToastText02;
-            XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
-
-            IXmlNode toasttextelements = toastXml.GetElementsByTagName("text").FirstOrDefault();
-            toasttextelements.AppendChild(toastXml.CreateTextNode("Husk vaccine!"));
-
-            var dueTimeSeconds = 3;
-            DateTime dueTime = DateTime.Now.AddSeconds(dueTimeSeconds);
-
-            ScheduledToastNotification scheduledToast = new ScheduledToastNotification(toastXml, dueTime);
-
-            ToastNotificationManager.CreateToastNotifier().AddToSchedule(scheduledToast);
-
-
-        }
-
 
 
     }

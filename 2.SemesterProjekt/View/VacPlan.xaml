@@ -48,7 +48,5 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Button x:Name="Noti" Content="Notifikation" HorizontalAlignment="Center"  VerticalAlignment="Bottom" Click="button_Click" Style="{StaticResource Familie}" Margin="0,0,0,30"/>
-
     </Grid>
 </Page>

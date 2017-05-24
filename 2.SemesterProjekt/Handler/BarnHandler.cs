@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using _2.SemesterProjekt.Viewmodel;
 using Windows.UI.Popups;
 using _2.SemesterProjekt.Converter;
+using Windows.UI.Notifications;
+using System.Xml;
+using Windows.Data.Xml.Dom;
 
 namespace _2.SemesterProjekt.Handler
 {
@@ -51,6 +54,28 @@ namespace _2.SemesterProjekt.Handler
         {
           await Model.Singleton.Instance.HentVacSkema();
         }
+
+        //benji ide
+
+
+
+        public void Notifikation(string barnid, string Fornavn, string Efternavn, string VaccineNavn, DateTime VaccineTid)
+        {
+            ToastTemplateType toastTemplate = ToastTemplateType.ToastText02;
+            Windows.Data.Xml.Dom.XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
+
+            IXmlNode toasttextelements = toastXml.GetElementsByTagName("text").FirstOrDefault();
+            toasttextelements.AppendChild(toastXml.CreateTextNode($"{Fornavn} {Efternavn} skal have vaccine {VaccineNavn} kl {VaccineTid} "));
+
+            DateTime dueTime = VaccineTid;
+
+            ScheduledToastNotification scheduledToast = new ScheduledToastNotification(toastXml, dueTime);
+
+            ToastNotificationManager.CreateToastNotifier().AddToSchedule(scheduledToast);
+        }
+
+        
+
 
 
     }

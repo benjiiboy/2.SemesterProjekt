@@ -40,7 +40,7 @@ namespace _2.SemesterProjekt.View
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(VacPlan));
-            Persistency.PersistencyService.GetVacPlanAsync();
+            Persistency.PersistencyService.GetVacSkemaBarnPlanAsync();
         }
     }
 }
