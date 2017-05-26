@@ -24,7 +24,7 @@ namespace _2.SemesterProjekt.Viewmodel
         private ICommand seVaccinerCommand;
 
         public Handler.BarnHandler BarnHandler { get; set; }
-        public ICommand PutBarnCommand { get; set; }
+        //public ICommand PutBarnCommand { get; set; }
         public Singleton Singleton { get; set; }
 
         public int TelefonNr
@@ -82,7 +82,7 @@ namespace _2.SemesterProjekt.Viewmodel
 
             OpretBarnCommand = new RelayCommand(BarnHandler.OpretBarn);
             SletBarnCommand = new RelayCommand(BarnHandler.SletBarn,TomListeCheck);
-            PutBarnCommand = new RelayCommand(BarnHandler.PutBarn,TomListeCheck);
+            //PutBarnCommand = new RelayCommand(BarnHandler.PutBarn,TomListeCheck);
             SeVaccinerCommand = new RelayCommand(BarnHandler.HentVacciner,TomListeCheck);
 
             DateTimeOffset dt = System.DateTime.Now;
