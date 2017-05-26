@@ -52,9 +52,7 @@ namespace _2.SemesterProjekt.Model
             VaccineCollectionIkkesort = new ObservableCollection<Vaccine>();
             VacPlanCollection = new ObservableCollection<VacSkemaBarnPlan>();
             VaccineCollection = new ObservableCollection<Vaccine>();
-            //GetVaccineAsync();
             hent();
-            //GetvaccineAsyncIkkeSort();
         }
 
         public void TilføjBarn(Barn b)
@@ -69,11 +67,11 @@ namespace _2.SemesterProjekt.Model
             PersistencyService.DeleteBarn(b);
         }
 
-        public void PutBarn(Barn BarnToPut)
-        {
-            PersistencyService.PutBarn(BarnToPut);
-            hent();
-        }
+        //public void PutBarn(Barn BarnToPut)
+        //{
+        //    PersistencyService.PutBarn(BarnToPut);
+        //    hent();
+        //}
 
         public async Task HentVacSkema()
         {
