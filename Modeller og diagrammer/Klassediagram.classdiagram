@@ -1,100 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="356c5240-7299-4b14-b49b-df813e1abfb8" name="Domain Model" linkedPackageId="b18c3b85-2a7d-43d6-96f8-8797782ee16e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="455ed438-bb02-4e89-b406-9fbd03474614">
+      <elementDefinition Id="6c0f9a5d-fc32-486f-8bc9-2e837d480b69" />
+      <body>FrontEnd</body>
+    </comment>
+    <comment Id="8f52dc51-c644-45bd-8ce4-abbee14cb188">
+      <elementDefinition Id="7af372b6-8d38-4de9-b41d-71266fb19ebd" />
+      <body>Ws/BackEnd
+</body>
+    </comment>
+    <comment Id="c0c1a6fd-aca8-49b0-b4ac-25468bdfaf46">
+      <elementDefinition Id="a36e0cf6-7739-4edd-891d-0f4d1e50fc1a" />
+      <body>database
+</body>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
-      <package Id="5d7e9c3c-5d36-44d4-bae4-61c8a935ed3e" name="Model">
-        <elementDefinition Id="194074f1-7eb9-4903-97d7-6741d0366986" />
+      <package Id="4da578d8-5d2d-4c67-b2a0-3d7e90934ca7" name="Common">
+        <elementDefinition Id="82c35898-cef2-47c4-a5ad-84d7cf247d1e" />
         <packagedElements>
           <packageHasNamedElement>
-            <class Id="bf708012-b1cc-4fd6-bb26-849ded0576b4" name="Barn" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="38bbe8df-21e0-41cd-91a8-466f50174105" />
-              <targetEnds>
-                <association Id="6807a564-9c15-4efc-8386-24e5ae0176e5" isDerived="false" sourceEndRoleName="Barn" targetEndRoleName="Notifikation" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="4f2af48e-b325-4959-8886-9a66eaa1aec0" LastKnownName="Notifikation" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="d95cfa90-864e-4be9-b609-b7058a59e9c5" name="Barn" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <lowerValueInternal>
-                          <literalString Id="edfb62f9-a8cf-4dd6-93b7-3bb3965090d4" name="Lower" value="1">
-                            <elementDefinition Id="5de0079f-78cb-46c5-aa7d-d3dca5d62c2a" />
-                          </literalString>
-                        </lowerValueInternal>
-                        <upperValueInternal>
-                          <literalString Id="41b7fd99-c936-42ff-8828-129cec4e296f" name="Upper" value="1">
-                            <elementDefinition Id="f9a575be-9f69-4f9b-b177-9509e0bb3da6" />
-                          </literalString>
-                        </upperValueInternal>
-                        <elementDefinition Id="7bba5769-69df-43f6-b812-0cdee31ed2c4" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="7b39a74e-40b8-4f03-9144-04d34451cf91" name="Notifikation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <lowerValueInternal>
-                          <literalString Id="884c000d-e67e-4ede-9592-57c846b6bb78" name="Lower" value="1">
-                            <elementDefinition Id="303604ec-eab4-45e2-85ed-b21162be38b8" />
-                          </literalString>
-                        </lowerValueInternal>
-                        <upperValueInternal>
-                          <literalString Id="13e4ad45-4736-4a3f-ab86-345c21334419" name="Upper" value="*">
-                            <elementDefinition Id="282f9436-45ee-43b6-a3a1-ce793e9b870c" />
-                          </literalString>
-                        </upperValueInternal>
-                        <elementDefinition Id="0a96b2c7-007e-40cf-9f46-052feedb48f3" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="e5edf8b4-dfe0-4027-93fb-0f0f1a5d48e9" />
-                </association>
-              </targetEnds>
-              <ownedAttributesInternal>
-                <property Id="306ce906-e670-4851-bc0a-4119e84e45e6" name="Fødselssdato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="8c996522-6f4d-4ff9-aaba-61570034f3b9" />
-                </property>
-                <property Id="a479fa8b-f6bb-425b-b299-8c7e4f8bc820" name="ID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="d523a0c0-894a-4443-8225-52f9a81f0dd9" />
-                </property>
-                <property Id="9e450ad8-5471-4a07-aeb2-21b9401556e8" name="Fornavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="5c6baa13-fa67-41f1-81ac-a1d0cc01b8a0" />
-                </property>
-                <property Id="81b7e4ec-b272-43e0-a353-6ae91a623c55" name="Efternavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="38b2c85c-10f5-49de-92c8-29e76ed490d2" />
-                </property>
-                <property Id="c99c6a1a-514d-4985-862f-834bd4b423a0" name="TelefonNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="984b0a90-08bf-4133-ac60-563b11209ab2" />
-                </property>
-              </ownedAttributesInternal>
+            <class Id="aa1d89d8-b5c2-489a-9b5b-fa589f33f78b" name="RelayCommand" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="eff4d69a-c0f2-4ff2-9f31-869e44030c65" />
             </class>
           </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="ec3b5afc-4f57-4a8e-80cd-7946a5ecdce6" name="Converter">
+        <elementDefinition Id="03bc7280-77f9-440e-8c92-d8e6fd951c85" />
+        <packagedElements>
           <packageHasNamedElement>
-            <class Id="36a269b7-5ed7-4029-8ff9-d693092cd904" name="Singleton" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="0d965ee9-aba4-461d-9ba8-2a2779a78567" />
-              <targetEnds>
-                <association Id="39fb0a0d-7c0e-4134-8efa-f11c83e96d14" isDerived="false" sourceEndRoleName="Singleton" targetEndRoleName="VaccAppViewModel" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="9afea6ac-6197-45c8-be19-8aafb6711e0c" LastKnownName="VaccAppViewModel" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="a9a9a507-9f8d-4e03-95d9-9aea19630e53" name="Singleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="bdaafca4-238a-4b75-b8d2-ebbc7b303178" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="ff59f659-dbff-440d-bb46-8c15d8da1efa" name="VaccAppViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="e8803f39-2477-4dcc-8497-3f7ab38e6ec0" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="de6419d2-ea9b-4d18-a0ee-7c686a88144f" />
-                </association>
-              </targetEnds>
+            <class Id="4bd69e0e-6e35-48d0-94f5-954f5728ff6e" name="DateTimeConverter" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="3e4726d6-35eb-4712-9823-ed5f52ba0b45" />
               <ownedOperationsInternal>
-                <operation Id="7b56abd0-2653-404a-ab3a-4ec2eb72b27c" name="TilføjBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="658f7ccb-0733-430e-9540-93fdfd792df7" />
-                </operation>
-                <operation Id="c592fb54-2258-4fff-bd0d-b79917097927" name="FjernBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="ba07d0ef-1224-4c95-bb74-260aed3badeb" />
-                </operation>
-                <operation Id="968f8aed-ec5b-4c07-a52c-ac05c74e1c08" name="Hent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="e5459efd-c819-4bf4-8720-3274eee09cdb" />
+                <operation Id="9960cdbe-6c4b-4703-b3a0-8d39037d91b1" name="+ DateTimeOffsetAndTimeToDate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="0e3e85a6-6ccd-4411-99a2-73f7f6208357" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="dcb3c6db-9ac9-42d8-86af-6facbe3e2a08" name="Datime)(" direction="In" isUnique="false">
+                        <elementDefinition Id="623c8b42-b931-4fa5-a693-3f7e55e6e2c1" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -103,99 +54,69 @@
       </package>
     </logicalClassDesignerModelHasPackages>
     <logicalClassDesignerModelHasPackages>
-      <package Id="c6f81831-596e-4b81-bea1-8b4530743d10" name="Handler">
-        <elementDefinition Id="9c4378ee-2cff-482e-a8ef-4a712597c971" />
+      <package Id="2fc8a846-75f5-4238-b6cf-05cd589ae5d9" name="Handler">
+        <elementDefinition Id="bb5d3395-552b-4f14-98a3-b94b5216f766" />
         <packagedElements>
           <packageHasNamedElement>
-            <class Id="4f2af48e-b325-4959-8886-9a66eaa1aec0" name="Notifikation" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="9e60562e-d0eb-416a-b86c-115929c972c8" />
+            <class Id="656385b8-6b00-4ea2-a8ec-da8febb7a3ff" name="BarnHandler" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="8489ebff-8bd7-4504-878f-2445c3487072" />
               <ownedAttributesInternal>
-                <property Id="f4fd9003-13c0-431a-a5f4-e1c3c8adbfcf" name="Push Notifikation" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="4e196f34-dc64-47ca-b48b-898cbec63eaa" />
-                </property>
-              </ownedAttributesInternal>
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="6f0e13a9-2bf7-4a67-bbdb-ed88f42f9a3c" name="BarnHandler" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="2998ac9b-44a6-4394-ac1c-170de964b61f" />
-              <targetEnds>
-                <association Id="f6fa49f1-2772-4056-9eb3-65620b26b01a" isDerived="false" sourceEndRoleName="BarnHandler" targetEndRoleName="Singleton" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="36a269b7-5ed7-4029-8ff9-d693092cd904" LastKnownName="Singleton" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="b5920873-3c32-4760-bb80-011dcd1466a1" name="BarnHandler" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="287f766f-cfc4-472e-8ddd-7524f911f2b4" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="f23c6f58-06e9-47b8-9efa-2a6f1114cdd8" name="Singleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="426a19c8-cd0d-4926-9e83-028d3b8e0804" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="8f926bb3-1834-432b-83fc-134d9d8b21f3" />
-                </association>
-              </targetEnds>
-              <ownedOperationsInternal>
-                <operation Id="cef5be9d-6e84-46b5-8e89-8bdea7b240cf" name="SletBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="a4c0ba61-56ee-4eaa-885b-5ebacf8ed2ab" />
-                </operation>
-                <operation Id="95184a8c-4625-4c0b-b18e-fb0eacf33c81" name="OpretBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="02e56c24-b159-4da4-8923-dfc55176c020" />
-                </operation>
-                <operation Id="ff44fb2b-7033-4d71-8c35-99540faea81f" name="PutBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="0299b2bb-1aaf-4ab9-99f7-8274d454fdff" />
-                </operation>
-              </ownedOperationsInternal>
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="e9e131ba-40b1-4f6c-9ea4-b53dbceab7c4" name="VacVaccine" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="20dab33d-778a-4547-9909-47d995fe29b4" />
-              <ownedOperationsInternal>
-                <operation Id="e7a01516-5a35-4ff7-9a83-4eb9fb5eaf06" name="Return vaccine navn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="4b1988a7-9248-4030-b7ea-7a072c1e293e" />
-                </operation>
-              </ownedOperationsInternal>
-            </class>
-          </packageHasNamedElement>
-        </packagedElements>
-      </package>
-    </logicalClassDesignerModelHasPackages>
-    <logicalClassDesignerModelHasPackages>
-      <package Id="1c00185c-0446-4e33-bf08-adafbf714a88" name="ViewModel">
-        <elementDefinition Id="922ffb75-cd02-4131-864d-0b348dc5426f" />
-        <packagedElements>
-          <packageHasNamedElement>
-            <class Id="9afea6ac-6197-45c8-be19-8aafb6711e0c" name="VaccAppViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="b34c92fb-6cba-41b6-9b8d-033cee59ae86" />
-              <ownedAttributesInternal>
-                <property Id="8e076e8b-32bb-4f85-84b5-6462836ea573" name="Singleton" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="2745cc85-c854-4a09-9334-7c16dc8c68d9" />
-                </property>
-                <property Id="1865fcb8-b5a2-4de3-9373-cfa3267397f6" name="TelefonNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="441e3860-677d-41c7-9540-72bdbc6ec99e" />
-                </property>
-                <property Id="87cc9378-2d4e-463f-bc0f-0e9fee7c8216" name="ID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="3688fbbf-ef42-45be-bbce-25acc3615b0c" />
-                </property>
-                <property Id="db2c866d-26f8-44e2-8a3f-fbb37ac28dc8" name="Fødseslsdag" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="9aadf135-333c-4f72-917d-e4b6c988add5" />
-                </property>
-                <property Id="631ee630-a695-44fa-b2e7-95b1b723ab32" name="ForNavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="24f42893-5390-4134-bf14-cae453f72330" />
-                </property>
-                <property Id="2eb45697-21e6-43e6-b390-29be0bd13861" name="EfterNavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="b6e8f07f-abc2-4cfe-93c0-88facf106077" />
-                </property>
-                <property Id="2792a3f3-a0fa-4c77-95e7-e2e6d2199096" name="Selected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="2ad3df60-b095-4a5d-b4f5-44b2ddd45496" />
+                <property Id="8602b5aa-2563-4d84-b47b-19ddcf1a2c99" name="VaccAppViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="574a4d57-2267-4327-b98b-0c6708296f35" />
                 </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
-                <operation Id="70a20721-f84e-4d00-ac1e-7c5dab473f4e" name="OnPropertyChanged" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="0eef6541-d624-4e8f-a23a-f76b70a172d8" />
+                <operation Id="cfdbbccd-0ce5-43e5-aaf5-c68da61bfb87" name="BarnHandler" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="865f5b3f-3649-411b-91ba-fe5a53e6a529" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="9e763481-0fbc-4717-b65e-e4d5a7cc6e56" name="VaccAppViewModel" direction="In" isUnique="false">
+                        <elementDefinition Id="578f4431-c996-48e8-972f-3ab00d57e5be" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="c6b680e7-ef08-44ab-acbe-56cbc945f52d" name="Opretbarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="8c6d9721-2cf7-4d8b-a287-06a836faa6aa" />
+                </operation>
+                <operation Id="b587fbc9-d078-47ec-abce-bd4483f00d94" name="SletBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="e52374f1-589c-4dee-95b7-8145cafa4513" />
+                </operation>
+                <operation Id="ade20048-8abb-4d7f-98cf-50cd1a6ac1ec" name="PutBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="faebbb31-4244-41af-8869-4ddc4666749f" />
+                </operation>
+                <operation Id="43bd600a-1cb5-40f3-a763-be3177164603" name="HentVacciner" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="bfc07e85-ae65-4ed9-b87f-383f48e41c65" />
+                </operation>
+                <operation Id="b45d3c61-a2b5-4407-af0c-32bd417ccf7a" name="Notifikation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="59631223-4abf-487b-ac42-30f0b4fab4ac" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="51f724df-14d5-4640-aa17-50fca39630d4" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="36662cd1-a202-4c80-8965-8e7179201c6d" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="676c5427-5c6c-44d6-a548-8ffbb3161747" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="51d580a4-bf11-4785-814f-a02dc24352c5" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="172a6357-72ac-4d8f-8c6a-b6b6766c8544" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="1d0f95ae-ff76-4405-bb50-aa84ba15f3eb" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="c6b2c9ce-a40b-4497-b7e8-9c3a52733156" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="db915b97-cef2-43fd-bde2-e8192953da98" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="8f4729a1-2904-40e4-b4ba-e9045440b254" name="datetime" direction="In" isUnique="false">
+                        <elementDefinition Id="8b37479d-6089-452e-b442-fa435ed3bb53" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -204,244 +125,268 @@
       </package>
     </logicalClassDesignerModelHasPackages>
     <logicalClassDesignerModelHasPackages>
-      <package Id="72669b24-d24e-45c1-a1ae-98bc0eeb8a7e" name="Common">
-        <elementDefinition Id="fb5c724c-1bde-477c-9dda-1888816af145" />
+      <package Id="d7738fab-d759-4aca-9b43-92a13d014aa2" name="Model">
+        <elementDefinition Id="5cb98698-97b1-4716-99ef-a70aa9cbe381" />
         <packagedElements>
           <packageHasNamedElement>
-            <class Id="b0260ddc-15bc-44c0-9fec-0065e4942132" name="RelayCommand" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="ce762f07-ff54-4a80-ae1f-a1622c6b1d33" />
-            </class>
-          </packageHasNamedElement>
-        </packagedElements>
-      </package>
-    </logicalClassDesignerModelHasPackages>
-    <logicalClassDesignerModelHasPackages>
-      <package Id="33238544-3713-472a-b03a-e90db9b81c1f" name="View">
-        <ownedCommentsInternal>
-          <comment Id="bfe9bc1a-9590-4be9-9ebe-5552c13b6d31">
-            <elementDefinition Id="93edb037-6129-43f7-9392-b6c76f04b035" />
-            <body>Der bliver tilføjet et
-vackort 
-som kan tilgås fra:
-Familie &amp; Menu</body>
-          </comment>
-        </ownedCommentsInternal>
-        <elementDefinition Id="0d407d90-1a42-41f0-9de0-8f2b566978dc" />
-        <packagedElements>
-          <packageHasNamedElement>
-            <class Id="9d75c384-45b5-4bea-979b-a8dd1ff1d80b" name="MainPage" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="14c3aad1-5e25-4fca-a6f7-7a21404a83e7" />
-              <targetEnds>
-                <association Id="f261b07b-ca7f-46ba-bac2-56b86632002f" isDerived="false" sourceEndRoleName="MainPage" targetEndRoleName="Menu" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="7bf59c0c-a280-4b5e-8ce3-025c4b762351" LastKnownName="Menu" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="9e15ec87-c786-4cfe-8a4e-b2201c52a3a9" name="MainPage" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="43cd0647-a1b7-4f5f-b746-379183b3827a" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="40ffdfb4-b8db-48da-8d9a-fb680355f0be" name="Menu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="d07edd84-e150-43d9-88b7-324c7578d2f6" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="d61ab213-b344-4cc6-955b-783ae3fd5cad" />
-                </association>
-              </targetEnds>
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="7bf59c0c-a280-4b5e-8ce3-025c4b762351" name="Menu" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="aa51c6c3-290c-4406-b354-a8750a758e73" />
-              <targetEnds>
-                <association Id="a765ee2f-f838-46fd-b4d1-b6f41cc92d56" isDerived="false" sourceEndRoleName="Menu" targetEndRoleName="Familie" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="bfc67be1-b4f3-46cc-9658-0a5455d1fcf0" LastKnownName="Familie" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="880313a3-aab2-4064-af93-5c828cb876dd" name="Menu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="a6daaa6b-0c94-47c2-bba2-2848f40a00f4" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="c8f76b95-0787-47ee-a7ac-c79c8759e025" name="Familie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="0553d050-fc80-4d51-90dc-2605a343e4d2" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="41df5613-d945-4b07-a816-f1b6c9157b00" />
-                </association>
-                <association Id="81fb2e3f-e22a-493e-b425-aa0390c4276d" isDerived="false" sourceEndRoleName="Menu" targetEndRoleName="Wiki" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="1ae0f355-ff60-445d-a323-37a1bf06aa2b" LastKnownName="Wiki" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="2d458dac-6468-4d31-bd35-426e5c7c07c2" name="Menu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="2ff6376c-ad95-4c74-bc59-d490a2a22831" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="5f2e3873-f2fa-4e7e-b218-629a0a19323d" name="Wiki" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="5ea32420-349e-4dba-b6f9-a576e33fb659" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="16b3f48b-2f06-4efa-b5ec-f939ce4b8e43" />
-                </association>
-              </targetEnds>
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="bfc67be1-b4f3-46cc-9658-0a5455d1fcf0" name="Familie" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="a4971c61-7ca9-4544-b4b2-6b57985882e8" />
-              <targetEnds>
-                <association Id="df58a077-357d-4434-b283-55f865d80643" isDerived="false" sourceEndRoleName="Familie" targetEndRoleName="opret barn" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="683e6828-7139-49ac-9a44-b48613bbce48" LastKnownName="opret barn" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="882e6f7c-7744-4899-a25e-8798a6da1bfb" name="Familie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="ed508a85-f7e7-40b5-9ca6-15705fd34c60" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="8f88419f-4b37-4b2a-b839-80e0b552b675" name="opret barn" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="f09ad307-9bda-4af0-b87d-9ece6eca4949" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="6970f1a4-ac19-4349-a46b-8128722878a6" />
-                </association>
-                <association Id="84c76273-af6d-4f77-81a4-8b582e64804b" isDerived="false" sourceEndRoleName="Familie" targetEndRoleName="VaccAppViewModel" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="9afea6ac-6197-45c8-be19-8aafb6711e0c" LastKnownName="VaccAppViewModel" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="b7d382f5-fe1d-433e-8d6b-0268908ce425" name="Familie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="26ad7207-b290-400e-83f3-7d7c315b1ced" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="cbba8ffe-ef27-481f-ab9f-9aa4a651f6eb" name="VaccAppViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="2d4361b6-20cc-40cc-8b6d-07d9ed5e4109" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="d54c4ae1-4835-42a7-8da7-97060fee7f6b" />
-                </association>
-                <association Id="ffcdec59-ab6c-4c84-90c8-a10ab8e90e70" isDerived="false" sourceEndRoleName="Familie" targetEndRoleName="RedigerBarn" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="25c4c058-3b6e-44f9-bd6d-5c6fda0623fd" LastKnownName="RedigerBarn" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="4cb5d31d-f808-40c5-8fb2-d36cdc689466" name="Familie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="8334e753-0d66-4078-8754-4cf0d4e3aadd" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="0a2d0e14-a072-43ab-8f5d-b3421745878b" name="RedigerBarn" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="bf1a467e-c398-431e-b053-c9293bfe6e5e" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="b67e39e9-243a-4513-8fe5-c049c856dee8" />
-                </association>
-              </targetEnds>
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="1ae0f355-ff60-445d-a323-37a1bf06aa2b" name="Wiki" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="ec1afff8-8cee-43cc-b5e7-f240888baa75" />
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="683e6828-7139-49ac-9a44-b48613bbce48" name="opret barn" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="fa157ac0-17f5-41d9-b8ab-bb79f05e8cfc" />
-              <targetEnds>
-                <association Id="c3160d51-5701-4855-a9a5-1480d27372b6" isDerived="false" sourceEndRoleName="opret barn" targetEndRoleName="VaccAppViewModel" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="9afea6ac-6197-45c8-be19-8aafb6711e0c" LastKnownName="VaccAppViewModel" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="da8a7ca6-8497-4751-a5eb-aa27219d1c98" name="opret barn" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="a79f5fb8-073f-447c-819f-f718b6de2eb8" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="27d7ec33-1ab7-49f6-822d-ffc437e7a010" name="VaccAppViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="c744edcc-b775-479c-9fed-2c6c9fec28aa" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="2fa9b20e-6716-445f-9913-3502d35b1040" />
-                </association>
-              </targetEnds>
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="25c4c058-3b6e-44f9-bd6d-5c6fda0623fd" name="RedigerBarn" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="0140045b-1e92-4a90-a5f3-f17e065703d3" />
-            </class>
-          </packageHasNamedElement>
-        </packagedElements>
-      </package>
-    </logicalClassDesignerModelHasPackages>
-    <packageHasNamedElement>
-      <referencedType Id="3ab95742-d778-4822-a1b2-db7776487ffd" name="ApiBørn" isAbstract="false" isLeaf="false" cachedFullName="ApiBørn">
-        <elementDefinition Id="c9f48ac4-64ee-4d3b-9297-833583e739d4" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="016bfd35-f8fa-403f-a580-b9ba4aa238bc" name="ServuerUrl" isAbstract="false" isLeaf="false" cachedFullName="ServuerUrl">
-        <elementDefinition Id="6ad16fdf-3e02-4e63-ac47-3f7942a65ead" />
-      </referencedType>
-    </packageHasNamedElement>
-    <logicalClassDesignerModelHasPackages>
-      <package Id="c82a7d68-2d20-49aa-9e75-02d27aeba2fa" name="Persistency">
-        <elementDefinition Id="c8c34085-26e2-4611-bd49-333da64c8f57" />
-        <packagedElements>
-          <packageHasNamedElement>
-            <class Id="2018f21f-81a0-4330-b598-072afb110fb4" name="PersistencyService" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="39fe3866-eb9e-4ef9-ac02-69079345d32d" />
-              <targetEnds>
-                <association Id="c6393005-549b-41c1-be8e-75f17dc69b4d" isDerived="false" sourceEndRoleName="PersistencyService" targetEndRoleName="Singleton" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="36a269b7-5ed7-4029-8ff9-d693092cd904" LastKnownName="Singleton" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="44100b5b-f96e-4f1f-a371-62558a46b4fa" name="PersistencyService" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="762aa0e8-59d2-43be-9731-802347293155" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="a4208f83-7d32-460f-b167-0332121328ca" name="Singleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="b43304e6-e635-4d87-9a31-01b379f71607" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="9882b90c-c0a1-47b1-ad65-f6c7f15afe00" />
-                </association>
-              </targetEnds>
+            <class Id="c58234fb-2ea8-4c77-9dde-13de2534f2eb" name="Singleton" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="a640136b-dddf-4c47-811f-ebe22364a2f4" />
               <ownedAttributesInternal>
-                <property Id="7cde2849-22ef-4da3-9e8a-103eb9526060" name="String" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="1271ccb1-1a26-4d8f-b656-250d9b555f96" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="3ab95742-d778-4822-a1b2-db7776487ffd" LastKnownName="ApiBørn" />
-                  </type_NamedElement>
+                <property Id="dbb90928-7ab6-428d-9235-cd936490de68" name="ObservableCollection&lt;barn&gt;Børn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="059357c1-8ddb-47ea-b149-df0915565c5f" />
                 </property>
-                <property Id="fc65081d-58a7-4b0f-8039-1eec4fadb9a7" name="String" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="02b7a025-a9ae-42ae-9ab7-6b21edf3926d" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="016bfd35-f8fa-403f-a580-b9ba4aa238bc" LastKnownName="ServuerUrl" />
-                  </type_NamedElement>
+                <property Id="29dafcec-8522-4e66-b096-c062af0ebbb2" name="singleton instance" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="85ae3530-4041-47b5-aad4-b067991ae607" />
+                </property>
+                <property Id="468df808-d443-48dd-a337-b527a5232477" name="Obs&lt;Vaccine&gt; VaccineListe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="35e54db1-3493-4122-8667-bbec211e868b" />
+                </property>
+                <property Id="9e4dcfe1-6521-46f4-80da-4427eed6e5a0" name="obs&lt;Vaccine&gt; VaccineCollectionsort" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f81b3b08-78eb-47a3-8351-460fdc95f9e4" />
+                </property>
+                <property Id="fcfb0ab7-2b79-4d01-8de5-8c68d367968d" name="obs&lt;VacSkemaBarnPlan&gt;VacPlanCollection" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3ee47895-744b-4962-9364-9614990398d7" />
+                </property>
+                <property Id="86a7d8fd-300f-4e08-932c-ff993e905191" name="VaccineCollection&lt;Barn&gt;" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4b452cee-211e-425d-8974-d66bd8e16d1a" />
+                </property>
+                <property Id="c86ff7ba-c0f6-4455-9738-e4a2e6e6c83e" name="obs&lt;vaccine&gt; VaccineListe" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="eb885692-41d1-471f-b006-cdea913ccfd3" />
                 </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
-                <operation Id="cb734055-7a69-407c-b5ba-5204c731bf16" name="PostBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="2dbf5a50-2326-4276-906d-230904fdcd39" />
+                <operation Id="96d2209a-577f-4eeb-8ac8-53efa2113f81" name="singleton" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c5f7885e-ef3b-4eec-a443-7d12b6259034" />
                 </operation>
-                <operation Id="50a44eaf-2f49-45d8-bb73-fa1dcdd512f7" name="GetBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="a8b591b4-9408-4086-8cd9-809b3400da53" />
+                <operation Id="341b402e-d2ec-4173-959b-a2dded12334d" name="Tilføjbarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="cf10bac7-0f69-4f3b-b382-fef45e3a35d9" />
                 </operation>
-                <operation Id="1d45929a-e10c-4aee-a554-179ce553b79e" name="DeleteBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="013d714a-9703-4d90-af2d-3088d0d4ab09" />
+                <operation Id="a1440596-4f4e-4dfe-a4b1-76135ede6ed0" name="fjernBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="b6b49a32-3241-432d-b005-39d2111adc95" />
                 </operation>
-                <operation Id="ed5a2953-6c0f-436f-93e5-d1a48ace1a34" name="PutBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="ff673303-d82c-4caf-9c90-7f44b18dc730" />
+                <operation Id="9024e020-2dfd-4a9a-bda1-dfb15c304727" name="PutBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="4cf91c82-1f85-4045-94ca-467b36bdb7ef" />
+                </operation>
+                <operation Id="970b66ae-c9b5-40a8-bd12-597a02fd32e5" name="HentVacSkema" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="eb65f0d1-fc39-462d-88ce-fc0ed3e5817f" />
+                </operation>
+                <operation Id="e5b6f203-ed5f-4479-ae9d-c55ac9461e70" name="hent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="720c3311-4843-4787-8687-13d7cca134e0" />
+                </operation>
+                <operation Id="8c028c4b-b3d9-459e-ab60-af4318d1bec5" name="GetVaccineAsync" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="eec149d5-e3e8-4888-94af-28d0acef0e0e" />
+                </operation>
+                <operation Id="14ef990f-3d5f-41fa-a5cb-b5c7702972c1" name="GetVaccineAsyncikkesort" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="170360e2-577c-4b28-843c-729a41a0d95f" />
+                </operation>
+                <operation Id="8a7db15e-b9f4-4ea0-ba99-eaf64f195840" name="OnPopertyChanged" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="f0f73fe4-ea99-4854-95cd-782846605ce6" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="9984cbb6-ee05-457a-b545-cc009c93e317" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="87cc27db-162a-4f3b-9f0e-cf353c3258fc" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="1ba2888f-40ab-47a9-b402-6909f7b8d46a" name="Barn" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="3ca2cc1d-fa62-41ed-8c08-6355a63fe4c2" />
+              <ownedAttributesInternal>
+                <property Id="4ec645ba-8659-4329-bc6f-333796a4919d" name="String Fornavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="690c0372-a89e-4b53-bf03-0512c969da75" />
+                </property>
+                <property Id="dcb8359a-ede5-4328-be85-0627a6300760" name="String Efternavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="48d7883a-f9ae-483d-be0c-6d98a7511348" />
+                </property>
+                <property Id="a978f581-c30d-48f1-8c73-d41f7dba784f" name="int Barn_Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ee5c1b44-11f8-4a42-aa22-97030687d3ee" />
+                </property>
+                <property Id="5fb05129-8d99-44a1-97de-26d4473de4b8" name="Datetime Fødselsdato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a1a30e1b-8ade-45d1-9911-de1a59111cf5" />
+                </property>
+                <property Id="b23c2445-d42f-440a-aa8a-23744db4c078" name="int TelefonNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c5587966-38ba-48a8-8053-165f8ae0900b" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="e6c52304-2c08-4045-845b-c51a67398531" name="Barn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="1338f657-c06d-41a0-89f0-21e4b1814deb" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="888872c2-e946-429e-af86-eb787047fa05" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="f2773b45-c7e0-49b1-9154-127437f2c4af" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="cd05626f-b36c-4941-b1c2-9cbd89c4e82f" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="8005feea-ee67-49b9-8a62-702a1f359267" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="e3f31878-66e9-4119-81dc-c401aa92b567" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="793c6d8c-5a71-4ce7-8efa-846028698eea" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="047afdda-0e40-4fa5-8fc6-9068bc09fb08" name="datetime" direction="In" isUnique="false">
+                        <elementDefinition Id="c9ac7cba-c795-4fa1-9894-69871cc822d5" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="c8260f4a-70c9-44ea-9d82-05a5127b4269" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="1d892653-a3da-4c92-8d90-38602ca14225" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="7230586a-9ee6-4fde-9d70-42bc3d0986f8" name="Barn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9bf94dd1-4d81-4c05-b689-e42c2dc40dd7" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="b3b98410-b7b0-4cdb-a52c-061b38b8c7b0" name="Vaccine" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="5ed774c9-57ce-4a1b-b2b8-e132e9331497" />
+              <ownedAttributesInternal>
+                <property Id="016b121a-2f48-4e76-9664-bbec654ec21f" name="int Vac_Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3ba4a064-a746-4c70-8c7f-a9724f3d91b5" />
+                </property>
+                <property Id="f5296c6c-b9ce-4e6d-9971-172258b9286c" name="Int Tid" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7082c4e5-bd25-4f65-aa85-68c0a8fcbe62" />
+                </property>
+                <property Id="9621571d-5c57-4ed9-befc-01ba9f77b11f" name="String VaccineNavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ca9af250-bcea-49e9-88e9-24982a2f7997" />
+                </property>
+                <property Id="036f32ec-0b55-42fa-af4b-a90c6d7359e8" name="String Note" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b3a069f6-3ed7-4c78-86df-efb24c5b15ce" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="0df5b619-3fb8-470f-879d-d29792769381" name="Vaccine(int,int,string,string" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9446c951-3ef3-4bd0-b6e9-a00af147d9e4" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="74ec057b-6fc0-49a5-ba4a-1adda04a49d6" name="VacPlan" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="6b9b906e-3e52-4380-9c00-6f380630e57c" />
+              <ownedAttributesInternal>
+                <property Id="88ed7446-8c61-4bc4-ba6f-256fe1158915" name="int Plan_Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8ce7acc0-7ec9-4dcc-963e-58ce6d0a82b6" />
+                </property>
+                <property Id="df13bd08-f83f-4365-a04c-221e4f6aeb37" name="DateTime VaccineTid" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c138fbd3-5f15-438b-82bc-670c7b6c8468" />
+                </property>
+                <property Id="78a0d5da-754d-49e1-b239-69b049fcbbfb" name="Bool TrueFalse" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ac7c6f8c-d58b-47eb-b80f-821c39badb6d" />
+                </property>
+                <property Id="1d973564-9fb9-4565-8e42-f3e4d417c9a9" name="int Barn_Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4ec2b6a7-2760-457c-aeda-81241957691e" />
+                </property>
+                <property Id="04d2ae69-68ff-471a-8a71-a40a80c83c7b" name="int Vac_Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9d49d9f3-c815-4377-b061-a56307476f1e" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="ee747850-8e64-4ec1-b9a1-2dde399642e3" name="Vacplan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5b3e4cd7-2b55-4bbc-9643-a6385191411d" />
+                </operation>
+                <operation Id="2a1cc487-93ea-4793-a00e-61908879733b" name="Vacplan(Int,DateTime, Bool, Int, Int" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="e8136c63-9e74-4a6a-a95d-aae807672b49" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="455db49c-40e0-4c3f-aa07-13b0b91cc5eb" name="VacSkemaBarnPlan" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="1f78f86b-d42f-4c35-9393-484f86b4c019" />
+              <ownedAttributesInternal>
+                <property Id="141c36d4-ded3-49f2-9078-7dc5addc8e1c" name="int  Plan_Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e9304aa4-bcde-4963-a6ce-42e42cd70998" />
+                </property>
+                <property Id="0a89e1cc-cca5-480c-a770-2014ad0f5bcc" name="Bool TrueFalse" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="685a798d-5652-4fc9-9559-3391c1cecf3b" />
+                </property>
+                <property Id="15189490-f711-4232-88ad-57394f7bf1d0" name="DateTime VaccineTid" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d4374a3f-5a48-4049-ad97-33b92266522b" />
+                </property>
+                <property Id="03754a3a-a7ef-412e-a119-c99f9fd7e5d1" name="int Barn_Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="84a978e9-13d2-421e-9a46-4df7720139d0" />
+                </property>
+                <property Id="bd94243d-0e56-49e0-b331-14a200bb8360" name="int Vac_Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d2fe3338-ae5e-4bc1-99a6-77087616261b" />
+                </property>
+                <property Id="70590072-a9e0-4f56-9d8a-0d42dff63b8e" name="String ForNavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3e61cf97-fd7a-4646-9c9a-27700f81f6ab" />
+                </property>
+                <property Id="9a0d4020-1383-4dc7-bcd4-b0c6f776388f" name="string Efternavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="88a04713-8415-43d2-91c0-0697e6ff43d5" />
+                </property>
+                <property Id="06886759-a99a-487b-a991-556dfba7cc97" name="datetime Fødselsdato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fae76aa3-afd4-4063-bebb-c4360f53d821" />
+                </property>
+                <property Id="d7ede5d5-f738-448b-8d11-dde2e89a2239" name="int tid" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0287dbf8-7416-43bb-a262-ba42c73ac8a1" />
+                </property>
+                <property Id="84c6fbe2-e664-4de1-96cb-d87161a684ec" name="string VaccineNavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b602c51d-92a6-45e7-9efb-9f96659a62fd" />
+                </property>
+                <property Id="df0c2afb-eccd-4d48-b50e-c8ac35dfd42b" name="string VaccineModtaget" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="787686b5-dcd9-43ba-b90b-4859743d7556" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="c441b25d-ba8b-4219-96d1-0073c0c5ddf3" name="VaccineSkemaBarnPlan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="a3e2b960-7edf-4040-922e-e704ef62af17" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="2fef3174-e49a-465e-96fa-eea188b211da" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="caac9c5e-285e-487f-aa96-ce5717b4b0bf" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="2a292052-d0ef-4e80-9a95-bba1b6aa9894" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="4d2ba8b9-71f0-4a3a-a78f-ee8859bb4346" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="e33ff33c-a47d-4818-9e27-e9f7d232b2ab" name="datetime" direction="In" isUnique="false">
+                        <elementDefinition Id="0a29fcea-ae6f-4f1c-8457-027c3f2f1d4e" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="053fa5ac-4078-486b-8a46-16bd1dac6ad1" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="8e7756b4-576c-42c8-aa0b-d68dbed0488b" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="fe81cb18-8174-45ec-9ad6-59481f83406d" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="03bfcfd7-1923-45a2-bdfa-b20d351b4d8c" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="845e34eb-a373-417b-8acc-a53d43570cd8" name="datetime" direction="In" isUnique="false">
+                        <elementDefinition Id="f96c32de-2665-4e6f-800f-b9955d0e73e2" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="66bfd900-8f0e-43ac-acd0-1bfd4c68a7c6" name="bool(" direction="In" isUnique="false">
+                        <elementDefinition Id="cd266315-fc85-49fe-b23a-dc70bcc7adea" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="67b4c802-1f32-4502-82c4-75c9cd989d2d" name="VacSkemaBarnPlan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="a687c57c-941f-4a93-9b33-c58263b1a519" />
+                </operation>
+                <operation Id="521194a3-2e47-4412-bf92-435166f8524c" name="VacSkemaBarnPlan(int,int,string,string,string,bool, Datetime" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5d705f1f-b899-4558-b681-456ee0d41a71" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -450,89 +395,199 @@ Familie &amp; Menu</body>
       </package>
     </logicalClassDesignerModelHasPackages>
     <logicalClassDesignerModelHasPackages>
-      <package Id="db110920-5daa-40ed-ae6a-dd5bfdcbab0a" name="WebService">
-        <elementDefinition Id="26950fe2-4f0e-416a-83b2-bd7fbe2f469b" />
+      <package Id="406458e2-7471-46c2-88d9-a6dfd29490a1" name="PersistencyService">
+        <elementDefinition Id="bace8028-cb49-4286-8fcc-df8ab3e4487a" />
         <packagedElements>
           <packageHasNamedElement>
-            <class Id="9f78c944-ba3f-4b56-9386-483340c5a152" name="BarnContext" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="0839f3a8-e0a6-4979-8856-b7bf5ce59208" />
-              <targetEnds>
-                <association Id="b227b8b5-e259-4bfe-9a24-bc3e771dfcac" isDerived="false" sourceEndRoleName="BarnContext" targetEndRoleName="Børn" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="b07f70b2-d58d-496a-8ed2-b47fab54828b" LastKnownName="Børn" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="c76cfb73-62e0-4829-bf0e-4490577046b2" name="BarnContext" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="a023bdad-4fa6-49a2-9a58-076df2ec27aa" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="0c7b31f5-7ee5-4737-a8b6-41a084acc4aa" name="Børn" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="e8899f22-e180-44cd-bec0-aeabf91969a1" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="c46b43eb-5620-4bea-9909-9e3a43909a1e" />
-                </association>
-              </targetEnds>
+            <class Id="629e00a4-8420-4738-8659-515e1a75a90e" name="PersistencyService" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="dbb018ed-444a-4371-8b3d-f7075d4e3b00" />
               <ownedAttributesInternal>
-                <property Id="db3d4ec6-5c0e-4867-9b81-ebbf55ef1101" name="Børn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="486045c9-292f-4b97-8a1c-6583625d7fc0" />
+                <property Id="0c1de24e-fc18-4d0d-9832-ed7e8f5d0cde" name="String ServerUrl" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d71139c5-91d3-4bab-80d7-30417c4cfa99" />
                 </property>
-                <property Id="c3da3d75-78f6-4796-b1af-fbd66dcb59c5" name="VacVaccine" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="679a8d66-fe36-48f5-a558-01119701a41f" />
+                <property Id="dbfd1cb1-7940-4d22-9707-56edfa6fb235" name="String ApiBøn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="24147ffb-4264-4ecb-b339-f3ad80238296" />
+                </property>
+                <property Id="65ebe963-8526-4274-89c2-98d65fde599f" name="string ApiVacPlan" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8a12839f-ae41-41fb-a461-8c1fb01bed1d" />
+                </property>
+                <property Id="3a0240b6-5baa-4900-84ca-cdc942f5b630" name="string apiVaccine" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bcc6a018-ab6a-4e4e-a792-0da33f5f024d" />
                 </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
-                <operation Id="b7f1ca77-8099-4162-907b-41f77fb71c2f" name="BarnContext" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="6653494b-cf6e-4f6b-8fb7-fdb274fa0498" />
+                <operation Id="c18858bc-8514-4dd4-9e3b-1dbd4edfc633" name="PostBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5de5f9c1-2760-447a-b9f1-f1aa1d1d43a1" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="94d28c39-a63a-44dd-8a2d-f1d994b31977" name="Barn" direction="In" isUnique="false">
+                        <elementDefinition Id="174647f0-5dc3-4b11-8b9f-6628fef7bd87" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
-                <operation Id="76549330-5375-4ba7-ad6e-0d1819b63cbd" name="OnModelCreating" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                  <elementDefinition Id="4ad18e07-629f-4580-b637-c7bd53777591" />
+                <operation Id="ac462e75-5f4c-4dfb-add3-4af7a670f40d" name="GetBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="6ccd708c-e710-4e1f-a2cd-6aa78f08b152" />
+                </operation>
+                <operation Id="cb6c091a-c88d-498f-960b-5d1aef390696" name="DeleteBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="438f2257-f4e5-4390-bd56-7b4ce5f5d661" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="d408676c-5fc0-49c3-b516-8f55ac7b6b38" name="Barn" direction="In" isUnique="false">
+                        <elementDefinition Id="91d84e1f-48f1-44ea-8d74-7d72e4d1802a" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="2e9c53ed-5db1-4a11-a520-9895c4beff07" name="GetVacSkemaBarnPlanAsync" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="a1d969d3-d60c-4920-b199-e620d7a419c2" />
+                </operation>
+                <operation Id="4d788efd-b129-4e2a-b862-02b9485f3d60" name="PostVacPlan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="7d57fa66-208f-486f-8c7a-22ab7a470db0" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="1c02a085-7768-405f-b47a-62ce8eee9d11" name="VacPlan" direction="In" isUnique="false">
+                        <elementDefinition Id="bf684897-4af3-4ae5-aacb-a64608ac0a7a" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="c4495478-5ef9-4306-8eea-734d09db3e63" name="GetVacPlan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c39a6c4c-bf8e-41d8-845e-e000ea0718ba" />
+                </operation>
+                <operation Id="be4e54bb-b7a5-43c4-a22b-d8bacb6c84b7" name="GetVaccine" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="31bd0d2e-2a2a-4bff-941c-33b524718e4e" />
+                </operation>
+                <operation Id="b6ffbcd6-7375-437b-aad3-09bdbeb0c50d" name="GetSortedeVaccineAsync" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="e3117e37-e63c-40b8-9c74-d31e1a717003" />
+                </operation>
+                <operation Id="f3483145-9efc-4a75-a6cc-8ce99d28fde9" name="GetVaccineAsync" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="8e91650b-c319-4e85-a9d1-10952f3dd51e" />
+                </operation>
+                <operation Id="2e0acc68-0dec-4daa-9683-8e95c757a3b7" name="ShowMessage" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="e92de9ee-2576-4ba5-bce5-ed29d28eef89" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="04a759fe-f253-4d14-88d4-ae6e88181b72" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="ada1b9a8-3a77-4fb2-8d30-8985e9196376" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
                 </operation>
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="ca3eb28b-a57f-47de-b4ea-cea481b81269" name="View">
+        <elementDefinition Id="8c3f0184-c7f3-4e6f-be9a-f7a2e1d284d3" />
+        <packagedElements>
           <packageHasNamedElement>
-            <class Id="b07f70b2-d58d-496a-8ed2-b47fab54828b" name="Børn" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="657ce896-72bc-47da-bdc7-4e82c928321d" />
-              <ownedAttributesInternal>
-                <property Id="ead94d2a-4d86-42ad-81ad-b478146908cc" name="ID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="637742a3-ccd6-453b-9f6f-708740aaf4b4" />
-                </property>
-                <property Id="8747b0db-70c1-4c60-950a-7a3126f840cb" name="Fornavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="45924a41-fc12-473a-9cf8-3979883cfa51" />
-                </property>
-                <property Id="a27aaa71-a7df-4614-9d14-fc855c364c55" name="Efternavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="5205ab6d-4b2c-4851-858d-9461f9058fd5" />
-                </property>
-                <property Id="98e69225-f23c-4257-a90c-c9c24f64548f" name="Fødselsdato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="7b092bfb-27e8-444e-9063-e106ed90c274" />
-                </property>
-                <property Id="bd885cf3-215e-4992-b8a0-278e0c3c4ef5" name="TelefonNr" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="ef3e800e-a552-4b06-ad47-70d385d513bc" />
-                </property>
-              </ownedAttributesInternal>
+            <class Id="5584990c-965b-4f89-96e1-0d48a311fe5f" name="MainPage" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="05ba2c4c-8968-478b-8b5a-1c441252d0d0" />
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
-            <package Id="414e9d64-99b0-41bc-a6ba-68269622b150" name="Controllers">
-              <elementDefinition Id="f5fd5288-282c-4b9e-b4d5-3e7f50d8b20c" />
+            <class Id="db72f3c3-9bc9-4fae-ab91-74efdc887a42" name="VaccineKort" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="93c8c72f-2b95-46d7-b122-294f38dc1645" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="1a0ae795-66ea-4934-8e7e-1983bd4fc86e" name="Familie" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="83faf6cc-7d30-4df9-bc1e-c756c3c24f1d" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="227b9c6b-6094-4260-badd-c256eab73eed" name="OpretBarn" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="18eb9fd5-78e7-446c-8149-a3852676b9c3" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="dc4c723a-7b09-417f-a45f-eb20d57a9957" name="Menu" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="28594d78-926d-4071-a28d-2687cddf92d2" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="945c7f96-ca9c-41b6-ac35-531b417eb726" name="Wiki" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="ed32c494-8830-4f22-8e5a-f26aba32af63" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="c66c86a6-8f1b-4045-aa45-9e6ec581e65d" name="VacPlan" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="bf66ebd3-1ffb-4952-a0c1-e6c3a7f87c10" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <package Id="a152a751-64d5-4c5b-978b-d18f707d8fc6" name="ViewModel">
+              <elementDefinition Id="60944eb0-fd57-4348-8470-f9b5594faa4e" />
               <packagedElements>
                 <packageHasNamedElement>
-                  <class Id="ae3fbccd-25fc-4a10-8aab-6e2ad927ff7e" name="BørnController" isAbstract="false" isLeaf="false" isActiveClass="false">
-                    <elementDefinition Id="f06d98d2-9942-494f-923a-51c08cb136a4" />
+                  <class Id="1b24d97e-b8c8-43ed-9904-e728a7b72e18" name="VaccAppViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="1b06cc69-a3fb-4bfa-9cc1-aba0ab02f07f" />
+                    <ownedAttributesInternal>
+                      <property Id="09c7549a-e090-41f4-8d90-dc43ebbf9bc8" name="Int _TelefonNar" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="de32ec95-b4da-440a-8acf-ca2da7f6804d" />
+                      </property>
+                      <property Id="97a10760-13d6-4cbc-910a-d4251c2cbeec" name="int Barn_Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="e6b38182-4041-4e5a-8e1a-94ef94e710b9" />
+                      </property>
+                      <property Id="11e1ebfd-65f9-46dd-8e27-58ccd6309b4d" name="DateTimeOffSet Fødselsdato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="9dbf46f6-fedf-43b9-84f0-77ed52863bc0" />
+                      </property>
+                      <property Id="87806bc8-232c-4695-8268-5220027d6d6b" name="String Fornavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="ae6ba46c-8d6b-454c-b4ef-9e1121ed5a5b" />
+                      </property>
+                      <property Id="7ad2ebb6-9424-41eb-95d2-30ef0ff62cf4" name="String Efternavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="9d18f42d-d0db-4324-9fab-9b930354522e" />
+                      </property>
+                      <property Id="2a8090a9-117e-4b95-b8e0-616522a96967" name="Icommand OpretBarnCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="56398c5e-f2d3-4ca6-ac50-e5535b530e9f" />
+                      </property>
+                      <property Id="49636c58-709b-4fd0-b83d-9f8e1990614c" name="Icommand SletBarnCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="d6c40f09-d170-4e44-aa87-9e96d5d580b0" />
+                      </property>
+                      <property Id="995e4529-ccf1-4484-9c9c-75a5e2eb0a5f" name="Icommand SeVaccinerCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="c0ba528d-a7d9-4d6a-9d73-1139f056b7ad" />
+                      </property>
+                      <property Id="c89311af-1805-46a2-9731-a76eb79840da" name="BarnHandler" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="dbabc1e1-acb7-4b5e-9fa8-ce2b80955029" />
+                      </property>
+                      <property Id="5529a3de-f7bc-43b5-a5a6-1951c5f5b748" name="Icommand PutBarnCommand" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="1cddbe52-5469-4371-940c-640a49b35084" />
+                      </property>
+                      <property Id="e904aac6-7192-4c8d-8760-a0da1c77250a" name="Stingleton" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="894f0be9-1af7-477d-a469-ce2d24a2e88f" />
+                      </property>
+                      <property Id="3a6e9f8c-5c63-4c13-9ceb-7d81cd8e2ff6" name="int Barn_Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="248e9c6a-6504-4004-b55a-b1f8dea3cc76" />
+                      </property>
+                      <property Id="f5502e63-8e1b-414d-808c-d5590a346ae5" name="DateTimeOffset Fødselsdato" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="62798867-23cf-443e-bd64-8e835ecdeaa8" />
+                      </property>
+                      <property Id="7b90ef59-db9f-4a85-8e4d-07bbb0c23339" name="String ForNavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="3df428dc-7e25-4793-aa55-68d3b34a8a59" />
+                      </property>
+                      <property Id="ea767f2f-1946-46cd-8d22-f3a6a23cd271" name="String EfterNavn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="92bb08c4-f2e4-4ae0-bf1c-b18beac62b74" />
+                      </property>
+                      <property Id="9f26d078-7903-4326-a7ce-7f4c23d02828" name="Selectedbarn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="57f22d07-9d57-4451-bab2-5142cdda9a4e" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="741f0750-509c-4da3-87e5-184b3b8eb64f" LastKnownName="Barn" />
+                        </type_NamedElement>
+                      </property>
+                      <property Id="7467bf0e-3590-4356-a85d-394e6fa85dbd" name="bool TomlisteCheck" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="54beba1c-4382-4f65-9f37-a8806e45498f" />
+                      </property>
+                    </ownedAttributesInternal>
                     <ownedOperationsInternal>
-                      <operation Id="bcfce742-c199-4ed2-8055-9af23bad31eb" name="GetBørn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                        <elementDefinition Id="604b0766-07b7-45bb-acd6-317a09459aab" />
+                      <operation Id="95c26a3e-c13b-430b-90e1-b4898ccc9ab8" name="VaccAppViewModel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="7464e8b6-fa31-4455-b132-f2eab1009e6a" />
                       </operation>
-                      <operation Id="4af85998-9bc0-493c-a502-5f6385618748" name="PutBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                        <elementDefinition Id="3cfbdc5c-5760-4e27-abf2-6b46e7fd8508" />
-                      </operation>
-                      <operation Id="8174993f-7f66-4a15-977c-55982a968277" name="PostBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                        <elementDefinition Id="244ee697-cbca-48b7-8449-59640ceb243e" />
-                      </operation>
-                      <operation Id="a8313223-00e3-40a6-9094-083298f1d7b7" name="DeleteBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-                        <elementDefinition Id="fbec7011-6479-4378-a8ce-fbee9efda189" />
+                      <operation Id="2db9296c-5d93-4735-9e9b-5e8ddf0a2667" name="TomListeCheck" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                        <elementDefinition Id="dcd553dc-7f62-45e8-b0d0-3b00fc6ffa2c" />
                       </operation>
                     </ownedOperationsInternal>
                   </class>
@@ -543,6 +598,319 @@ Familie &amp; Menu</body>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="741f0750-509c-4da3-87e5-184b3b8eb64f" name="Barn" isAbstract="false" isLeaf="false" cachedFullName="Barn">
+        <elementDefinition Id="bcf82a28-a68d-48c3-aa26-bfe614a2b9e8" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="841cb489-582b-4ac2-91d8-1a777d689e51" name="Controllers">
+        <elementDefinition Id="d705c41c-a23a-435a-b58f-ed637628a15c" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="e42753c0-7a0c-4b1d-996b-8d768e6a79df" name="BarnController" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="7cfe6c8d-d33f-4337-81a3-13b36ea474e3" />
+              <ownedAttributesInternal>
+                <property Id="b573e36b-78d2-4303-b405-84cfc38f88c3" name="DatabaseConect db" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b674de10-ab10-4ff1-a076-a37b587e6b6d" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="1c2b29b7-f2e6-42d6-9fa5-5a7b8def66fb" name="GetBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="39c0e89f-12fd-4364-ab46-d71c7a947fb8" />
+                </operation>
+                <operation Id="1915756f-5eef-4fff-8702-e0b696837db6" name="Getbarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="fd87b1dd-ab9c-4f03-868f-a9d89c11ac74" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3322ec48-d3eb-4e5a-9153-012b2463dc10" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="49b98f99-f188-49ad-b8f5-fc547d4634bb" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="06e43b12-3899-4ecf-9e23-b87049d449db" name="PutBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="014cc2eb-2b6a-4290-993b-b00ccef2f8d2" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="86a5c705-f595-443b-bab7-912636c618b4" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="fee83e0f-635c-41ec-861f-b13355928f30" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="b4981dea-8b8b-4e7e-8d32-432e8ce07d5a" name="barn" direction="In" isUnique="false">
+                        <elementDefinition Id="e91628f9-969c-4778-983f-76f19477b425" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="7ed6c77c-76c5-4f22-9049-dd593940b341" name="Post" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="db566546-2d2a-4a79-b24a-b0f3d4d9a1c4" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="129b6d7c-eeb1-4c13-89ca-cf45febf88c3" name="barn" direction="In" isUnique="false">
+                        <elementDefinition Id="681ce7b2-7a99-46c2-99ba-88070c27081b" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="2ae59621-31f3-40fe-9b61-120c1943c553" name="DeleteBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5a92a7ab-a4ca-4aa5-bd76-262984a9e183" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="2db51d20-41fe-49a7-8e0e-0a1f8c577f90" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="67bf94eb-8f3f-4493-b004-2f18d584e7b4" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="7abe91f3-9990-4ec3-8562-b85b355c2376" name="Dispose(bool9" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="6888bff8-1c44-40f4-861e-aae78bed28c6" />
+                </operation>
+                <operation Id="e9a4ce68-3589-4e33-a039-6b27061ec648" name="BarnExists" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="e5321a57-c6e0-4600-a0b2-3e6c4f99aad1" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="fe2c31de-b76d-4de7-9d97-97726fae0997" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="3795aa6b-e6e3-4ca3-b9d5-ddba97ef1ce2" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="a7cf0e21-fc6c-4234-8a23-bb13ba3229d5" name="HomeController" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="a78003d5-e325-4661-ba9a-22805e3588b6" />
+              <ownedOperationsInternal>
+                <operation Id="f16365fc-661e-40e0-b7ec-ff492fe0d21d" name="Index" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="097c48f6-481f-4115-93f5-264c785875d2" />
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="65a8acbe-954b-4b87-a482-9d51812d76b1" name="VaccineController" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="598ab471-3299-44c0-be4b-2b21de23f9a1" />
+              <ownedAttributesInternal>
+                <property Id="dd9e20a7-84a1-4a82-bc67-a48023f9e8c6" name="DatabaseContext db" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="55782655-a3b2-4841-893e-3baf5740ec14" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="4c0b87d3-a40a-4940-b907-af54dff00d62" name="GetVaccine" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="af0e42c8-248a-40d8-a847-cd619ed313cf" />
+                </operation>
+                <operation Id="1b0a227d-f390-43b2-b5c0-f93b1134bb56" name="GetVaccine" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c22aac19-1a06-4df3-a291-6ddd38f50905" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="ed6a3eec-928d-444f-9724-eb30e6d6c92f" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="8e42abbe-707d-49b0-adc2-0d612f6f8603" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="62fe816e-afb6-4fd1-9888-ad1076aaa345" name="PutVaccine" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="b311549d-b3ab-4ea5-98fa-46fe60282c08" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="69d877f6-ff2a-4352-8b50-f67aa0e451fd" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="706a6e28-9d4f-42d9-9d2d-765b8b1da878" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="36c76593-80f8-4a20-96df-83bb55bbd92c" name="Vaccine" direction="In" isUnique="false">
+                        <elementDefinition Id="b9bec27e-a69e-4207-b551-01f48fd03fbf" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="40a4e81e-9a9c-4d0a-affa-6b406afeaedd" name="DeleteVaccine" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="3660f024-efa4-4fe6-b471-801faaa1a13e" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7eed83cd-3b3c-4d9a-94fe-aa0465d7c8a1" name="Int" direction="In" isUnique="false">
+                        <elementDefinition Id="8117b810-613d-4413-b430-bc416698f47f" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="d4e55926-35a2-482f-ae49-3e182fae98b4" name="Dispose" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="2bb4b24f-dad0-4b27-9fb8-5a0df0b17308" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="7f8cb173-152b-4886-99f4-430ed27b2d7c" name="bool" direction="In" isUnique="false">
+                        <elementDefinition Id="58f1f430-60fe-4aea-9bdf-078cea9a9146" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="d5e9a5fb-2a64-4853-8de1-1bfb99001305" name="VaccineExists" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="4ccdaf26-be95-4716-9ae5-eb3301f99c02" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="f5de4d22-a705-42e7-91ce-21caf79664d9" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="b030b694-d411-4536-bc5f-81e63415312a" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="0297fae9-e37e-414e-8c41-91d0812c2fd5" direction="Return" isUnique="false">
+                        <elementDefinition Id="86c1d531-cc54-4b1e-926d-d0409c53affe" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="ab08c4cd-9188-47b5-9c42-f6cce337d240" LastKnownName="bool" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="242ee6f5-0a7f-4bd8-be24-319cfe18e99f" name="VacPlanController" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="482acc41-8c3c-4325-bcca-3c31828cba29" />
+              <ownedAttributesInternal>
+                <property Id="b6a0c2b9-baea-49af-94df-a9232b7f2a1d" name="DatabaseContext" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1ea3d86a-3bfe-49e4-bd2f-7ce4d515eb14" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="0eb823a6-3edf-457e-9311-f61b267aecde" name="GetVacPlan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9b670a2e-7957-42d0-b723-4f9e988d1dc1" />
+                </operation>
+                <operation Id="9f0c58ef-f667-4f42-ab12-739f9e00f602" name="GetVacPlan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="ced124ca-12a4-4948-b87f-fd2bc548d339" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="fb84d664-92f9-40b2-998a-f16600214243" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="904e00d6-baf9-4625-aacc-483eefbc104e" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="380ca1a9-a19e-4354-9014-fbaccfdf4bd2" name="PutVacPlan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="e4d2280a-1dca-446c-a0b8-660c9f0487c9" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="12dd08b4-493d-4828-929c-b2326a846ab0" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="dd0db0f2-72bd-42fb-8c06-960a72d8a5a5" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="582ba15e-2987-40e2-bbbd-0fec9cb2cb57" name="Vacplan" direction="In" isUnique="false">
+                        <elementDefinition Id="6b81fd60-4e25-42f3-b582-6b3a6bb6f268" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="bf3c067a-754b-455d-97f5-a978b76c7a90" name="DelteVacPlan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9f39ca9b-7aee-461b-8fde-5ab4d7bb0de4" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="5664af83-df52-47f6-bc0b-c79f102e3df8" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="207f3ad3-3ebf-41cd-a0e9-e1f52fb34df1" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="1ab853da-f7e5-4f72-b9e0-73fd23cb947b" name="PostVacplan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="efa4a6ec-e259-4af5-875e-77109d152cba" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="153a10ed-844c-4d90-825c-6b2f12c4eeff" name="VacpLan" direction="In" isUnique="false">
+                        <elementDefinition Id="4a62ca89-e6b0-47e8-bff0-24781338fbb7" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="4df9fc2b-8ad9-43cd-abe5-40b4f80a1a7a" name="Dispose" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="a8ce7245-dab2-43d2-940d-b8f673530f23" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="ab6a6d85-bda3-44d9-8e8a-b03d27ea583c" name="Bool" direction="In" isUnique="false">
+                        <elementDefinition Id="91814120-d392-4990-a798-ee174c630c20" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="e8d62e52-3b08-4de8-a044-fcd45a3964a9" name="VacplanTexits" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="ff016c97-2e80-46d6-9e06-e67735b84fc6" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="6dfd578c-0630-480d-97d7-512e363bdaf7" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="49c7bff1-1fa4-4522-ba5d-c7027c54dd73" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="903e9b20-b970-4e85-afb7-90c0d4dc6a66" name="ValuesController" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="9275fdb9-2d5e-49f1-b5cd-77280ad90b1f" />
+              <ownedOperationsInternal>
+                <operation Id="e22df6a7-b81e-4c66-8acb-c3f3251e1904" name="Get" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="decc9a4a-5e4b-4958-803e-a1045da000ed" />
+                </operation>
+                <operation Id="7bd25869-e0d4-4df4-a1cd-239e1d3290b2" name="Get" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="e573d8ac-1708-4ee0-899d-af281dba0ae0" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="cbe5475b-7ffd-4c38-9748-594e01040566" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="d495adbf-2277-486b-a5f4-824243605793" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="2922e111-535b-4053-a662-88322eaa9904" name="Post" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="2118a73f-5015-4071-9776-9d9a77070c17" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="134509de-9d4d-4308-9a85-11405260f7fb" name="string" direction="In" isUnique="false">
+                        <elementDefinition Id="0535d241-774a-4984-8381-d203d4c41f97" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="643a1117-6cea-455c-a45e-a47afed5d3e5" name="Put" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="2ae20208-a791-4d9c-afbd-a7e57ec9f88a" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="aa630999-a6a9-45d3-90d2-6824203619f3" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="d7f128cc-9e5c-4c55-b4ec-727acacc33a5" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="b94a282c-039e-41d6-82a8-dfe4ce00cf45" name="String" direction="In" isUnique="false">
+                        <elementDefinition Id="d1a7ba94-6392-4a41-8409-f37d1f76ae55" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="951c412f-0c52-4e85-b323-a2dec7e5c2ac" name="Delete" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5fb199a1-0822-4ee6-a385-9c7ec3b3d6ee" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="de2535bb-7f78-4d05-8f36-df3711c7f941" name="int" direction="In" isUnique="false">
+                        <elementDefinition Id="bd7d8aec-fa7b-4cf9-a2cb-1a0fe13bd35e" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="ab08c4cd-9188-47b5-9c42-f6cce337d240" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="1a40b9c0-79c4-41bd-9f2b-fa17eb7855c3" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="b18c3b85-2a7d-43d6-96f8-8797782ee16e" name="Modeller og diagrammer">
     <elementDefinition Id="7601ee2e-aac9-4ea4-99b1-8ff3250c0c10" />
