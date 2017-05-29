@@ -3,6 +3,12 @@
   dslVersion="1.0.0.0"
   Id="d705c41c-a23a-435a-b58f-ed637628a15c"
   name="Controllers" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="d477dda7-3d64-49b9-85da-ae2b3ad8938e">
+      <body>VacWS</body>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <packageHasNamedElement>
       <class

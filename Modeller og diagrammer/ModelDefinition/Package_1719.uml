@@ -3,6 +3,15 @@
   dslVersion="1.0.0.0"
   Id="bace8028-cb49-4286-8fcc-df8ab3e4487a"
   name="PersistencyService" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <suppliersInternal>
+    <dependency
+      Id="becb7dfe-eb83-428d-b07b-9276947ce867">
+      <packageMoniker
+        Id="d705c41c-a23a-435a-b58f-ed637628a15c"
+        LastKnownName="Controllers"
+        LastKnownLocation="Package_1728.uml" />
+    </dependency>
+  </suppliersInternal>
   <packagedElements>
     <packageHasNamedElement>
       <class
@@ -11,6 +20,108 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="d08abc66-6c09-4460-b5ef-296c2faddbfc"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="6b9b906e-3e52-4380-9c00-6f380630e57c"
+              LastKnownName="VacPlan"
+              LastKnownLocation="Package_1706.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0858ea28-46a0-48ea-b3bd-168224d532fe"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2b67ebd3-72aa-41ee-9519-d16dd0379188"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f21b1dcf-ef2d-4c9c-b94d-af5f0e4a03e0"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="bc477b46-be48-4c93-8674-2057f39d05c4"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f59acfb8-abb1-4031-8d77-1e59f145dbf5"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="5ed774c9-57ce-4a1b-b2b8-e132e9331497"
+              LastKnownName="Vaccine"
+              LastKnownLocation="Package_1706.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4642859d-711d-450e-83cb-3b9be4ef576b"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="786a3fe5-0063-44f2-ba83-50692b75aef6"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="07e8dcc0-c100-49dc-b5e4-e4d299ec5981"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1779c534-f9c0-4561-a268-53ce55247670"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="d71139c5-91d3-4bab-80d7-30417c4cfa99"
