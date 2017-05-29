@@ -56,7 +56,7 @@
                     <literalString
                       Id="bfdde282-29a1-4380-96dd-6f25d044b4dc"
                       name="Upper"
-                      value=".*" />
+                      value="1" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>

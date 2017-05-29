@@ -986,7 +986,7 @@
                           </literalString>
                         </lowerValueInternal>
                         <upperValueInternal>
-                          <literalString Id="3f279fa9-1701-4beb-b9fa-dd97b9feb86d" name="Upper" value=".*">
+                          <literalString Id="3f279fa9-1701-4beb-b9fa-dd97b9feb86d" name="Upper" value="1">
                             <elementDefinition Id="bfdde282-29a1-4380-96dd-6f25d044b4dc" />
                           </literalString>
                         </upperValueInternal>

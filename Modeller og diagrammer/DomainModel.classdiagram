@@ -136,7 +136,7 @@
             <elementDefinition Id="6d7c4c5f-735c-4e5b-8f72-0e48b4a9d572" />
           </association>
           <association Id="642ab73d-af62-4f77-9e83-4d49e2c81ccd" isDerived="false" sourceEndRoleName="Familie" targetEndRoleName="VaccineKort og VaccineInfo" isLeaf="false" isAbstract="false">
-            <classMoniker Id="c23ddbce-9eb7-4338-a576-471b86d56bfd" LastKnownName="VaccineKort og VaccineInfo" />
+            <classMoniker Id="c23ddbce-9eb7-4338-a576-471b86d56bfd" LastKnownName="VacPlan" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="34d50097-4f90-4dc2-a9fd-48a493a26b21" name="Familie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -162,7 +162,7 @@
             <elementDefinition Id="78d339c3-cf1d-4d36-ada8-0c78f7ae7f8c" />
           </association>
           <association Id="846e02f0-015a-4343-888c-886e8f615386" isDerived="false" sourceEndRoleName="Familie" targetEndRoleName="VaccineOversigt" isLeaf="false" isAbstract="false">
-            <classMoniker Id="63426bc8-0c41-4bfa-aaa5-a605db235da5" LastKnownName="VaccineOversigt" />
+            <classMoniker Id="63426bc8-0c41-4bfa-aaa5-a605db235da5" LastKnownName="Vaccine" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="4402a299-7ac1-4242-b153-ebe33c36d87b" name="Familie" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -193,6 +193,14 @@
             <elementDefinition Id="d0047c0b-9be6-49ad-ab77-1d96b77b293e" />
           </property>
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="12d75a01-ede8-4528-a3da-da56213e2474" name="SletBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a9c0bb4d-1806-42c8-a20e-f05ea983efc6" />
+          </operation>
+          <operation Id="1c2a9626-2469-4315-a90b-e9a70933238b" name="OpretBarn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="21c01cf5-3701-4f25-a619-3c465634c27a" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -226,7 +234,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="c23ddbce-9eb7-4338-a576-471b86d56bfd" name="VaccineKort og VaccineInfo" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="c23ddbce-9eb7-4338-a576-471b86d56bfd" name="VacPlan" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="67deb939-da29-4155-9eb7-798eea9894d9" />
         <ownedAttributesInternal>
           <property Id="c37f6ce5-ba64-4987-9517-bcfe3dc1397b" name="Vaccine Navn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -242,7 +250,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="63426bc8-0c41-4bfa-aaa5-a605db235da5" name="VaccineOversigt" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="63426bc8-0c41-4bfa-aaa5-a605db235da5" name="Vaccine" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="fcb1a6b0-4aa2-407b-a828-77e63459d01f" />
         <ownedAttributesInternal>
           <property Id="6df0c43e-b9b0-414a-a274-6337c61312bf" name="Vaccine Tid" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
