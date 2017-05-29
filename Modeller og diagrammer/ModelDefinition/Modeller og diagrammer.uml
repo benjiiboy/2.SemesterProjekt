@@ -1038,12 +1038,6 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <packageMoniker
-        Id="5cb98698-97b1-4716-99ef-a70aa9cbe381"
-        LastKnownName="Model"
-        LastKnownLocation="Package_1706.uml" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <packageMoniker
         Id="bace8028-cb49-4286-8fcc-df8ab3e4487a"
         LastKnownName="PersistencyService"
         LastKnownLocation="Package_1719.uml" />

@@ -66,5 +66,11 @@
         LastKnownName="ViewModel"
         LastKnownLocation="Package_1725.uml" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5cb98698-97b1-4716-99ef-a70aa9cbe381"
+        LastKnownName="Model"
+        LastKnownLocation="Package_1706.uml" />
+    </packageHasNamedElement>
   </packagedElements>
 </package>
