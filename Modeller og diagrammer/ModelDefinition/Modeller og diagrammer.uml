@@ -847,6 +847,110 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="78d339c3-cf1d-4d36-ada8-0c78f7ae7f8c"
+            isDerived="false"
+            sourceEndRoleName="Familie"
+            targetEndRoleName="VaccineKort og VaccineInfo"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="67deb939-da29-4155-9eb7-798eea9894d9"
+              LastKnownName="VaccineKort og VaccineInfo"
+              LastKnownLocation="Modeller og diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="54a4e523-ea2b-43a3-9c7e-dc5846dd8c5e"
+                  name="Familie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e90a5677-ed64-4cf9-b2af-ef7e0deca963"
+                  name="VaccineKort og VaccineInfo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="96ae565d-5004-4357-8fef-8671d63bad7f"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="238dccff-d507-439c-9cab-63d030f72158"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="43b33523-bf72-4e11-acc4-2fca7c6a251b"
+            isDerived="false"
+            sourceEndRoleName="Familie"
+            targetEndRoleName="VaccineOversigt"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fcb1a6b0-4aa2-407b-a828-77e63459d01f"
+              LastKnownName="VaccineOversigt"
+              LastKnownLocation="Modeller og diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="72553e56-cb3a-4fd3-9f4a-f2373c734697"
+                  name="Familie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f9c6ddc6-ddce-43ca-a03f-70580c5fbe5f"
+                  name="VaccineOversigt"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="20008afe-2c65-469f-beb2-e967f5a947eb"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ea8ca90b-b72f-4727-a2a0-2f4cb28dd0b7"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -907,6 +1011,28 @@
           <property
             Id="6c7db787-3a97-4361-9689-7e47c3553ae0"
             name="ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="2591c0e4-b715-4347-b521-25e5bece6e31"
+            name="Notifikation"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="6728b96b-c6f3-4945-959b-a14c8776c297"
+            name="Vaccine tidspunkt"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1063,6 +1189,102 @@
       <undefinedType
         Id="1a40b9c0-79c4-41bd-9f2b-fa17eb7855c3"
         name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4ac37618-6cab-4c45-882f-c1fd70c359b0"
+        name="Class2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="67deb939-da29-4155-9eb7-798eea9894d9"
+        name="VaccineKort og VaccineInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="5c7a04e6-9194-4a6c-8d81-09bfff1ac5b1"
+            name="Vaccine Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="117589b8-484d-4e80-b354-69b5b7d9da16"
+            name="Note"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="fcb7b79a-c312-4151-af38-50a90fbc8dde"
+            name="Tid"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fcb1a6b0-4aa2-407b-a828-77e63459d01f"
+        name="VaccineOversigt"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="a70e9f17-e2b0-465a-ac3f-ea7dbc8a9426"
+            name="Vaccine Tid"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="05ca929d-4958-438d-9ca4-71023abdefea"
+            name="Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d00ac28a-915f-49b6-bafd-b1f3b66987b9"
+            name="Vaccine Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
