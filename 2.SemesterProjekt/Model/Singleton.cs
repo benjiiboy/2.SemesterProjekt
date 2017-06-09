@@ -46,7 +46,7 @@ namespace _2.SemesterProjekt.Model
 
 
         /*CTOR*/
-        public Singleton()
+        private Singleton()
         {
             Børn = new ObservableCollection<Barn>();
             VaccineCollectionIkkesort = new ObservableCollection<Vaccine>();
