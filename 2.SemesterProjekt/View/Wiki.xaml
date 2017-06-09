@@ -1,88 +1,36 @@
 ﻿<Page
-    x:Class="_2.SemesterProjekt.View.Wiki"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:_2.SemesterProjekt.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Viewmodel="using:_2.SemesterProjekt.Viewmodel"
+    x:Class="_2.SemesterProjekt.View.Wiki"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
 
-        <ScrollViewer VerticalScrollBarVisibility="Auto" Visibility="Visible">
-            <StackPanel >
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="ms-appx:///Assets/vaccine.jpg" 
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Top"
-                   Width="150"/>
-                    <TextBlock VerticalAlignment="Center" FontSize="25" Margin="15,0,0,0" FontWeight="Bold"> Lorem Ipsum</TextBlock>
-                </StackPanel>
-                <TextBlock TextWrapping="WrapWholeWords">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies est tempus metus accumsan fermentum. Aliquam iaculis magna in mauris suscipit accumsan. Donec et ipsum eget metus sollicitudin mollis lacinia vitae ipsum. Proin ultricies efficitur arcu, non laoreet purus interdum id. Pellentesque porttitor malesuada justo a hendrerit. Etiam sit amet mauris porttitor, elementum dui id, porttitor nisi. Curabitur justo libero, gravida non sem vitae, iaculis facilisis nunc.</TextBlock>
+        <Grid.DataContext>
+            <Viewmodel:VaccAppViewModel/>
+        </Grid.DataContext>
 
+        <ListView Height="500" SelectionMode="None" ItemsSource="{Binding Singleton.VaccineCollection}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,120,0,0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Height="auto" Width="auto" HorizontalAlignment="Center">
+                        <StackPanel Margin="0,0,0,6">
+                            <StackPanel.Background>
+                                <SolidColorBrush Color="White" Opacity="0.8"/>
+                            </StackPanel.Background>
+                            <TextBlock Text="{Binding VaccineNavn}" FontWeight="Bold"/>
+                                <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Note}" TextWrapping="WrapWholeWords" Width="450" />
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="ms-appx:///Assets/vaccine.jpg" 
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Top"
-                   Width="150"/>
-                    <TextBlock VerticalAlignment="Center" FontSize="25" Margin="15,0,0,0" FontWeight="Bold"> Hepatitis B </TextBlock>
-                </StackPanel>
-                <TextBlock TextWrapping="WrapWholeWords">Vaccinens indhold: Vaccinen indeholder oprenset overfladeantigen fra hepatitis B virus</TextBlock>
-                <TextBlock TextWrapping="WrapWholeWords">Hyppigste Bivirkninger: Rødme, hævelse og ømhed på injektionsstedet, hovedpine,utilpashed og feber. 
-For yderligere detaljer henvises til produktresuméet.</TextBlock>
-
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="ms-appx:///Assets/vaccine.jpg" 
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Top"
-                   Width="150"/>
-                    <TextBlock VerticalAlignment="Center" FontSize="25" Margin="15,0,0,0" FontWeight="Bold"> Di-Te-Ki-Pol-hib</TextBlock>
-                </StackPanel>
-                <TextBlock TextWrapping="WrapWholeWords">Vaccination mod difteri, stivkrampe, kighoste og polio samt hib-meningitis og strubelågsbetændelse</TextBlock>
-                <TextBlock TextWrapping="WrapWholeWords">Grundvaccination: Vaccinen mod Di-Te-Ki-Pol/Act-Hib er en kombineret vaccine, der indeholder inaktiverede, det vil sige dræbte bestanddele, der giver beskyttelse mod de nævnte sygdomme. Med undtagelse af Hib-infektion beskytter vaccinen ikke mod andre former for meningitis.</TextBlock>
-
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="ms-appx:///Assets/vaccine.jpg" 
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Top"
-                   Width="150"/>
-                    <TextBlock VerticalAlignment="Center" FontSize="25" Margin="15,0,0,0" FontWeight="Bold"> Pnoumokok</TextBlock>
-                </StackPanel>
-                <TextBlock TextWrapping="WrapWholeWords">bivirkninger: Feber og lokal reaktion i form af rødme, hævelse og ømhed på injektions-stedet er almindelige reaktioner. Efter vaccination ses også irritabilitet, opkast, diaré og nedsat appetit.</TextBlock>
-                <TextBlock TextWrapping="WrapWholeWords">Hvem skal ikke have vaccinen:
-Børn med overfølsomhed over for indholdsstoffer i vaccinen, herunder difteritoxoid, skal ikke vaccineres.
-                    </TextBlock>
-
-
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="ms-appx:///Assets/vaccine.jpg" 
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Top"
-                   Width="150"/>
-                    <TextBlock VerticalAlignment="Center" FontSize="25" Margin="15,0,0,0" FontWeight="Bold"> MFR</TextBlock>
-                </StackPanel>
-                <TextBlock TextWrapping="WrapWholeWords">MFR-vaccination beskytter mod mæslinger, fåresyge og røde hunde</TextBlock>
-                <TextBlock TextWrapping="WrapWholeWords">Vaccinedosis er hver gang 0,5 ml. Vaccinen skal gives intramuskulært eller subkutant. De foretrukne vaccinationssteder er ydersiden af øvre lår hos små børn og ydersiden af skulderen hos større børn
-                </TextBlock>
-
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="ms-appx:///Assets/vaccine.jpg" 
-                   HorizontalAlignment="Left"
-                   VerticalAlignment="Top"
-                   Width="150"/>
-                    <TextBlock VerticalAlignment="Center" FontSize="25" Margin="15,0,0,0" FontWeight="Bold"> HPV</TextBlock>
-                </StackPanel>
-                <TextBlock TextWrapping="WrapWholeWords">Tilbuddet gælder fra pigerne fylder 12 år til de fylder 18 år. Der har også været midlertidige vaccinationstilbud for kvinder født i 1985-92 og 1993-95</TextBlock>
-                <TextBlock TextWrapping="WrapWholeWords">Vaccinedosis er 0,5 ml, der gives intramuskulært.
-                </TextBlock>
-
-
-
-
-
-            </StackPanel>
-        </ScrollViewer>
-        
     </Grid>
 </Page>

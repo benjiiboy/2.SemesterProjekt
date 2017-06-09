@@ -9,13 +9,9 @@ namespace _2.SemesterProjekt.Model
    public class VacPlan
     {
         public int Plan_Id { get; set; }
-
         public DateTime VaccineTid { get; set; }
-
         public bool TrueFalse { get; set; }
-
         public int Barn_Id { get; set; }
-
         public int Vac_Id { get; set; }
 
         public VacPlan()

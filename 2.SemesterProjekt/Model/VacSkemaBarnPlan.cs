@@ -19,7 +19,7 @@ namespace _2.SemesterProjekt.Model
         public DateTime Fødselsdato { get; set; }
         public int Tid { get; set; }
         public string VaccineNavn { get; set; }
-        public string FåetVaccine { get; set; }
+        public string VaccineModtaget { get; set; }
 
 
 
@@ -31,16 +31,8 @@ namespace _2.SemesterProjekt.Model
             this.VaccineTid = vaccinetid;
             this.Fornavn = fornavn;
             this.Efternavn = efternavn;
-            this.FåetVaccine = tf ? "Ja" : "Nej";
-            //if (tf)
-            //{
-            //    this.FåetVaccine = "Ja";
-            //}
-            //else
-            //{
-            //    this.FåetVaccine = "Nej";
-            //}
             this.Fødselsdato = Føds;
+            this.VaccineModtaget = tf ? "Ja":"Nej";
         }
 
         public VacSkemaBarnPlan(int vacid, int barnid, string fornavn, string efternavn, string vacnavn, bool tf, DateTime vacinetid)
@@ -50,13 +42,15 @@ namespace _2.SemesterProjekt.Model
             this.Fornavn = fornavn;
             this.Efternavn = efternavn;
             this.VaccineNavn = vacnavn;
-            this.FåetVaccine = tf ? "Ja" : "Nej";
             this.Barn_Id = barnid;
+            this.VaccineModtaget = tf ? "Ja" : "Nej";
+
         }
 
         public VacSkemaBarnPlan()
         {
 
         }
+
     }
 }

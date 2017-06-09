@@ -13,10 +13,18 @@ namespace _2.SemesterProjekt.Viewmodel
 {
    public class VaccAppViewModel : INotifyPropertyChanged
     {
-        public Singleton Singleton { get; set; }
-
 
         private int _TeleFonNr;
+        private int barn_Id;
+        private DateTimeOffset fødselsdato;
+        private string fornavn;
+        private string efternavn;
+        private ICommand opretBarnCommand;
+        private ICommand sletBarnCommand;
+        private ICommand seVaccinerCommand;
+
+        public Handler.BarnHandler BarnHandler { get; set; }
+        public Singleton Singleton { get; set; }
 
         public int TelefonNr
         {
@@ -24,15 +32,11 @@ namespace _2.SemesterProjekt.Viewmodel
             set { _TeleFonNr = value; OnPropertyChanged(nameof(TelefonNr)); }
         }
 
-        private int barn_Id;
-
         public int Barn_Id
         {
             get { return barn_Id; ; }
             set { barn_Id = value; OnPropertyChanged(nameof(Barn_Id)); }
         }
-
-        private DateTimeOffset fødselsdato;
 
         public DateTimeOffset Fødselsdato
         {
@@ -40,21 +44,50 @@ namespace _2.SemesterProjekt.Viewmodel
             set { fødselsdato = value; OnPropertyChanged(nameof(Fødselsdato)); }
         }
 
-        private string fornavn;
-
         public string ForNavn
         {
             get { return fornavn; }
             set { fornavn = value; OnPropertyChanged(nameof(ForNavn)); }
         }
 
-        private string efternavn;
-
         public string EfterNavn
         {
             get { return efternavn; }
             set { efternavn = value; OnPropertyChanged(nameof(EfterNavn)); }
         }
+
+        public ICommand OpretBarnCommand
+        {
+            get { return opretBarnCommand; }
+            set { opretBarnCommand = value; }
+        }
+
+        public ICommand SletBarnCommand
+        {
+            get { return sletBarnCommand; }
+            set { sletBarnCommand = value; }
+        }
+
+        public ICommand SeVaccinerCommand
+        {
+            get { return seVaccinerCommand; }
+            set { seVaccinerCommand = value; }
+        }
+
+        public VaccAppViewModel()
+        {
+            BarnHandler = new Handler.BarnHandler(this);
+            Singleton = Singleton.Instance;
+
+            OpretBarnCommand = new RelayCommand(BarnHandler.OpretBarn);
+            SletBarnCommand = new RelayCommand(BarnHandler.SletBarn,TomListeCheck);
+            //PutBarnCommand = new RelayCommand(BarnHandler.PutBarn,TomListeCheck);
+            SeVaccinerCommand = new RelayCommand(BarnHandler.HentVacciner,TomListeCheck);
+
+            DateTimeOffset dt = System.DateTime.Now;
+            fødselsdato = new DateTimeOffset(dt.Year, dt.Month, dt.Day, 0, 0, 0, 0, new TimeSpan());
+        }
+
 
         #region Selectedbarn metode
         /*Valgte barn*/
@@ -77,53 +110,6 @@ namespace _2.SemesterProjekt.Viewmodel
             }
         }
         #endregion
-
-
-        //TODO: Mangler at implenmtere Commands til knapper
-
-        public ICommand PutBarnCommand { get; set; }
-
-        private ICommand opretBarnCommand;
-        
-        public ICommand OpretBarnCommand
-        {
-            get { return opretBarnCommand; }
-            set { opretBarnCommand = value; }
-        }
-
-        private ICommand sletBarnCommand;
-
-        public ICommand SletBarnCommand
-        {
-            get { return sletBarnCommand; }
-            set { sletBarnCommand = value; }
-        }
-
-        private ICommand seVaccinerCommand;
-
-        public ICommand SeVaccinerCommand
-        {
-            get { return seVaccinerCommand; }
-            set { seVaccinerCommand = value; }
-        }
-
-
-        public Handler.BarnHandler BarnHandler { get; set; }
-
-        public VaccAppViewModel()
-        {
-            BarnHandler = new Handler.BarnHandler(this);
-            Singleton = Singleton.Instance;
-
-            OpretBarnCommand = new RelayCommand(BarnHandler.OpretBarn);
-            SletBarnCommand = new RelayCommand(BarnHandler.SletBarn,TomListeCheck);
-            PutBarnCommand = new RelayCommand(BarnHandler.PutBarn,TomListeCheck);
-            SeVaccinerCommand = new RelayCommand(BarnHandler.HentVacciner,TomListeCheck);
-
-            DateTime dt = System.DateTime.Now;
-            fødselsdato = new DateTimeOffset(dt.Year, dt.Month, dt.Day, 0, 0, 0, 0, new TimeSpan());
-        }
-
 
         public bool TomListeCheck()
         {

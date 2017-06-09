@@ -32,15 +32,10 @@ namespace _2.SemesterProjekt.View
             Frame.Navigate(typeof(OpretBarn));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(RedigerBarn));
-        }
-
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(VacPlan));
-            Persistency.PersistencyService.GetVacPlanAsync();
+            Persistency.PersistencyService.GetVacSkemaBarnPlanAsync();
         }
     }
 }

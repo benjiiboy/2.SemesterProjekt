@@ -5,4 +5,41 @@
     xmlns:local="using:_2.SemesterProjekt"
     RequestedTheme="Light">
 
+
+
+    <Application.Resources>
+        <Style TargetType="Button" x:Key="MainPageKnap">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="WhiteSmoke"/>
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="Foreground" Value="#FF0097FF"/>
+            <Setter Property="FontFamily" Value=" Verdana"/>
+            <Setter Property="Margin" Value="0,0,0,9"/>
+            <Setter Property="Opacity" Value="0.9"/>
+        </Style>
+
+
+        <Style TargetType="Button" x:Key="Familie">
+            <Setter Property="Background" Value="WhiteSmoke"/>
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Foreground" Value="#FF0097FF"/>
+            <Setter Property="FontFamily" Value="Verdana"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Opacity" Value="0.9"/>
+
+        </Style>
+
+
+        <Style TargetType="TextBlock" x:Key="setFamilie">
+            <Setter Property="FontFamily" Value=" Verdana"/>
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+            <Setter Property="Opacity" Value="0.9"/>
+        </Style>
+        
+        
+    </Application.Resources>
+
 </Application>

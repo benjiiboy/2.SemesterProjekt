@@ -35,8 +35,14 @@ namespace _2.SemesterProjekt.View
         private void HovedMenuWiki_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Wiki));
+            Model.Singleton.Instance.GetVaccineAsync();
+
         }
 
-
+        private void HovedMenuVaccinationsKort_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(VaccineKort));
+            Model.Singleton.Instance.GetvaccineAsyncIkkeSort();
+        }
     }
 }

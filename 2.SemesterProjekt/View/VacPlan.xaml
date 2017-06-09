@@ -7,14 +7,14 @@
     xmlns:Viewmodel="using:_2.SemesterProjekt.Viewmodel"
     x:Class="_2.SemesterProjekt.View.VacPlan"
     mc:Ignorable="d">
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
 
         <Grid.DataContext>
-            <Viewmodel:VacPlanViewModel/>
+            <Viewmodel:VaccAppViewModel/>
         </Grid.DataContext>
 
-        <TextBlock Text="Kommende vac's" HorizontalAlignment="Center" FontSize="36"
-                   />
+       
+            
         <ListView Height="500" SelectionMode="None" ItemsSource="{Binding Singleton.VacPlanCollection}" HorizontalAlignment="Center" VerticalAlignment="Center" IsSynchronizedWithCurrentItem="False">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -39,15 +39,14 @@
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Name="ModtagetStack">
                                     <TextBlock Text="Modtaget:"/>
-                                    <TextBlock Text="{Binding FåetVaccine}"/>
+                                    <TextBlock Text="{Binding VaccineModtaget}"/>
                                 </StackPanel>
                             </StackPanel>
-
-
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
     </Grid>
 </Page>

@@ -3,6 +3,22 @@
   dslVersion="1.0.0.0"
   Id="7601ee2e-aac9-4ea4-99b1-8ff3250c0c10"
   name="Modeller og diagrammer" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="6c0f9a5d-fc32-486f-8bc9-2e837d480b69">
+      <body>FrontEnd</body>
+    </comment>
+    <comment
+      Id="7af372b6-8d38-4de9-b41d-71266fb19ebd">
+      <body>Ws/BackEnd
+</body>
+    </comment>
+    <comment
+      Id="a36e0cf6-7739-4edd-891d-0f4d1e50fc1a">
+      <body>database
+</body>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -831,6 +847,110 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="78d339c3-cf1d-4d36-ada8-0c78f7ae7f8c"
+            isDerived="false"
+            sourceEndRoleName="Familie"
+            targetEndRoleName="VaccineKort og VaccineInfo"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="67deb939-da29-4155-9eb7-798eea9894d9"
+              LastKnownName="VacPlan"
+              LastKnownLocation="Modeller og diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="54a4e523-ea2b-43a3-9c7e-dc5846dd8c5e"
+                  name="Familie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e90a5677-ed64-4cf9-b2af-ef7e0deca963"
+                  name="VaccineKort og VaccineInfo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="96ae565d-5004-4357-8fef-8671d63bad7f"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="238dccff-d507-439c-9cab-63d030f72158"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="43b33523-bf72-4e11-acc4-2fca7c6a251b"
+            isDerived="false"
+            sourceEndRoleName="Familie"
+            targetEndRoleName="VaccineOversigt"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fcb1a6b0-4aa2-407b-a828-77e63459d01f"
+              LastKnownName="Vaccine"
+              LastKnownLocation="Modeller og diagrammer.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="72553e56-cb3a-4fd3-9f4a-f2373c734697"
+                  name="Familie"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f9c6ddc6-ddce-43ca-a03f-70580c5fbe5f"
+                  name="VaccineOversigt"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="20008afe-2c65-469f-beb2-e967f5a947eb"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ea8ca90b-b72f-4727-a2a0-2f4cb28dd0b7"
+                      name="Upper"
+                      value=".*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -845,6 +965,24 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="a9c0bb4d-1806-42c8-a20e-f05ea983efc6"
+            name="SletBarn"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="21c01cf5-3701-4f25-a619-3c465634c27a"
+            name="OpretBarn"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -891,6 +1029,28 @@
           <property
             Id="6c7db787-3a97-4361-9689-7e47c3553ae0"
             name="ID"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="2591c0e4-b715-4347-b521-25e5bece6e31"
+            name="Notifikation"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="6728b96b-c6f3-4945-959b-a14c8776c297"
+            name="Vaccine tidspunkt"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -993,6 +1153,156 @@
         Id="26950fe2-4f0e-416a-83b2-bd7fbe2f469b"
         LastKnownName="WebService"
         LastKnownLocation="Package_1326.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2fad6378-2cf2-42fb-a4d1-da95688d1158"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="82c35898-cef2-47c4-a5ad-84d7cf247d1e"
+        LastKnownName="Common"
+        LastKnownLocation="Package_1701.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="03bc7280-77f9-440e-8c92-d8e6fd951c85"
+        LastKnownName="Converter"
+        LastKnownLocation="Package_1703.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="bb5d3395-552b-4f14-98a3-b94b5216f766"
+        LastKnownName="Handler"
+        LastKnownLocation="Package_1705.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="bace8028-cb49-4286-8fcc-df8ab3e4487a"
+        LastKnownName="PersistencyService"
+        LastKnownLocation="Package_1719.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8c3f0184-c7f3-4e6f-be9a-f7a2e1d284d3"
+        LastKnownName="View"
+        LastKnownLocation="Package_1721.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="bcf82a28-a68d-48c3-aa26-bfe614a2b9e8"
+        name="Barn" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d705c41c-a23a-435a-b58f-ed637628a15c"
+        LastKnownName="Controllers"
+        LastKnownLocation="Package_1728.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="1a40b9c0-79c4-41bd-9f2b-fa17eb7855c3"
+        name="bool" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4ac37618-6cab-4c45-882f-c1fd70c359b0"
+        name="Class2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="67deb939-da29-4155-9eb7-798eea9894d9"
+        name="VacPlan"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="5c7a04e6-9194-4a6c-8d81-09bfff1ac5b1"
+            name="Vaccine Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="117589b8-484d-4e80-b354-69b5b7d9da16"
+            name="Note"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="fcb7b79a-c312-4151-af38-50a90fbc8dde"
+            name="Tid"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fcb1a6b0-4aa2-407b-a828-77e63459d01f"
+        name="Vaccine"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="a70e9f17-e2b0-465a-ac3f-ea7dbc8a9426"
+            name="Vaccine Tid"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="05ca929d-4958-438d-9ca4-71023abdefea"
+            name="Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d00ac28a-915f-49b6-bafd-b1f3b66987b9"
+            name="Vaccine Navn"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

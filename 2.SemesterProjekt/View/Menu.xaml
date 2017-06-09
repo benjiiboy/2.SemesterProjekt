@@ -7,38 +7,29 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid >
 
 
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel VerticalAlignment="Center">
             <Button x:Name="HovedMenuWiki"
-                    HorizontalAlignment="Stretch" 
-                    VerticalAlignment="Center" 
-                    Height="100" Content="Vaccine Info" 
-                    FontSize="28" 
-                    FontWeight="Bold" 
-                    Margin="0,0,0,20"
+Style="{StaticResource MainPageKnap}"
+                     Content="Vaccine info" 
+
                     Click="HovedMenuWiki_Click"
                     
                     />
 
             <Button x:Name="HovedMenuFamilie"
-                    HorizontalAlignment="Stretch" 
-                    VerticalAlignment="Center" 
-                    Height="100"  FontSize="28" 
-                    FontWeight="Bold" 
+                    Style="{StaticResource MainPageKnap}"
                     Content="Familie" 
-                    Margin="0,0,0,20" 
+                     
                     Click="HovedMenuFamilie_Click"
                     />
 
             <Button x:Name="HovedMenuVaccinationsKort" 
-                    HorizontalAlignment="Stretch"
-                    VerticalAlignment="Center" 
-                    Height="100"  FontSize="28" 
-                    FontWeight="Bold"
-                    Content="Vaccine kort" 
-                   ></Button>
+                    Style="{StaticResource MainPageKnap}"
+                    Content="Vaccinekort" 
+                  Click="HovedMenuVaccinationsKort_Click" ></Button>
 
         </StackPanel>
 

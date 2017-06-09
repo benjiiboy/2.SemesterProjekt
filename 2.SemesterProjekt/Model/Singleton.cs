@@ -12,17 +12,19 @@ namespace _2.SemesterProjekt.Model
 {
     public class Singleton : INotifyPropertyChanged
     {
-
-
         private ObservableCollection<Barn> børn;
+        private static Singleton instance;
+        private ObservableCollection<Vaccine> vaccineListe;
+
+        public ObservableCollection<Vaccine> VaccineCollectionIkkesort { get; set; }
+        public ObservableCollection<VacSkemaBarnPlan> VacPlanCollection { get; set; }
+        public ObservableCollection<Vaccine> VaccineCollection { get; set; }
 
         public ObservableCollection<Barn> Børn
         {
             get { return børn; }
             set { børn = value; }
         }
-
-        private static Singleton instance;
 
         public static Singleton Instance
         {
@@ -36,9 +38,6 @@ namespace _2.SemesterProjekt.Model
             }
         }
 
-        //Benji ide
-        private ObservableCollection<Vaccine> vaccineListe;
-
         public ObservableCollection<Vaccine> VaccineListe
         {
             get { return vaccineListe; }
@@ -46,21 +45,20 @@ namespace _2.SemesterProjekt.Model
         }
 
 
-
         /*CTOR*/
-        public Singleton()
+        private Singleton()
         {
             Børn = new ObservableCollection<Barn>();
-            hent();
-            //mik
+            VaccineCollectionIkkesort = new ObservableCollection<Vaccine>();
             VacPlanCollection = new ObservableCollection<VacSkemaBarnPlan>();
-            HentVacSkema();
+            VaccineCollection = new ObservableCollection<Vaccine>();
+            hent();
         }
 
         public void TilføjBarn(Barn b)
         {
-            Børn.Add(b);
             PersistencyService.PostBarn(b);
+            Børn.Add(b);
         }
 
         public void FjernBarn(Barn b)
@@ -69,35 +67,46 @@ namespace _2.SemesterProjekt.Model
             PersistencyService.DeleteBarn(b);
         }
 
-        public void PutBarn(Barn BarnToPut)
-        {
-            PersistencyService.PutBarn(BarnToPut);
-            hent();
-        }
 
         public async Task HentVacSkema()
         {
-            VacPlanCollection = await PersistencyService.GetVacPlanAsync();
+            VacPlanCollection.Clear();
+            foreach (var item in await PersistencyService.GetVacSkemaBarnPlanAsync())
+            {
+                VacPlanCollection.Add(item);
+            }
         }
-
 
         public void hent()
         {
             Børn = PersistencyService.GetBarn();
         }
 
-        //PropetyChanged
+        public async Task GetVaccineAsync()
+        {
+            VaccineCollection.Clear();
+            foreach (var i in await PersistencyService.GetSorteredeVaccineAsync())
+            {
+                this.VaccineCollection.Add(i);
+            }
+        }
+
+        public async Task GetvaccineAsyncIkkeSort()
+        {
+            VaccineCollectionIkkesort.Clear();
+            foreach (var i in await PersistencyService.GetVaccineAsync())
+            {
+                this.VaccineCollectionIkkesort.Add(i);
+            }
+        }
+
+        #region onpropertychanged
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-
-        public ObservableCollection<VacSkemaBarnPlan> VacPlanCollection { get; set; }
-
-
-
+        #endregion
     }
 }
 

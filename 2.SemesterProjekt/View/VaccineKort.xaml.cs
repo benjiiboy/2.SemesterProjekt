@@ -20,9 +20,9 @@ namespace _2.SemesterProjekt.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class RedigerBarn : Page
+    public sealed partial class VaccineKort : Page
     {
-        public RedigerBarn()
+        public VaccineKort()
         {
             this.InitializeComponent();
         }

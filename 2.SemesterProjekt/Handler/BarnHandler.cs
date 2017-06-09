@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using _2.SemesterProjekt.Viewmodel;
 using Windows.UI.Popups;
 using _2.SemesterProjekt.Converter;
+using Windows.UI.Notifications;
+using System.Xml;
+using Windows.Data.Xml.Dom;
 
 namespace _2.SemesterProjekt.Handler
 {
@@ -42,15 +45,15 @@ namespace _2.SemesterProjekt.Handler
             
         }
 
-        public void PutBarn()
+
+
+        public async void HentVacciner()
         {
-            Model.Singleton.Instance.PutBarn(VaccAppVievModel.SelectedBarn);
+          await Model.Singleton.Instance.HentVacSkema();
         }
 
-        public void HentVacciner()
-        {
-            Model.Singleton.Instance.HentVacSkema();
-        }
+        
+
 
 
     }
