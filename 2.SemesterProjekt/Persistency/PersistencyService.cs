@@ -137,30 +137,6 @@ namespace _2.SemesterProjekt.Persistency
                 }
             }
         }
-        //public static void PutBarn(Barn PutBarn)
-        //{
-        //    using (var Client = new HttpClient())
-        //    {
-        //        Client.BaseAddress = new Uri(serverUrl);
-        //        Client.DefaultRequestHeaders.Clear();
-        //        Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-        //        string urlString = apibørn + PutBarn.Barn_Id;
-
-        //        try
-        //        {
-        //            var response = Client.PutAsJsonAsync(urlString, PutBarn).Result;
-        //            if (response.IsSuccessStatusCode)
-        //            {
-        //                ShowMessage("Barn opdateret");
-        //            }
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            ShowMessage("Fejl, barn blev IKKE opdateret" + e);
-        //        }
-        //    }
-        //}
 
         public static async Task<ObservableCollection<VacSkemaBarnPlan>> GetVacSkemaBarnPlanAsync()
         {
