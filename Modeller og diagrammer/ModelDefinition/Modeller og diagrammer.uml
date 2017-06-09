@@ -856,7 +856,7 @@
             isAbstract="false">
             <classMoniker
               Id="67deb939-da29-4155-9eb7-798eea9894d9"
-              LastKnownName="VaccineKort og VaccineInfo"
+              LastKnownName="VacPlan"
               LastKnownLocation="Modeller og diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -908,7 +908,7 @@
             isAbstract="false">
             <classMoniker
               Id="fcb1a6b0-4aa2-407b-a828-77e63459d01f"
-              LastKnownName="VaccineOversigt"
+              LastKnownName="Vaccine"
               LastKnownLocation="Modeller og diagrammer.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -965,6 +965,24 @@
             aggregation="None"
             isComposite="false" />
         </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="a9c0bb4d-1806-42c8-a20e-f05ea983efc6"
+            name="SletBarn"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="21c01cf5-3701-4f25-a619-3c465634c27a"
+            name="OpretBarn"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1201,7 +1219,7 @@
     <packageHasNamedElement>
       <class
         Id="67deb939-da29-4155-9eb7-798eea9894d9"
-        name="VaccineKort og VaccineInfo"
+        name="VacPlan"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -1245,7 +1263,7 @@
     <packageHasNamedElement>
       <class
         Id="fcb1a6b0-4aa2-407b-a828-77e63459d01f"
-        name="VaccineOversigt"
+        name="Vaccine"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
