@@ -59,7 +59,7 @@ namespace _2.SemesterProjekt.Persistency
                             XmlDocument toastXml = ToastNotificationManager.GetTemplateContent(toastTemplate);
 
                             IXmlNode toasttextelements = toastXml.GetElementsByTagName("text").FirstOrDefault();
-                            toasttextelements.AppendChild(toastXml.CreateTextNode($"{PostBarn.Fornavn} {PostBarn.Efternavn} skal have vaccine {s.VaccineNavn} d. {vp.VaccineTid.ToString("dd-MM-yyyy")} "));
+                            toasttextelements.AppendChild(toastXml.CreateTextNode($"{PostBarn.Fornavn} {PostBarn.Efternavn} skal have vaccine nr {s.Vac_Id} {s.VaccineNavn} d. {vp.VaccineTid.ToString("dd-MM-yyyy")} "));
 
                             /*Ændre datetime.now til vp.vaccinetid.adddays(-14)*/
                             DateTime dueTime = DateTime.Now.AddSeconds(5);
@@ -265,7 +265,7 @@ namespace _2.SemesterProjekt.Persistency
                 return null;
             }
         }
-        public static async Task<List<Vaccine>> GetSorteredeVaccineAsync()
+        public static async Task<List<Vaccine>> GetSorteredeVaccineAsync()  
         {
             using (var Client = new HttpClient())
             {

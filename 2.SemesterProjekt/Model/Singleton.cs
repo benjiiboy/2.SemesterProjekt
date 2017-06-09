@@ -89,6 +89,7 @@ namespace _2.SemesterProjekt.Model
 
         public async Task GetVaccineAsync()
         {
+            VaccineCollection.Clear();
             foreach (var i in await PersistencyService.GetSorteredeVaccineAsync())
             {
                 this.VaccineCollection.Add(i);
@@ -97,6 +98,7 @@ namespace _2.SemesterProjekt.Model
 
         public async Task GetvaccineAsyncIkkeSort()
         {
+            VaccineCollectionIkkesort.Clear();
             foreach (var i in await PersistencyService.GetVaccineAsync())
             {
                 this.VaccineCollectionIkkesort.Add(i);
