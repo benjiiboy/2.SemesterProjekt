@@ -67,11 +67,6 @@ namespace _2.SemesterProjekt.Model
             PersistencyService.DeleteBarn(b);
         }
 
-        //public void PutBarn(Barn BarnToPut)
-        //{
-        //    PersistencyService.PutBarn(BarnToPut);
-        //    hent();
-        //}
 
         public async Task HentVacSkema()
         {

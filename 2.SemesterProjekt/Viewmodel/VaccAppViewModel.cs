@@ -24,7 +24,6 @@ namespace _2.SemesterProjekt.Viewmodel
         private ICommand seVaccinerCommand;
 
         public Handler.BarnHandler BarnHandler { get; set; }
-        //public ICommand PutBarnCommand { get; set; }
         public Singleton Singleton { get; set; }
 
         public int TelefonNr
